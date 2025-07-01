@@ -1,10 +1,11 @@
 ---
 title: Git
 layout: home
-nav_order: 2
+nav_order: 1
+has_children: true
 ---
 
-# Apuntes GIT
+# Apuntes Git
 
 Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
@@ -14,7 +15,7 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
 ## Tabla de Contenidos
 
-- [Apuntes GIT](#apuntes-git)
+- [Apuntes Git](#apuntes-git)
   - [Menu](#menu)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Get Started](#get-started)
