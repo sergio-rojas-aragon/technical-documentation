@@ -2,7 +2,16 @@
 
 Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
+
+## Menu
+
+1. [troubleshooting](git troubleshooting.md)
+
+## Tabla de Contenidos
+
 - [Apuntes GIT](#apuntes-git)
+  - [Menu](#menu)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Get Started](#get-started)
   - [Alias](#alias)
   - [Branch commands](#branch-commands)
