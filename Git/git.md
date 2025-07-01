@@ -2,10 +2,9 @@
 
 Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
-
 ## Menu
 
-1. [troubleshooting](git troubleshooting.md)
+1. [troubleshooting](<git troubleshooting.md>)
 
 ## Tabla de Contenidos
 
