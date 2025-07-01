@@ -1,4 +1,3 @@
-
 ---
 title: trouble shooting
 parent: Git

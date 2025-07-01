@@ -3,8 +3,6 @@ title: Git
 nav_order: 2
 ---
 
-
-
 # Apuntes GIT
 
 Aca dejare todos los comandos GIT para evitar buscarlos en google.
