@@ -1,7 +1,3 @@
----
-title: Docker
-nav_order: 2
----
 
 # Docker commands
 

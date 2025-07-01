@@ -1,6 +1,6 @@
 ---
-layout: home
 title: Troubleshooting
+layout: home
 parent: Git
 nav_order: 2
 ---
