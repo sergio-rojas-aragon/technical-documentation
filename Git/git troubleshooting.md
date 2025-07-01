@@ -1,8 +1,15 @@
-# troubleshooting
+
+---
+title: trouble shooting
+parent: Git
+nav_order: 1
+---
+
+# trouble shooting
 
 Menu
 
-- [troubleshooting](#troubleshooting)
+- [trouble shooting](#trouble-shooting)
     - [git ignore no funciona](#git-ignore-no-funciona)
     - [Carpeta mayuscula no se guarda en repo](#carpeta-mayuscula-no-se-guarda-en-repo)
 
