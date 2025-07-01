@@ -1,5 +1,5 @@
 # Readme
 
-1. [Docker](docker/)
-2. GIT
+1. [Docker](docker/Docker.md)
+2. [Git](GIT/)
    
