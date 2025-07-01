@@ -1,7 +1,8 @@
 ---
-title: trouble shooting
+layout: home
+title: Troubleshooting
 parent: Git
-nav_order: 1
+nav_order: 2
 ---
 
 # trouble shooting
