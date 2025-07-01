@@ -1,0 +1,5 @@
+                If IsDBNull(dt.Rows(0).Item("XmlCertificado")) Then
+
+                    Dim aca As String = "aaa"
+
+                End If

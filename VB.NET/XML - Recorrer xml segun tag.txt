@@ -1,0 +1,12 @@
+
+        For Each DTENode As XmlNode In xml.SelectNodes("//root//data")
+            Dim oXMLDoc As New XmlDocument
+            oXMLDoc.PreserveWhitespace = True
+            oXMLDoc.LoadXml(DTENode.OuterXml)
+			
+			
+			
+		Next
+		
+		
+		

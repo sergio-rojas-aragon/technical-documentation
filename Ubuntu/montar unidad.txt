@@ -1,0 +1,12 @@
+sudo gedit /etc/fstab
+
+se edita este archivo y se agrega la unidad
+
+//192.168.0.253/inetpub /media/192.168.0.253 cifs user=njaramillo,password=abc*123,noexec,user,rw,nounix,uid=1000,iocharset=utf8 0 0
+
+despues se ejecuta
+
+sudo mount -all
+
+
+https://eltallerdelbit.com/montar-unidades-de-red-windows-en-linux/

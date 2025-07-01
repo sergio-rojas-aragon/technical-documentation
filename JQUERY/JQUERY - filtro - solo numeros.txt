@@ -1,0 +1,4 @@
+			jQuery('#campo1').keyup(function(){
+if (jQuery(this).val() != "")
+jQuery(this).val(jQuery(this).val().replace(/[^0-9\.]/g, ""));
+});

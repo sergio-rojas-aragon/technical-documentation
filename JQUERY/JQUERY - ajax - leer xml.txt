@@ -1,0 +1,45 @@
+	function busca_ot(){
+		
+		var ruta, fuente, nodo, i, tabla;
+		//alert("veamos1");
+		jQuery.ajax({
+			type: "GET",
+			url: "xmlverificador.php?veri=44",
+			cache: false,
+			dataType: (jQuery.browser.msie) ? 'text' : 'xml',
+			async:false,
+			success: function(data) {
+				var xml;
+				if(typeof data == 'string'){
+				  xml = new ActiveXObject('Microsoft.XMLDOM');
+				  xml.async = false;
+				  xml.loadXML(data);
+				} else {
+				  xml = data;
+				}
+
+				jQuery(xml).find('OT').each(function(){
+					
+					var numero = jQuery(this).find('numero').text();
+					var descripcion = jQuery(this).find('descripcion').text();
+					tabla+="<tr>";
+					tabla+="<td><input type='radio' name='ot' value='"+ numero +" "+ descripcion +"' onClick='nv.ordentrabajo.value=\""+ numero +" "+ descripcion +"\";most_ocul(\"_ot\");'></td>";
+					tabla+="<td>"+ numero +"</td>";
+					tabla+="<td>"+ descripcion +"</td>";
+					tabla+="</tr>";
+				});
+				tabla += "</table>";
+				tabla+="</td>";
+				tabla+="</tr>";
+				tabla += "</table>";
+				jQuery('#_ot').html(tabla);
+				//_ot.innerHTML = tabla;
+				
+			},	
+			error: function(){
+				alert("error");
+			}
+		});
+		//alert("veamos2");
+		return false;
+	}

@@ -1,0 +1,5 @@
+Node JS
+
+npm install create-react-app -g
+	set-executionpolicy remotesigned
+	

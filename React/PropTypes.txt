@@ -1,0 +1,6 @@
+import  PropTypes  from "prop-types";
+
+AddCategory.propTypes = {
+	// para validar recibir una funcion
+    setCategories: PropTypes.func.isRequired
+}

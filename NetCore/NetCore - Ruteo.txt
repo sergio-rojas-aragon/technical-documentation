@@ -1,0 +1,41 @@
+Supongamos que queremos dos mentodos get
+uno get usuario y otro getlistadousuarios
+no se puede tener dos gets en la misma url
+
+ruta por defecto
+/api/usuario
+
+[HttpGet]
+public async Task<ActionResult<LoginDTO>> getUsuario([FromBody] LoginUsrDTO parametrosLogin)
+
+Ejemplo de como se accederia
+localhost/api/usuario
+
+[HttpGet("listado")]
+public async Task<ActionResult<LoginDTO>> getUsuario([FromBody] LoginUsrDTO parametrosLogin)
+
+Ejemplo de como se accederia
+localhost/api/usuario/listado
+
+
+---------------------------------------------------
+
+para cambiar ruta.
+
+ruta por defecto
+/api/usuario
+
+[HttpGet("listado")]
+Ejemplo de como se accederia
+localhost/api/usuario/listado
+
+pero si lo coloco de esta manera
+[HttpGet("/listado")]
+Ejemplo de como se accederia
+localhost/api/listado
+
+para que se aplique en dos rutas a la vez
+[HttpGet("listado")]
+[HttpGet("/listado")]
+
+

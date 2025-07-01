@@ -1,0 +1,6 @@
+INSERT INTO tbcontacto_obs (id_tbcontacto, fecha_asignacion, observaciones)
+SELECT idcontacto, fecha_asignacion, observaciones FROM tbcontacto
+
+Otra forma:
+insert into tbcontratos (idempresa , idprofesional) select idempresa , idprofesional
+ from tbcontratos where idcontrato = '"& idcontrato &"' 

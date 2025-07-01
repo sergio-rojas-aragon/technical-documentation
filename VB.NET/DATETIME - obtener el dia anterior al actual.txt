@@ -1,0 +1,1 @@
+Dim fecha As DateTime = DateTime.Now.AddDays(-1)

@@ -1,0 +1,10 @@
+Limpiar espacios
+Transformar=>Formato=>Recortar
+
+Columna con mismo valor escrito de diferente formas
+Agregar Columna =>Columna Condicional
+Se puede eliminar la columna original
+
+Quitar duplicados
+primer paso, comprobar en inicio=>reducir filas=>conservar filas=>conservar duplicados
+Segundo paso, inicio=>Reducir filas=>quitar filas=> quitar duplicados

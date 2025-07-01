@@ -1,0 +1,1 @@
+para empezar con <? ;Valor por defectoshort_open_tag = Off; Habilito la etiqueta corta, cambiandola con: short_open_tag = On

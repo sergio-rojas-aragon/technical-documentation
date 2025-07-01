@@ -1,0 +1,32 @@
+
+para actualizar la rama en la que se esta trabajando con la master, la cual ha sufrido varios cambios
+se puede hacer de diferentes maneras. una de ellas es el rebase, que mueve la rama completa de un punto antiguo
+al punto actual de de la master.
+
+esto se puede utilizar para diferentes motivos:
+
+- ordenar la linea.
+- corregir mensajes de los commits
+- unir commits
+- separar commits
+
+
+
+
+
+para hacer un rebase
+
+actualiza la rama en la que se esta trabajando, con datos de otras ramas
+
+primero se mueve la ubicacion al rebase
+
+para ver las ramas
+git branch 
+
+para ir a la rama
+git checkout ramas
+
+rama que quiero tomar y tirar hacia a atras de la rama actual.
+git rebase master
+
+luego se mueve denuevo a la master y se mezclan las ramas con fast foward (de una sola vez sin problemas)

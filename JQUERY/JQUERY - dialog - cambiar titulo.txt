@@ -1,0 +1,1 @@
+jQuery( "#dialogAcuse" ).dialog('option', 'title', 'Estado de Notificaciones.');

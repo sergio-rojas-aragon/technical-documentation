@@ -1,0 +1,24 @@
+        Dim objConn As New SqlConnection(variablesConexion.strConexion)
+        Dim command As SqlCommand = New SqlCommand
+
+        consulta = "update ADMIN_FACTUR3 set "
+        consulta += " pass = '" & password & "', url_facturacion = '" & url & "', dir_dest_descarga = '" & destDescarga & "', productivo = '" & productivo & "', asigna_folio = '" & asignaFolio & "', copia_sesion = '" & copiaCesion & "', habilitar_descarga= '" & habilitarDescarga & "' ,adicvacio= '" & adicVacion & "' "
+        consulta += " where idempresa = '" & idempresa & "'; "
+        'MsgBox(consulta)
+
+        ' Return False
+        'Exit Function
+
+        command.CommandText = consulta
+        command.Connection = objConn
+
+        objConn.Open()
+
+        Dim recordsAffected As Integer = command.ExecuteNonQuery()
+        If recordsAffected > 0 Then 'it worked
+
+
+            Return True
+        Else
+            Return False
+        End If

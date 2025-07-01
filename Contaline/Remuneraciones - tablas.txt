@@ -1,0 +1,7 @@
+maestro
+
+XXXdatos
+
+XXXremunMMYYYY
+	re0100	guarda los datos de los usuarios
+	

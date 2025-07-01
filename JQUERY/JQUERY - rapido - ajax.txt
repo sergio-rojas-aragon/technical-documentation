@@ -1,0 +1,19 @@
+jQuery.ajax({
+	url: "acciones.php",
+	type: "POST",
+	async:false,
+	data: {
+		accion:"5"
+				
+	},
+	error: function(jqXHR, textStatus, errorThrown){ 
+			//alert("jqXHR.status: "+ jqXHR.status + "- Error Cod. 442"); 
+			retorno = ""; 
+			sin_error = false;
+			
+	},
+	success: function(regreso){
+		alert(regreso);
+					
+	}
+}); 

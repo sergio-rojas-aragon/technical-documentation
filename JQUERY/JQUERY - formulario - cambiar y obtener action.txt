@@ -1,0 +1,2 @@
+		jQuery('#nv').attr("action","grelinmo_nventa_eparciales.php?gc=1&accion=G");
+		alert(jQuery('#nv').attr("action"));

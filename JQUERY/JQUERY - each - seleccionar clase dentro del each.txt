@@ -1,0 +1,6 @@
+// se obtiene la linea completa
+
+var row = $(this).closest('tr');
+
+// se obtiene el valor del elemento dentro de la linea
+var cant = row.find('.cant').val();

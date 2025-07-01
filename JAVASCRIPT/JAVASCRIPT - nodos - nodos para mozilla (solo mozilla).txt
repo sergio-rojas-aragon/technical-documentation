@@ -1,0 +1,18 @@
+		var ruta, fuente, i, uni;
+		ruta = "xmlverificador.php?veri=20&bod="+document.form1.codbod.value;
+		fuente = new XMLHttpRequest();
+		//fuente = new ActiveXObject("Microsoft.XMLDOM"); XMLHTTP
+		//fuente.async= false;
+		//fuente.load(ruta);
+		fuente.overrideMimeType('text/xml');
+		fuente.open("GET", ruta, false);
+		fuente.send();
+		//alert(fuente.readyState);
+		//alert(fuente.status);
+		var nodo = fuente.responseXML; 
+		//alert(nodo.childNodes[0].nodeName);
+		if(nodo.childNodes[0].nodeName == "OK"){
+			alert("oka");
+		}else{
+			alert("no oka");
+		}

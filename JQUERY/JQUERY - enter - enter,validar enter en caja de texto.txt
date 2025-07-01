@@ -1,0 +1,21 @@
+   		jQuery('#txtbuscar').keydown(function(event){
+			kcode = event.keyCode;
+			if ( kcode == 13 ){
+				jQuery.post("acciones_contactos.asp",	{ 
+					accion:4,
+					buscar: jQuery("#txtbuscar").val()
+				},
+				function(data){ jQuery('#tablaconsultas').html(data);
+					jQuery('#paginas').hide();
+				})	
+			}
+		}); 
+		
+otra forma:
+
+onkeypress= clientprov(event)
+
+function cllientprov(event){
+kcode = event.keyCode;
+....
+}

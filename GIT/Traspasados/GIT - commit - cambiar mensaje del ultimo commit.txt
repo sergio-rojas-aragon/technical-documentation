@@ -1,0 +1,3 @@
+git commit --amend -m "Actualizacion de mensaje"
+
+amend significa enmendar

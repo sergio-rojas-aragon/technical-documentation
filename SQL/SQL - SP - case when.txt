@@ -1,0 +1,19 @@
+SELECT email2,  
+					CASE email2  
+						WHEN 'acuitino' THEN 'acuitino@contaline2.cl'  
+						WHEN 'jcarilao' THEN 'jcarilao@contaline2.cl'  
+						WHEN 'mnanculeo' THEN 'mnanculeo@contaline2.cl'  
+						WHEN 'vponce' THEN 'vponce@contaline2.cl'  
+						WHEN 'licencias' THEN 'mvergara@contaline2.cl'  
+						WHEN 'mvergara@contaline.cl' THEN 'mvergara@contaline2.cl'  
+						WHEN 'otras' THEN 'mvergara@contaline2.cl'  
+						WHEN 'representante' THEN 'mvergara@contaline2.cl'  
+						else '1'  
+					END  
+						AS correo  
+					FROM tb_agrupacion_ejecutivo as a , tbusuarios as b   
+					WHERE   
+					 a.idempresa = 1327  
+						and a.idusuario = b.idusuario  
+						and b.tipo = 8  
+					group by email2 

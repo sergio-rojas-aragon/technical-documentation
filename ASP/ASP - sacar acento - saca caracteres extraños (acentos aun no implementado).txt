@@ -1,0 +1,14 @@
+	function sacaracento(texto)
+		if texto = "" or isnull(texto) then
+			sacaracento = texto
+		else
+			texto = replace(texto,"ñ","n")	
+			texto = replace(texto,"�'","N")	
+			texto = replace(texto,"á","a")	
+			texto = replace(texto,"é","e")	
+			texto = replace(texto,"í","i")	
+			texto = replace(texto,"ó","o")	
+			texto = replace(texto,"ú","u")	
+			sacaracento = texto
+		end if
+	end function

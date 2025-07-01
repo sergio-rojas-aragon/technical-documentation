@@ -1,0 +1,2 @@
+var uno = 1;
+stringUno = uno.toString();

@@ -1,0 +1,9 @@
+1 - agregar clase css:
+
+.no-close .ui-dialog-titlebar-close {
+	display: none;
+}
+
+2 - colocar en la definicion del dialog:
+
+dialogClass: "no-close",

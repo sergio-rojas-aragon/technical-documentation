@@ -1,0 +1,76 @@
+= {1,2,3}
+
+/* transforma la lista en tabla */
+= Table.FromList(Origen, Splitter, null null, ExtraValues.Error)
+
+
+Registros
+= { Producto="Mesa", Color="Rojo" }
+
+se puede convertir en tabla
+
+Tabla
+si hay un registro mal estructurado se transforma en tabla
+para convertir en tabla un registro de tipo fecha, se tiene que hacer en la opción de menu "A la tabla" que aparece con el botón derecho
+
+Consulta en blanco se utiliza para reutilizar
+
+Obtener Datos => Consulta en blanco
+
+Entrar al editor avanzado
+
+
+#shared
+
+muestra todos los metadatos disponibles y todas las funciones
+
+
+Crear nueva funcion
+En una consulta existente, botón derecho agregar consulta nueva
+
+inicio->Agregar Columna-> Agregar columna personalizada
+Después en la visualizacizacion principal, colocar función personalizada
+
+
+**** Guardar las credenciales de conexión
+
+
+** Columna a paratir de ejemplos
+
+se selecciona la columna
+Se va a agregar columna=> columna a partir de ejemplos => a partir de la selección
+
+Se escribe el ejemplo, y a la segunda linea ya se tiene el patron y puede crear la nueva consulta personalizada
+
+
+
+**** EVITAR A TODA COSTA
+
+Cuando existe una única tabla donde están las columnas de distintas entidades
+ejemplo: Cliente, Categorías etc en una sola tabla
+
+-----------------------
+Diferencia entre filas y columnas
+
+Columnas
+Se calculan fila a fila y si se recargan datos se vuelven a calcular
+gastan espacio en memoria
+solo esta visible en la tabla que se ha creado
+Crearlas tiene que ser un excepción
+
+Medidas
+implícitas y explisitas
+implícitas: se crean al utilizar una columna numérica en un informe
+explicitas: usa la suma
+
+mejor explicitas por mantenimiento del código
+Se puede utilizar en otros cálculos y no se referencia la columna
+no gasta espacio
+
+
+141914
+28866
+170095
+
+
+

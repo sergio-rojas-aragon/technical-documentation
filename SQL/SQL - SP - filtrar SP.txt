@@ -1,0 +1,6 @@
+	declare  @temp table(IDPRODUCTO DECIMAL(18), CANT_MOVS DECIMAL(18))
+
+	Insert into @temp (IDPRODUCTO, CANT_MOVS)
+		EXEC SP_MOVEXI_SIN_SALDOSALIDA_DETCANT 2830
+
+	select * from @temp where IDPRODUCTO = 1484

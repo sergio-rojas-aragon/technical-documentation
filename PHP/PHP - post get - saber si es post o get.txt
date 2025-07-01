@@ -1,0 +1,8 @@
+if(!empty($_GET['palabra']))
+{
+  $consulta = "SELECT * FROM wiki WHERE titulo = '" . mysql_real_escape_string($palabra) . "'";
+}
+elseif(!empty($_POST['palabra']))
+{
+  $consulta ="SELECT * FROM wiki WHERE titulo LIKE '%". mysql_real_escape_string($_GET['palabra']) ."%'";
+} 

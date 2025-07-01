@@ -1,0 +1,4 @@
+declare @v_mascaro decimal
+select @v_mascaro = max(mcostolab) from materia
+select v_mascaro
+

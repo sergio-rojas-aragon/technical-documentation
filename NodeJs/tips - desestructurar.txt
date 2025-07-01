@@ -1,0 +1,4 @@
+
+
+// solo separa el nombre, el resto lo deja en una sola variable
+const { nombre, ...resto} = req.body 

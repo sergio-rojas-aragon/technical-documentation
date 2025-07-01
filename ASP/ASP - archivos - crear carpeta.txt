@@ -1,0 +1,6 @@
+		set fs=Server.CreateObject("Scripting.FileSystemObject")
+		ruta = "d:\REMUN_v2.0\remun_a\" & trim(idempresa_aio) & "\BANCOS\" &session("periodo")&""
+		set fs = createobject("scripting.filesystemobject")
+		if fs.FolderExists(ruta)=false then		
+			set nfolder = fs.createfolder(ruta)
+		end if

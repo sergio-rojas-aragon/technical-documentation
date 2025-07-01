@@ -1,0 +1,1 @@
+jQuery('#tabladetalle >tbody >tr').length

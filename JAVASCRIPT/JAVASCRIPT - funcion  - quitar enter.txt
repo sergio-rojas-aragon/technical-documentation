@@ -1,0 +1,7 @@
+		function sacarenter(texto){
+			pat = new RegExp(String.fromCharCode(13),"g")
+ 			pat2 = new RegExp(String.fromCharCode(10),"g")
+			texto = texto.replace(pat, "<br>");
+			texto = texto.replace(pat2, "<br>");
+			return texto;		
+		}

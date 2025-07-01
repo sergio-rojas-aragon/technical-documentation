@@ -1,0 +1,6 @@
+		jQuery( "#formulario" ).dialog({
+			autoOpen: false,
+			height: 260,
+			width: 430,
+			modal: true		
+       });

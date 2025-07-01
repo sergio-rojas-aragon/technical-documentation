@@ -1,0 +1,18 @@
+
+while @vcount <= 10
+begin
+	
+	---la sentencia continue hace que no continue con las siguientes lineas y se devuelve al while.
+	
+	if @vcount = 5 continue
+	print @vcount
+	
+end
+
+--- tambien puede ser asi
+
+if @vcount = 5
+begin
+	set @vcount = @vcount + 1
+	continue
+end

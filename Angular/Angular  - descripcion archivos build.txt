@@ -1,0 +1,2 @@
+polyfills: comandos que expanden la compatibilidad con los navegadores
+main: aplicacion de angular.

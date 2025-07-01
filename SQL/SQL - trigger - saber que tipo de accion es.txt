@@ -1,0 +1,11 @@
+	DECLARE @event_type varchar(42)
+	IF EXISTS(SELECT * FROM inserted)
+	  IF EXISTS(SELECT * FROM deleted)
+		SELECT @event_type = 'update'
+	ELSE
+		SELECT @event_type = 'insert'
+	ELSE
+	  IF EXISTS(SELECT * FROM deleted)
+		SELECT @event_type = 'delete'
+
+print @event_type

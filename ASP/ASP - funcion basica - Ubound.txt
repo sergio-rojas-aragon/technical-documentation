@@ -1,0 +1,4 @@
+for x=0 to ubound(prestamos,2)
+
+ubound indica la cantidad de elementos que estan dentro de una matriz o array
+

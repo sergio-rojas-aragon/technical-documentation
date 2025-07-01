@@ -1,0 +1,9 @@
+	IF EXISTS(SELECT 1 FROM integracion_app_pcs where idempresa = @IDEMPRESA and idtipo_integracion = @IDTIPO_INTEGRACION and NOMBRE_PC = @NOMBREPC and MAC_PC = @MAC)
+	BEGIN
+		-- SI YA EXISTE EL EQUIPO
+		print 'hola'
+	END
+	else
+		BEGIN
+		print 'holachao'
+		END

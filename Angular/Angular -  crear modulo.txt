@@ -1,0 +1,18 @@
+crear archivo:
+
+app-routing.module.ts
+
+la idea de crear esto e que el app.module.ts no quede tan cargado.
+
+se exporta la clase para poder ser utilizada en otros lados
+export class AppRouting{
+
+}
+
+@NgModule({
+
+})
+
+luego se debe especificar las rutas de la aplicacion, o como uno quiere que funcionen dichas rutas.
+
+se arma las variables rutas y para eso se requiere importar el modulo de rutas. dentro de esa variable se guardan todas las rutas que el modulo va a manejar.

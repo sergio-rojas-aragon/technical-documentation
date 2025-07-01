@@ -1,0 +1,8 @@
+	function evitasql(inyeccion) {
+		inyeccion = trim(inyeccion);
+		inyeccion = inyeccion.replace(/'/g, "`");
+		inyeccion = inyeccion.replace(/"/g, "`");
+		inyeccion = inyeccion.replace(/--/g, "");
+		inyeccion = inyeccion.replace(/;/g, "");
+		return inyeccion
+	}

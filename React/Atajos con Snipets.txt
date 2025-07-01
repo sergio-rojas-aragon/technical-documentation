@@ -1,0 +1,9 @@
+rafcp = crea de cero una arrow function con prototype
+anfn = crea funcion de arrow
+nfn→	creates a named function const add = (params) => {}
+rafc = crea componente sin prototype
+imd→	imports only a portion of the module using destructing import {rename} from 'fs';
+
+
+https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
+

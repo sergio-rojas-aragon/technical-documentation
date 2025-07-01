@@ -1,0 +1,5 @@
+tsc app
+
+modo observardor
+tsc app -w
+

@@ -1,0 +1,5 @@
+para activar en el formulario completo
+jQuery( document ).tooltip();
+
+para que muestre el tooltip en cualquier tipo de elemento agregar title="descripcion que se muestra"
+

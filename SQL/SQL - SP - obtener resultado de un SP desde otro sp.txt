@@ -1,0 +1,3 @@
+	
+	insert into @tablaResultado
+		exec dbo.SP_AuditoriaDI_Centralizadas

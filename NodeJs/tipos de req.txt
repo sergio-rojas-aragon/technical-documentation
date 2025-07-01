@@ -1,0 +1,10 @@
+
+const usuariosGet = (req = request, res = response ) => {
+
+req.body 	obtiene el body de la consulta json
+req.params	obtiene los parametros enviados por get
+
+
+
+
+

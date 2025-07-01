@@ -1,0 +1,20 @@
+
+para ver archivos en conflictos
+
+git diff --name-only --diff-filter=U
+
+
+
+cuando se hace merge puede que existan conflictos. en ese caso colocara algo asi
+
+<<<<<<< HEead
+
+codigo 1
+=======
+codigo 2
+>>>>>>> rama conflictos
+
+se quitan las etiquetas y se deja el codigo 1 o 2 o mezclarlos
+
+se guarda, y luego se hace commit
+

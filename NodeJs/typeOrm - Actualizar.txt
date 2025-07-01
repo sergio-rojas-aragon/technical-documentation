@@ -1,0 +1,9 @@
+        let where : FindConditions<Colaborador> = { rut: rut };
+        let registro = await colService.getOneColaborador(where);
+        let msg = "Exito";
+
+        if (registro) {
+            
+            registro.colaboradorStatus = colaboradorStatusId;
+            registro.fechaModificacion = new Date;
+            await getRepository(Colaborador).save(registro);

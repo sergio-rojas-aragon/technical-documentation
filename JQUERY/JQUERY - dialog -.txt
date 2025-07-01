@@ -1,0 +1,9 @@
+
+activar dialog
+	jQuery("#cuerpo").dialog({ modal: true, autoOpen: false, height: 320, width: 450 });
+
+ocultar cabecera del dialogo
+	jQuery("#loading").dialog({ modal: true, autoOpen: true, height: 320, width: 450, draggable: false, resizable: false }).parent('.ui-dialog').find('.ui-dialog-titlebar').hide();	
+
+ocultar la x de la cabecera del dialogo
+jQuery("#loading").dialog({ modal: true, autoOpen: true, height: 320, width: 450, draggable: false, resizable: false }).parent('.ui-dialog').find('.ui-dialog-titlebar-close').hide();

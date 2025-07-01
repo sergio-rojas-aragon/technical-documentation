@@ -1,0 +1,10 @@
+	.hr-danger{
+	  background-image: -webkit-linear-gradient(left, rgba(244,67,54,.8), rgba(244,67,54,.6), rgba(0,0,0,0));
+	}
+	hr {
+	  height: 2px;
+	  margin-top: 2px;
+	  margin-bottom: 4px;
+
+	}
+						<hr class="hr-danger" />

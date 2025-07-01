@@ -1,0 +1,14 @@
+        $(jsonDetalleDI).each(function(index, detdi){
+
+            console.log( "linea", detdi.linea);
+
+        });
+
+        for( var i in jsonDetalleDI){
+            console.log(jsonDetalleDI[i]);
+            var det = JSON.parse(JSON.stringify(jsonDetalleDI[i]));
+            
+
+
+
+        }

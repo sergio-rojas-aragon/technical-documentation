@@ -1,0 +1,9 @@
+
+locales
+
+git branch -d nombre_rama
+
+
+eliminacion de branch en remoto
+
+git push --delete origin Desarrollo

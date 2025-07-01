@@ -1,0 +1,5 @@
+
+20 minutos = 	1200000
+5 minutos = 	300000
+1 minuto  =		60000
+1 segundo = 	10000

@@ -1,0 +1,6 @@
+        Dim cantidad As Double = ListBox1.Items.Count
+
+        For index As Integer = 0 To cantidad - 1
+            ListBox1.SelectedIndex = 0
+
+        Next

@@ -1,0 +1,16 @@
+ASP - funcion para llenar con caracteres a la derecha o izquierda ***
+	http://www.bestcodingpractices.com/asp_string_padding_functions-16.html
+
+Function Rpad (sValue, sPadchar, iLength)
+  Rpad = sValue & string(iLength - Len(sValue), sPadchar)
+End Function
+
+Function Lpad (sValue, sPadchar, iLength)
+  Lpad = string(iLength - Len(sValue),sPadchar) & sValue
+End Function
+	
+Rpad(cadena,caracter para reemplazar,largo)
+ejemplo
+	Rpad("1","0",6)
+	resultado:
+	100000

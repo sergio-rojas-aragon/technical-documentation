@@ -1,0 +1,32 @@
+https://programacionecuador.blogspot.com/2016/08/saber-la-fecha-de-modificacion-de-un.html
+
+
+SELECT
+   [name], 
+   [object_id], 
+   [create_date], 
+   [modify_date] 
+FROM sys.all_objects 
+WHERE [type] = 'P' 
+AND [object_id] > 0 
+AND [name] like '%sp_cons%'
+ORDER BY [modify_date] DESC
+
+
+
+ SELECT
+   [name], 
+   [object_id], 
+   [create_date], 
+   [modify_date] 
+FROM sys.all_objects 
+WHERE  [object_id] > 0 
+ORDER BY [modify_date] DESC
+
+-- obtencion de informacion de los triggers del sistema
+
+SELECT
+* 
+FROM sys.all_objects 
+where type =  'TR'
+ORDER BY name asc

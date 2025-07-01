@@ -1,0 +1,10 @@
+para unir ramas se tiene que posicionarse e la rama en donde se quiere fucionar algo
+
+git checkout master
+
+head = apunta al ultimo commit a la rama de al cual estamos
+
+git merge rama-villanos
+
+merge ramas con commit de mensaje
+git merge --no-f rama -m "mensaje"

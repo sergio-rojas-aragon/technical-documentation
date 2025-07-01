@@ -1,0 +1,6 @@
+
+
+response.write(Round(24.75122))
+25 
+
+

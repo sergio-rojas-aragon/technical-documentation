@@ -1,0 +1,1 @@
+$rut = ereg_replace( '-','', $_GET["rut"] );

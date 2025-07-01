@@ -1,0 +1,21 @@
+ALTER PROCEDURE [dbo].[SP_Series_TraeSerie]
+
+	@Serie varchar(10),
+	@indicadorTraslado decimal(2),
+	-- Puede ser del 1 al 9. 0 no hace nada
+
+	@CodigoReferencia decimal(2),
+	-- puede ser del 1 al 3, 0 no hace nada
+
+	@SerieRetorno varchar(10) output
+
+AS
+begin
+
+	return @SerieRetorno
+
+END
+
+-- para llamar al sp
+	-- ejecuta procedimiento que obtiene la serie que deberia ser.
+	EXECUTE [bdcomun].[dbo].[SP_Series_TraeSerie] @Serie,@IndicadorTraslado,@CodigoReferencia, @SerieRetorno output

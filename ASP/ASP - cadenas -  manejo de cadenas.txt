@@ -1,0 +1,10 @@
+MANEJO DE CADENAS  
+
+
+  * len(cadena). Nos devuelve el número de carácteres de una cadena.
+    * split(cadena,separador). Divide una cadena en varias usando un carácter separador.
+    * mid(cadena, inicio, longitud). Devuelve una subcadena de otra, empezando por inicio y de longitud longitud.
+    * trim(cadena). Elimina los espacios iniciales y finales de una cadena.
+    * instr(cadena1, cadena2). Busca la cadena2 dentro de cadena1 indicándonos la posición en la que se encuentra.
+    * replace(texto, cadena1, cadena2). Reemplaza la cadena1 por la cadena2 en el texto.
+    * left(cadena, num). Devuelve los num caracteres de cadena empezando por la izquierda.

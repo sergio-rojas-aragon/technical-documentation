@@ -1,0 +1,1 @@
+http://jquery-ui.googlecode.com/svn/trunk/tests/static/icons.html

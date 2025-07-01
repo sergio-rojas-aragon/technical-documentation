@@ -1,0 +1,4 @@
+-------------------------------
+insertAdjacentHTML
+-------------------------------
+Inserta texto u código HTML en las adyacencias del elemento referido. Cualquier referencia HTML es correctamente interpretada y mostrada después de que se insertó. El texto y el código HTML puede ser insertado al principio o al final del elemento referido dentro de él, o inmediatamente antes o después del elemento, fuera de sus etiquetas de inicio o cierre.

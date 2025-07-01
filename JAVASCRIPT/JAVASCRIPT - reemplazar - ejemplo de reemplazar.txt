@@ -1,0 +1,12 @@
+str = str.replace('a','o');
+
+cremillas
+
+		cremi = /'/g;
+		data = data.replace(cremi,'');
+
+
+$("#sessionOT").val().replace(/cta/g, "ctacontable");
+
+//reeplaza todos los puntos
+mystring = mystring.replace(/\./g,'')

@@ -1,0 +1,9 @@
+        jQuery.ajax({
+            type: 'POST',
+            url: "grelinmo_bodega.php?accion=G",
+            data: jQuery('#form1').serialize(),
+            // Mostramos un mensaje con la respuesta de PHP
+            success: function(data) {
+				resultado = data;
+            }
+        });  

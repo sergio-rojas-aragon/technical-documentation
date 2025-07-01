@@ -1,0 +1,87 @@
+response.write "SERVER_NAME: "& Request.ServerVariables("SERVER_NAME") & "<br>"
+
+i = 1
+For Each Item In Request.ServerVariables
+	Response.Write "["& i &"]" & Item & " = " & Request.ServerVariables(Item) & "<br>"
+	i = i + 1
+Next
+
+'How many session variables are there?
+Response.Write "There are " & Session.Contents.Count & _
+			  " Session variables<P>"
+
+'Use a For Each ... Next to loop through the entire collection
+For Each strName in Session.Contents
+  'Is this session variable an array?
+  If IsArray(Session(strName)) then
+	'If it is an array, loop through each element one at a time
+	For iLoop = LBound(Session(strName)) to UBound(Session(strName))
+	  Response.Write strName & "(" & iLoop & ") - " & _
+					  Session(strName)(iLoop) & "<BR>"
+	Next
+  Else
+	'We aren't dealing with an array, so just display the variable
+	Response.Write strName & " - " & Session.Contents(strName) & "<BR>"
+  End If
+Next
+
+response.end
+
+resultado
+
+SERVER_NAME: 192.168.0.253
+[1]ALL_HTTP = HTTP_CACHE_CONTROL:max-age=0 HTTP_CONNECTION:keep-alive HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8 HTTP_ACCEPT_ENCODING:gzip, deflate HTTP_ACCEPT_LANGUAGE:es-CL,es;q=0.8,en-US;q=0.5,en;q=0.3 HTTP_COOKIE:ASPSESSIONIDCCADDBBD=NAGNEPHANAAOMDCIEADJJGBH; __utma=220538328.883505509.1575032778.1575032778.1575032778.1; __utmb=220538328.3.10.1575032778; __utmc=220538328; __utmz=220538328.1575032778.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _fbp=fb.3.1575032778072.2015568844; __zlcmid=vViivtI2A0uUyX HTTP_HOST:192.168.0.253 HTTP_REFERER:http://192.168.0.253/clientes/default.asp HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0 HTTP_UPGRADE_INSECURE_REQUESTS:1
+[2]ALL_RAW = Cache-Control: max-age=0 Connection: keep-alive Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8 Accept-Encoding: gzip, deflate Accept-Language: es-CL,es;q=0.8,en-US;q=0.5,en;q=0.3 Cookie: ASPSESSIONIDCCADDBBD=NAGNEPHANAAOMDCIEADJJGBH; __utma=220538328.883505509.1575032778.1575032778.1575032778.1; __utmb=220538328.3.10.1575032778; __utmc=220538328; __utmz=220538328.1575032778.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _fbp=fb.3.1575032778072.2015568844; __zlcmid=vViivtI2A0uUyX Host: 192.168.0.253 Referer: http://192.168.0.253/clientes/default.asp User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0 Upgrade-Insecure-Requests: 1
+[3]APPL_MD_PATH = /LM/W3SVC/1/ROOT
+[4]APPL_PHYSICAL_PATH = C:\inetpub\wwwroot_contaline\
+[5]AUTH_PASSWORD =
+[6]AUTH_TYPE =
+[7]AUTH_USER =
+[8]CERT_COOKIE =
+[9]CERT_FLAGS =
+[10]CERT_ISSUER =
+[11]CERT_KEYSIZE =
+[12]CERT_SECRETKEYSIZE =
+[13]CERT_SERIALNUMBER =
+[14]CERT_SERVER_ISSUER =
+[15]CERT_SERVER_SUBJECT =
+[16]CERT_SUBJECT =
+[17]CONTENT_LENGTH = 0
+[18]CONTENT_TYPE =
+[19]GATEWAY_INTERFACE = CGI/1.1
+[20]HTTPS = off
+[21]HTTPS_KEYSIZE =
+[22]HTTPS_SECRETKEYSIZE =
+[23]HTTPS_SERVER_ISSUER =
+[24]HTTPS_SERVER_SUBJECT =
+[25]INSTANCE_ID = 1
+[26]INSTANCE_META_PATH = /LM/W3SVC/1
+[27]LOCAL_ADDR = 192.168.0.253
+[28]LOGON_USER =
+[29]PATH_INFO = /clientes/ctacteII_cli/an_index.asp
+[30]PATH_TRANSLATED = C:\inetpub\wwwroot_contaline\clientes\ctacteII_cli\an_index.asp
+[31]QUERY_STRING =
+[32]REMOTE_ADDR = 192.168.1.4
+[33]REMOTE_HOST = 192.168.1.4
+[34]REMOTE_USER =
+[35]REQUEST_METHOD = GET
+[36]SCRIPT_NAME = /clientes/ctacteII_cli/an_index.asp
+[37]SERVER_NAME = 192.168.0.253
+[38]SERVER_PORT = 80
+[39]SERVER_PORT_SECURE = 0
+[40]SERVER_PROTOCOL = HTTP/1.1
+[41]SERVER_SOFTWARE = Microsoft-IIS/7.5
+[42]URL = /clientes/ctacteII_cli/an_index.asp
+[43]HTTP_CACHE_CONTROL = max-age=0
+[44]HTTP_CONNECTION = keep-alive
+[45]HTTP_ACCEPT = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[46]HTTP_ACCEPT_ENCODING = gzip, deflate
+[47]HTTP_ACCEPT_LANGUAGE = es-CL,es;q=0.8,en-US;q=0.5,en;q=0.3
+[48]HTTP_COOKIE = ASPSESSIONIDCCADDBBD=NAGNEPHANAAOMDCIEADJJGBH; __utma=220538328.883505509.1575032778.1575032778.1575032778.1; __utmb=220538328.3.10.1575032778; __utmc=220538328; __utmz=220538328.1575032778.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _fbp=fb.3.1575032778072.2015568844; __zlcmid=vViivtI2A0uUyX
+[49]HTTP_HOST = 192.168.0.253
+[50]HTTP_REFERER = http://192.168.0.253/clientes/default.asp
+[51]HTTP_USER_AGENT = Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0
+[52]HTTP_UPGRADE_INSECURE_REQUESTS = 1
+There are 1 Session variables
+
+Start - 29/11/2019 10:06:44

@@ -1,0 +1,108 @@
+http://mundogeek.net/archivos/2010/04/21/tutorial-rapido-de-jquery/
+---------------------------
+load 
+---------------------------
+---------------------------
+onLoad
+---------------------------
+se dispara cuando terminamos de cargar toda la pagina
+---------------------------
+onUnLoad
+---------------------------
+se ejectuta cuando se sale de la pagina
+---------------------------
+ready
+---------------------------
+Con este evento sólo habrá que esperar a que se cargue la estructura de la página.
+es un evento que se lanza una vez que todo el DOM de la página ha sido cargado por completo. 
+
+---------------------------
+click
+---------------------------
+Sirve para generar un evento cuando se produce un clic en un elemento de la página.
+---------------------------
+dbclick
+---------------------------
+Para generar un evento cuando se produce un doble clic sobre un elemento. 
+---------------------------
+hover
+---------------------------
+Esta función en realidad sirve para manejar dos eventos, cuando el ratón entra y sale de encima de un elemento. Por tanto espera recibir dos funciones en vez de una que se envía a la mayoría de los eventos. 
+---------------------------
+mousedown
+---------------------------
+Para generar un evento cuando el usuario hace clic, en el momento que presiona el botón e independientemente de si lo suelta o no. Sirve tanto para el botón derecho como el izquierdo del ratón. 
+---------------------------
+mouseup
+---------------------------
+Para generar un evento cuando el usuario ha hecho clic y luego suelta un botón del ratón. El evento mouseup se produce sólo en el momento de soltar el botón. 
+---------------------------
+mouseenter() 
+---------------------------
+Este evento se produce al situar el ratón encima de un elemento de la página. 
+---------------------------
+mouseover
+---------------------------
+El ratón “entra” en el elemento (pasa porencima del elemento)
+---------------------------
+mouseup
+---------------------------
+Soltar el botón que estaba pulsado en el ratón
+----------------------------
+* `blur`
+----------------------------
+----------------------------
+* `change`
+----------------------------
+----------------------------
+* `focus`
+----------------------------
+----------------------------
+* `error`
+----------------------------
+----------------------------
+* `focus`
+----------------------------
+----------------------------
+* `keydown`
+----------------------------
+----------------------------
+* `keypress`
+----------------------------
+----------------------------
+* `keyup`
+----------------------------
+----------------------------
+* `load`
+----------------------------
+----------------------------
+* `mousemove`
+----------------------------
+----------------------------
+* `mouseout`
+----------------------------
+----------------------------
+* `resize`
+----------------------------
+----------------------------
+* `scroll`
+----------------------------
+----------------------------
+* `select`
+----------------------------
+----------------------------
+submit
+----------------------------
+----------------------------
+attr
+
+Show (Mostrar) $(objeto).show("velocidad")
+Hide (Ocultar) $(objeto).hide("velocidad")
+Slide Down (Aparecer hacia abajo) $(objeto).slideDown("velocidad")
+Slide Up (Aparecer hacia arriba) $(objeto).slideUp("velocidad")
+Fade In(Aparecer) $(objeto).fadeIn("velocidad")
+Fade Out(Desaparecer) $(objeto).fadeOut("velocidad")
+Center (Centrar) $(objeto).center("velocidad");
+Fade To(Cambiar transparencia) $(objeto).fadeTo("velocidad", transparencia)
+Animate (Animar) $(objeto).animate("propiedades","velocidad");
+each

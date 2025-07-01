@@ -1,0 +1,9 @@
+medida con variables
+
+
+Diferencia = 
+	var __hola = 1
+	var __chato = 2
+return
+	IF(NOt ISBLANK(__hola, __chao)
+	

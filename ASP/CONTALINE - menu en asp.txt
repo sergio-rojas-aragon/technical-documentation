@@ -1,0 +1,7 @@
+<!-- #include file="./../../remun_l/session.asp" -->
+
+<%
+	libreria(1)
+	estilo
+	barra()
+%>

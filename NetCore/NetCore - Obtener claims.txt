@@ -1,0 +1,6 @@
+desde el controlador
+
+if (User.Identity.IsAuthenticated)
+{
+   var claims = User.Claims.ToList();
+}

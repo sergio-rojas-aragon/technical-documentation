@@ -1,0 +1,17 @@
+function reemplazacaracthtml($s) {
+	$s = ereg_replace("[áàâãª]","&aacute;",$s);
+	$s = ereg_replace("[ÁÀÂÃ]","&Aacute;",$s);
+	$s = ereg_replace("[éèê]","&eacute;",$s);
+	$s = ereg_replace("[ÉÈÊ]","&Eacute;",$s);
+	$s = ereg_replace("[íìî]","&iacute;",$s);
+	$s = ereg_replace("[ÍÌÎ]","&Iacute;",$s);
+	$s = ereg_replace("[óòôõº]","&oacute;",$s);
+	$s = ereg_replace("[ÓÒÔÕ]","&Oacute;",$s);
+	$s = ereg_replace("[úùû]","&uacute;",$s);
+	$s = ereg_replace("[ÚÙÛ]","&Uacute;",$s);
+	$s = str_replace("ñ","&ntilde;",$s);
+	$s = str_replace("Ñ","&Ntilde;",$s);
+	//para ampliar los caracteres a reemplazar agregar lineas de este tipo:
+	//$s = str_replace("caracter-que-queremos-cambiar","caracter-por-el-cual-lo-vamos-a-cambiar",$s);
+	return $s;
+}

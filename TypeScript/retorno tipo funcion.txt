@@ -1,0 +1,19 @@
+https://blog.logrocket.com/async-await-in-typescript/
+
+const myAsync = async (): Promise<Record<string, number | string>> => {
+    await angelMowersPromise
+    const response = await myPaymentPromise
+    return response
+}
+
+    async createColaboradorPilares( colaboradorPilar: ColaboradorPilares, 
+                                    idPilarGraveRel: number, idDocumento: number = 0 )
+                                    : Promise<number>
+                                    {
+
+        let idRegistro : number = 0;
+
+
+        return idRegistro
+                                        
+    }

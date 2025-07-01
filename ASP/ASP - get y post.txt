@@ -1,0 +1,4 @@
+get
+ Request.Querystring ("thename") 
+post
+Request.form ("thename")

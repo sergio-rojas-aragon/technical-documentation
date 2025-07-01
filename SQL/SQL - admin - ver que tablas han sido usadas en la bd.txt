@@ -1,0 +1,11 @@
+
+SELECT OBJECT_NAME(OBJECT_ID) AS DatabaseName, last_user_update, database_id, *
+FROM sys.dm_db_index_usage_stats
+WHERE
+---	OBJECT_NAME(OBJECT_ID) = 'MAT_SISTEMAS'
+
+ database_id = DB_ID( 'bdcomun')
+AND OBJECT_ID=OBJECT_ID('yourTableName')
+
+
+select DB_ID( 'bdcomun')

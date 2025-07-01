@@ -1,0 +1,37 @@
+logname: es el nombre del archivo en donde se echaran los logs.
+Source: es el nombre de la aplicaciuon que hechara los registros en el logname
+
+
+New-EventLog -LogName LogAplicacionesCntln -Source LoggerNet
+New-EventLog -LogName LogAplicacionesCntln -Source ConsultaBancoWebApi
+New-EventLog -LogName ChronosService -Source ChronosGatilladorServices 
+https://stackoverflow.com/questions/446691/how-to-create-windows-eventlog-source-from-command-line
+
+
+Get-EventLog -LogName Application |Select-Object Source -Unique
+Get-EventLog -List
+
+Remove-EventLog -LogName "WindowsServiceContaline"
+Remove-EventLog -Source "ChronosAplicacionesService"
+
+New-EventLog -LogName ChronosApps -Source ChronosAplicacionesService
+New-EventLog -LogName ChronosApps -Source AvisoConsumoFolios
+
+
+s
+InteCtln
+
+Remove-EventLog -Source "ChronosAplicacionesService"
+
+
+Remove-EventLog -Source "IntegraCtlnInt"
+New-EventLog -LogName IntContabilizacion -Source LibContabilizacionDTE
+
+Remove-EventLog -Source "LibContabilizacionDTE"
+
+Get-WmiObject -Class Win32_NTEventLOgFile | Select-Object FileName, Sources
+
+
+New-EventLog -LogName CoreFacturaElectronica -Source AteneaDTEv5
+New-EventLog -LogName CoreFESql -Source AteneaDTEv5Sql
+New-EventLog -LogName AvisoConsumoFolios -Source AvisoConsumoFolios

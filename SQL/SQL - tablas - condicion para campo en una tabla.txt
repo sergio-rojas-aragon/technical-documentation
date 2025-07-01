@@ -1,0 +1,11 @@
+
+alter table CMATERIA -- TABLA
+add constraint CN_COSTO -- NOMBRE
+check -- validacion puede ser casi cualquier cosa que pueda ingresarse en la clausula where
+	-- para crear esta restriccion en una tabla se tiene que comprobar primero que no existan registros
+	-- que violen la restriccion que se esta creando
+	(McostoLab < 600)
+
+	INSERT INTO cmateria VALUES ('1', '1', '1', 630, 0, '32')
+
+	SELECT * FROM cmateria

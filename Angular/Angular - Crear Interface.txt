@@ -1,0 +1,8 @@
+inteface sirve para dar tipo de dato a los elementos por ejemplo de un json.
+dice que tal objeto tiene tales caracteristicas
+
+dentro de la carpeta app crear otra carpeta con el nombre interface
+luego agregar un archivo en que se llama algo.interface.ts
+
+
+//export se agrega para saber que se necesita exportar fuera del archivo.

@@ -1,0 +1,5 @@
+Vé a INICIO
+tipea regedit > enter
+
+cuando entres al editor de registro sigue la siguiente secuencia
+HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main 

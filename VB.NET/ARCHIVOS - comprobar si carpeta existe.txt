@@ -1,0 +1,4 @@
+        'COMPROBAR SI CARPETA EXISTE
+        If Directory.Exists(rutaCnCarpeta) = False Then
+
+        End If

@@ -1,0 +1,13 @@
+para crear una carpeta en el src de angular se tiene que tener en consideracion cual es su funcion dentro del proyecto.
+
+en el caso de shared, carpeta en donde se dejaran los recursos compartidos para la aplicacion
+
+ng g c shared/header --spec=false
+
+ng: angular
+g: generame
+c: componente
+shared/header: carpeta y nombre
+--spec=false: para que no cree el archivo de pruebas unitaria o de integracion.
+
+se tiene que entrar en app/shared/app.module.ts y se tiene que revisar que el HeaderComponent este en las declaraciones

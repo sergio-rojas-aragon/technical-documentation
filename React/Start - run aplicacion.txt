@@ -1,0 +1,7 @@
+dentro del proyecto creado
+
+npm run
+
+npm start 
+	Abrira navegador con la aplicacion andando
+	

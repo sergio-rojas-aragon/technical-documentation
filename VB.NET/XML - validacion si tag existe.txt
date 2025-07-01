@@ -1,0 +1,5 @@
+                        If Not oXMLDoc.SelectNodes("//total_net_amount") Is Nothing Then
+                            valorNeto = oXMLDoc.DocumentElement.Item("net_amount").InnerText()
+                        Else
+                            valorNeto = oXMLDoc.DocumentElement.Item("total_net_amount").InnerText()
+                        End If

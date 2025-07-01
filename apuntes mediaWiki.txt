@@ -1,0 +1,49 @@
+Para editar Sidebar
+
+http://wiki.contaline.cl/index.php/MediaWiki:Sidebar
+
+imagenes
+
+https://www.mediawiki.org/wiki/Help:Images/es
+
+
+Descripcion de modulos
+Procedimientos internos
+Procedimientos de soporte a clientes
+Documentacion de librerias internas
+Notificaciones automaticas
+Procesos automaticos
+
+ <nowiki>
+	jQuery.ajax({
+
+		url: "acciones.php",
+
+		type: "POST",
+
+		async:false,
+
+		data: {
+
+			accion:"5"
+					
+		},
+
+		error: function(jqXHR, textStatus, errorThrown){ 
+
+				//alert("jqXHR.status: "+ jqXHR.status + "- Error Cod. 442"); 
+
+				retorno = ""; 
+
+				sin_error = false;
+				
+		},
+
+		success: function(regreso){
+
+			alert(regreso);
+						
+		}
+
+	});
+ </nowiki>

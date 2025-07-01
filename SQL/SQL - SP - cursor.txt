@@ -1,0 +1,21 @@
+
+se declara cursor y dentro se deja el select a recorrer:
+
+	DECLARE CursorMovimientos CURSOR FOR 
+		select IDMAT_SERIES, count(*) as CantidadOpc  
+		from MAT_SERIES_CONFIG group by IDMAT_SERIES 
+
+se abre cursor, se dejan los resultados en variables y se recorre.
+
+	OPEN CursorMovimientos; 
+	FETCH NEXT FROM CursorMovimientos into @FECHA_EMISION, @idmov_existencias, @IDMATTIPO_MOVIMIENTO, @COD_PRODUCTO, @COSTOUNITARIO, @COSTOLINEA, @PRECIO_UNITARIO, @CANTIDAD, @TOTAL_LINEA  ;  
+	WHILE @@FETCH_STATUS = 0  
+	   BEGIN 
+		
+se pasa al siguiente registro
+	
+			FETCH NEXT FROM CursorMovimientos into @FECHA_EMISION, @idmov_existencias, @IDMATTIPO_MOVIMIENTO, @COD_PRODUCTO, @COSTOUNITARIO, @COSTOLINEA, @PRECIO_UNITARIO, @CANTIDAD, @TOTAL_LINEA  ;  
+	   END;
+
+		CLOSE CursorMovimientos; 
+		DEALLOCATE CursorMovimientos;

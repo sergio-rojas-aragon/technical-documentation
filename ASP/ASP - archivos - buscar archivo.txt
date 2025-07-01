@@ -1,0 +1,8 @@
+	Set fs=Server.CreateObject("Scripting.FileSystemObject")
+	ruta = "d:\REMUN_v2.0\remun_a\" & trim(idempresa_aio) & "\BANCOS\" &session("periodo")&"\"& cadena &""
+	If (fs.FileExists(ruta))=true Then
+      Response.Write("File c:\winnt\cursors\3dgarro.cur exists.")
+	  
+Else
+      Response.Write("File c:\winnt\cursors\3dgarro.cur does not exist.")
+End If

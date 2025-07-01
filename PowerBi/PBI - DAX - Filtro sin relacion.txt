@@ -1,0 +1,5 @@
+Filtro cruzado
+Se utiliza Calculate
+= Calculate( columna de tabla [No. Clientes];
+	CROSSFILTER(Tabla[ColumnaRelacion]; Tabla2[ColumnaRelacion]; /*Dirección */ Both)
+	)

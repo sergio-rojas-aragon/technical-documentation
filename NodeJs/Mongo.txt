@@ -1,0 +1,14 @@
+
+
+
+// se agrega conexion al modelo
+const Usuario = require('../models/usuario');
+
+
+dentro de la funcion
+
+    //se obtiene la instancia del modelo y se envia el modelo json
+    // mongo se encargara de guardar solo los datos que coincidan con su esquema.
+    const usuario = new Usuario(body);
+
+    await usuario.save();

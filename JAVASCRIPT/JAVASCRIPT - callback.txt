@@ -1,0 +1,63 @@
+function GuardaDI(variable1, variable2, callback){
+	$.ajax({
+		url: "paginaProceso_proc.asp",
+		async: true, //asincrono
+		data:{
+			accion: "guardaAlgunaWea",
+			nosePO: variable1,
+			nosePO2: variable2
+		},
+		type:"POST",
+		success :function(resultado){
+			// digamos que esta pagina trae algun valor html
+			// espera a respuesta del proceso asincrono y luego lo envia de vuelta
+			// a donde se llamo la funcion
+			if(resultado=="1"){
+				guardaDetalle(variable1, function(resultadoSegundaFuncion){
+					// aca espera a que la segunda funcion termine
+					if(resultadoSegundaFuncion=="1"){
+						//si guardo ok, retorno true
+						callback(true)
+					}else{
+						//si la wea no funciono:
+						callback(false)
+					}
+				}
+			}else{
+				//como no guardo bien, retorno false:
+				callback(false)
+			}
+		}
+	});
+}
+
+ejecucio
+function GuardaTodo(var1, var2){
+	
+	// se envian las variables por parametro y la funcion para recibir el callback
+	GuardaDI(var1, var2, function(px) { 
+		console.log("GuardaDI resultado:", px);
+
+		//si se guardo correctamente guarda en conta.
+		if(px==true){
+
+			//guarda en conta.
+			GuardarTblcvh(function(gt){
+				console.log("GuardarTblcvh resultado:", gt);
+				if(gt==true){
+					//guardo correctamente.
+					$("#ModalConfirmGuardar").modal("toggle");
+					$("#loadProductoIcon").hide();
+					$("#ModaFinalConf").modal("show");
+					$("#linkAsignarGastos").show();
+
+				}else{
+					//ocurrio un problema.
+
+				}
+
+			});
+		}
+
+	 });
+ }

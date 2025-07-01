@@ -1,0 +1,3 @@
+						observaciones = replace(rs("observaciones"),vbCrLf,".")
+						observaciones = replace(observaciones,Chr(13),".")
+						observaciones = replace(observaciones,Chr(10),".")

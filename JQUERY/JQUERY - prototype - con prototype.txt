@@ -1,0 +1,10 @@
+Agregar esto antes de empezar a programar con jquery
+
+ 
+
+jQuery.noConflict();
+
+ 
+
+y luego en vez de escribir las funciones con $ se reemplaza por jQuery
+

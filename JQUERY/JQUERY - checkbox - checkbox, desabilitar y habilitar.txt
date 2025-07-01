@@ -1,0 +1,8 @@
+habilitar
+jQuery(':checkbox').attr('disabled',''); 
+	jQuery('#ceder').attr('disabled', true); 
+	jQuery('#cancelar').attr('disabled', true); 
+desabilitar
+jQuery(':checkbox').attr('disabled','disabled'); 
+				jQuery('#ceder').attr('disabled', false); 
+				jQuery('#cancelar').attr('disabled', false); 

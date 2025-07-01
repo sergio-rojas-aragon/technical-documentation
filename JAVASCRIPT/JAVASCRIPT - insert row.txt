@@ -1,0 +1,8 @@
+-------------------------------
+insert row
+-------------------------------
+inserta filas desde cualquier posicion
+
+document.elementID.rows.insertRow(param1)
+document.getElementById("elementID").insertRow(param1)
+document.all.elementID.insertRow(param1) // IE only

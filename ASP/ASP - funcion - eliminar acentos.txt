@@ -1,0 +1,1 @@
+Function EliminarAcentos(texto)    Dim i, s1, s2    s1 = "ΑΐΙΘΝΟΣÒΪάαΰθινοσςϊόρη"    s2 = "AAEEIIOOUUaaeeiioouunc"    If Len(texto) <> 0 Then        For i = 1 To Len(s1)            texto = Replace(texto, Mid(s1,i,1), Mid(s2,i,1))        Next    End If        EliminarAcentos = textoEnd Function	

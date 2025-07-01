@@ -1,0 +1,3 @@
+git commit -am "agregamos a nick fixes #5 "
+closes
+resolves

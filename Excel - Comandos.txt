@@ -1,0 +1,26 @@
+Ctrl+Mayús+:					Inserta la hora actual.
+
+Ctrl+barra espaciadora 			selecciona una columna completa de una hoja de cálculo.
+
+Mayús+barra espaciadora 		selecciona una fila completa de una hoja de cálculo.
+
+Ctrl+Mayús+barra espaciadora	selecciona toda la hoja de cálculo.
+
+
+
+Insertar filas.
+
+Una vez que hayas realizado la selección de la fila, presiona la combinación de teclas CTRL +  (signo más). Entonces aparecerá una nueva fila arriba de la seleccionada.
+
+#5 Insertar columnas.
+
+Una vez que hayas realizado la selección de la columna, presiona la combinación de teclas CTRL +  (signo más). Entonces aparecerá una nueva columna a la izquierda de la seleccionada.
+
+#7 Seleccionar un rango o tabla.
+
+Con las flechas direccionales te colocas en cualquiera de las celdas del rango o tabla y entonces presionas la combinación CTRL * . Verás cómo el rango completo se seleccionará.
+
+ALT+O+SO+N 			quitar color de fondo de celda.
+
+F2					editar celda sin borrar el contenido que ya tiene
+

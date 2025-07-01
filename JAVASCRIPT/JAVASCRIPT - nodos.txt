@@ -1,0 +1,54 @@
+------------------------------------------------
+nodos javascript
+------------------------------------------------
+-envio de pregunta
+
+	if ((ser == "0142") || (ser == "0151") || (ser == "0159")){
+		// direccion e la pagina que se va a hacer la consulta
+		ruta = "xmlverificador_contrato.php?veri=50&interno="+numeroI;
+		fuente = new ActiveXObject("Microsoft.XMLDOM");
+		fuente.async= false;
+		// si lansa false significa que no la leyo
+		fuente.load(ruta);
+		nodo = fuente.documentElement;
+		//alert (nodo.tagName);
+		if (nodo.tagName=="OK"){
+			//imprime el valor del nodo
+			var auxiliar = nodo.childNodes[0].text;
+		}
+	}
+-recepcion y respuesta de solicitud
+--cabecera
+	<?
+		session_start();
+		$veri=$_GET[veri];
+	?>
+acceso a la funcion a la que es llamada	
+	<?
+		if ($veri==50){
+			// importa el archivo de conexion
+			require("abredb.php");
+			require("abresql.php");
+			$ninterno = $_GET[interno];
+			echo "<?xml version='1.0' encoding='ISO-8859-1'?>";
+			$sql = "select * from fact_det_contrato_periosidad where n_interno = '$ninterno'";
+			$consu=pg_query($conexion,$sql);
+			while ($tabla=pg_fetch_array($consu)){
+				$numprod = trim($tabla[ninprod]);
+				$sql2 = "select impuesto from fact_producserv where ninprod = '$numprod'";
+				$consu2 = pg_query($conexion,$sql2);
+				if (pg_num_rows($consu2) != 0 ){
+					// ejecuta la consulta sql
+					$tabla2 = pg_fetch_array($consu2);
+					$sql3 = "delete from fact_det_contrato_periosidad where n_interno = '$ninterno' and ninprod = '$numprod'";
+					//guarda el resultado en una variable
+					$impuesto = $tabla2[impuesto];
+					if ($impuesto == '1'){
+						$sql3 = "delete from fact_det_contrato_periosidad where n_interno = '$ninterno' and ninprod = '$numprod'";
+						pg_query($conexion,$sql3);
+					}
+				}
+			}
+			echo "<OK>$sql3</OK>";
+		}
+	?>

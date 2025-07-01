@@ -1,0 +1,8 @@
+Para montar paginas de angular
+
+
+INSTALACION
+npm i -g http-server@0.9.0
+
+MONTAR SERVIDOR
+http-server -o

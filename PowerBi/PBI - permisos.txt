@@ -1,0 +1,11 @@
+se da permisos por rol en modelado=>administrar roles
+nombre de rol
+seleccionar tabla
+expresión dax, por ejemplo si se quiere que se vea Francia [Pais]=Francia
+
+comprobar
+modelado=>ver como roles
+
+En power bi online se configura el permiso en los datos y se busca "Seguridad"
+	Se asigna personas para el rol
+

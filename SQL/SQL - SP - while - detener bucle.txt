@@ -1,0 +1,8 @@
+
+while @vcount <= 10
+begin
+	
+	//saca del bucle si la condicion se cumple.
+	if @vcount = 5 break
+	
+end

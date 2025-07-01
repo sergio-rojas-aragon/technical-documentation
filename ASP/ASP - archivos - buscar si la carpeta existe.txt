@@ -1,0 +1,5 @@
+		set fs = createobject("scripting.filesystemobject")
+		if fs.FolderExists("d:\REMUN_v2.0\remun_a\" & trim(idempresa_aio) & "\BANCOS\" &session("periodo")&"")=false then
+		'	response.write "no lo encontro"
+		response.write "	<tr><td align='center'>Sin Archivos Creados para este Periodo</td></tr>"
+		end if

@@ -1,0 +1,4 @@
+-------------------------------
+innerHTML
+-------------------------------
+Retorna el texto completo y también el código HTML del elemento. Asignando un nuevo texto se reemplazará completamente el anterior y cualquier referencia HTML contenida en el nuevo texto será interpretada y mostrada adecuadamente. 

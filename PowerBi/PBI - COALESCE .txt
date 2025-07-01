@@ -1,0 +1,13 @@
+
+
+Devuelve la primera expresión que no se evalúa como BLANK. Si todas las expresiones se evalúan como BLANK, se devuelve BLANK.
+
+EVALUATE { COALESCE(BLANK(), 10, DATE(2008, 3, 3)) }
+Devuelve 10, que es la primera expresión que no se evalúa como BLANK.
+
+= COALESCE(SUM(FactInternetSales[SalesAmount]), 0)
+Devuelve la suma de todos los valores de la columna SalesAmount de la tabla FactInternetSales o 0. Esto se puede usar para convertir BLANK valores de ventas totales en 0.
+
+
+
+https://learn.microsoft.com/es-mx/dax/coalesce-function-dax

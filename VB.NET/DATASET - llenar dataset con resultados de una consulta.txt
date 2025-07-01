@@ -1,0 +1,21 @@
+ Imports 
+Imports System.Data
+Imports System.Data.SqlClient
+ 
+variable de conexion
+
+strConexionDesarrollo = "Data Source=192.168.1.219;Initial Catalog=contaline;User Id=SA;Password=MiA4401;"
+	
+llenar data set con resultados de una consulta
+	
+		Dim sql_conexion As New SqlConnection(strConexionDesarrollo)
+        Dim consultaBD As String = "select sercue, cod_sii from tbseries_sii where electronica = '1'"
+
+        Dim sql_dataadapter As New SqlDataAdapter(consultaBD, sql_conexion)
+
+        sql_dataadapter.FillSchema(variables.SeriesDataset, SchemaType.Source, "SeriesSII")
+        sql_dataadapter.Fill(variables.SeriesDataset, "SeriesSII")
+
+		
+		
+		

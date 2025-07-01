@@ -1,0 +1,58 @@
+npm i express-validator
+
+const { check } = require('express-validator');
+
+router.post('/', [
+    check('nombre', 'llene el nombre').not().isEmpty(),
+    check('password', 'debe ir un password valido').isLength({ min: 6 }),
+    check('correo', 'el correo no es valido').isEmail(),
+    check('rol', 'no esta permitido').isIn(['ADMIN_ROLE', 'USER_ROL'])
+],  usuariosPost );
+
+
+en el controlador
+
+const usuariosPost = async (req, res = response) => {
+
+    // validacion de express validator
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+        return res.status(400).json(errors);
+    }
+	
+reutilizando
+
+se crea carpeta middlewares y se crea un archivo json
+
+
+const { validationResult } = require('express-validator');
+
+
+// next: si se termina este middleware, que sigua con el siguiente
+const validarCampos = ( req, res, next ) => {
+
+    // validacion de express validator
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+        return res.status(400).json(errors);
+    }
+    next();
+}
+
+module.exports = {
+    validarCampos
+}
+
+
+despues se implementa:
+
+
+
+
+router.post('/', [
+    check('nombre', 'llene el nombre').not().isEmpty(),
+    check('password', 'debe ir un password valido').isLength({ min: 6 }),
+    check('correo', 'el correo no es valido').isEmail(),
+    check('rol', 'no esta permitido').isIn(['ADMIN_ROLE', 'USER_ROL']),
+    validarCampos
+],  usuariosPost );

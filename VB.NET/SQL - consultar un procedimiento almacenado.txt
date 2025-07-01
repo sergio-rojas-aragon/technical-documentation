@@ -1,0 +1,84 @@
+    Public Function consulta_saldoXMLContaline(ByVal usuario As String, ByVal password As String, ByVal periodo As String, ByVal empresa As String, ByVal lin As String, ByVal cc As String, ByVal cta As String) As XmlDocument
+
+        'Setup SQL Command'
+        Dim txt As String = ""
+        Dim string_valida_datos As String = ""
+        Dim doc As New XmlDocument
+
+        string_valida_datos = validaDatos(periodo, empresa, lin, cc, cta)
+
+        If string_valida_datos <> "" Then
+            txt = txt & "<Retorno>"
+            txt = txt & "<error>1</error>"
+            txt = txt & "<errorLista>"
+            txt = txt & string_valida_datos
+            txt = txt & "</errorLista>"
+            txt = txt & "</Retorno>"
+            doc.LoadXml(txt)
+
+            Return doc
+        End If
+
+        If ValidaUsuario(usuario, password, empresa) = False Then
+            txt = txt & "<Retorno>"
+            txt = txt & "<error>1</error>"
+            txt = txt & "<errorLista>"
+            txt = txt & "<errorDescripcion>Nombre de usuario o contraseña incorrecta</errorDescripcion>"
+            txt = txt & "</errorLista>"
+            txt = txt & "</Retorno>"
+            doc.LoadXml(txt)
+
+            Return doc
+        End If
+
+
+
+        Dim SQL_COMAND As New SqlCommand("proc_saldos_ln")
+
+        Dim connection As New SqlConnection(STRConexion.traeString())
+        SQL_COMAND.Connection = connection
+        SQL_COMAND.CommandType = CommandType.StoredProcedure
+        SQL_COMAND.Parameters.Add("@periodo", SqlDbType.VarChar)
+        SQL_COMAND.Parameters.Add("@empresa", SqlDbType.VarChar)
+        SQL_COMAND.Parameters.Add("@lin", SqlDbType.VarChar)
+        SQL_COMAND.Parameters.Add("@cc", SqlDbType.VarChar)
+        SQL_COMAND.Parameters.Add("@cta", SqlDbType.VarChar)
+
+        'proc_saldos_ln(2012, 297, 1, 1, 4211301)
+        SQL_COMAND.Parameters("@periodo").Value = periodo
+        SQL_COMAND.Parameters("@empresa").Value = empresa
+        SQL_COMAND.Parameters("@lin").Value = lin
+        SQL_COMAND.Parameters("@cc").Value = cc
+        SQL_COMAND.Parameters("@cta").Value = cta
+
+        connection.Open()
+
+        Dim reader As SqlDataReader = SQL_COMAND.ExecuteReader()
+        txt = txt & "<Retorno>"
+        txt = txt & "<error>0</error>"
+        txt = txt & "<Resultado>"
+        If reader.HasRows Then
+            While reader.Read()
+                txt = txt & "<saldo>"
+
+                txt = txt & "<cuenta>" & reader("cuenta") & "</cuenta>"
+                txt = txt & "<ccosto>" & reader("cc") & "</ccosto>"
+                txt = txt & "<lineanegocio>" & reader("m4") & "</lineanegocio>"
+                txt = txt & "<anio>" & reader("año") & "</anio>"
+                txt = txt & "<mes>" & reader("mes") & "</mes>"
+                txt = txt & "<debe>" & reader("debe") & "</debe>"
+                txt = txt & "<haber>" & reader("haber") & "</haber>"
+                txt = txt & "</saldo>"
+            End While
+        Else
+            txt = txt & ""
+
+        End If
+        txt = txt & "</Resultado>"
+        txt = txt & "</Retorno>"
+        doc.LoadXml(txt)
+
+        Return doc
+
+
+    End Function

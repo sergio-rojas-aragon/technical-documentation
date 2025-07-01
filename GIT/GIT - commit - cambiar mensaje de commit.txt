@@ -1,0 +1,8 @@
+se selecciona el ultimo elemento
+
+git rebase - HEAD~1
+
+en el editor de texto cambiar el pick por reword
+escape+:wq
+
+se abrira otra vez el editor de texto y ahi se cambia el mensaje

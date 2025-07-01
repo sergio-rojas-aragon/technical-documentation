@@ -1,0 +1,7 @@
+
+
+declare @variable1 decimal, @variable2 decimal
+
+
+
+

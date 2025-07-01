@@ -1,0 +1,4 @@
+-------------------------------
+outerText
+-------------------------------
+Funciona de forma similar a innerText pero cualquier texto asignado reemplazara el elemento completamente. 

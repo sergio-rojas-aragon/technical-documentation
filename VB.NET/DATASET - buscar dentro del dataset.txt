@@ -1,0 +1,22 @@
+    Public Shared Function traeSercueCodigo(ByVal tipo As Double, ByVal SerieCodSII As String)
+        Dim retorno As String = ""
+        Dim TablaSeries As DataTable
+        TablaSeries = variables.SeriesDataset.Tables("SeriesSII")
+
+        Dim drCurrent As DataRow
+        For Each drCurrent In TablaSeries.Rows
+            If tipo = 1 Then
+                If drCurrent("sercue").ToString() = SerieCodSII Then
+
+                    Return drCurrent("cod_sii").ToString()
+                End If
+            End If
+            If tipo = 2 Then
+                If drCurrent("cod_sii").ToString() = SerieCodSII Then
+
+                    Return drCurrent("sercue").ToString()
+                End If
+            End If
+        Next
+        Return "0"
+    End Function

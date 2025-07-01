@@ -1,0 +1,8 @@
+        Dim fecha As DateTime = DateTime.Now.AddDays(-1)
+        Dim FechaInicio As String = fecha.ToString("yyyy-MM-dd")
+        Dim FechaTermino As String = fecha.ToString("yyyy-MM-dd")
+		
+FORMATOS DE FECHAS
+http://msdn.microsoft.com/en-us/library/8kb3ddd4%28v=vs.110%29.aspx
+
+

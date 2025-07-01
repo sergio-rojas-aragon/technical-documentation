@@ -1,0 +1,1 @@
+select * from tbcontacto_obs where id_tbcontacto = 59 order by year(convert(datetime,fecha_asignacion,103)) desc, month(convert(datetime,fecha_asignacion,103)) desc, day(convert(datetime,fecha_asignacion,103)) desc

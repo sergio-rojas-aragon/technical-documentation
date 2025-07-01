@@ -1,0 +1,5 @@
+inserta fecha y hora de insercion o modificacion en el campo ***
+
+	- esto se hace al modificar o crear una tabla en sql server
+	- se tiene que agregar lo siguiente en la opcion "Valor o Enlace predeterminado":
+			(getdate())

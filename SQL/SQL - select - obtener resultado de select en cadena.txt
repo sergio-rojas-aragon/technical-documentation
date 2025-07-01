@@ -1,0 +1,24 @@
+	-- Declare the return variable here
+	DECLARE @IDMOV_EXISTENCIAS decimal(18)
+	declare @cadena nvarchar(MAX)
+	-- Add the T-SQL statements to compute the return value here
+
+	set @cadena = N'select @IDMOV_EXISTENCIA=IDMOV_EXISTENCIAS from TBMOV_EXISTENCIAS 
+					 where IDEMPRESA = ' +convert(varchar,@idempresa)+ ' 
+						and SERIE = _/_'+ @SERIE +'_/_ 
+						and FOLIO = ' +convert(varchar,@FOLIO)+ ' 
+						and IDPRODUCTO = ' +convert(varchar,@IDPRODUCTO)+ ' '
+
+
+	if @LINEA <> 0
+	begin
+		set @cadena = @cadena + ' AND LINEA = ' +convert(varchar,@LINEA)+ ' '
+	end
+
+	set @cadena = replace(@cadena,'_/_','''')
+
+	exec sp_executesql @cadena, N'@IDMOV_EXISTENCIA decimal(18) output', @IDMOV_EXISTENCIA = @IDMOV_EXISTENCIAS output
+
+
+	-- Return the result of the function
+	select @IDMOV_EXISTENCIAS as IDMOV_EXISTENCIAS

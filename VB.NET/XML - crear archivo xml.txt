@@ -1,0 +1,47 @@
+    Function CreaTxt(ByVal texto As String) As String
+
+        Dim sRenglon As String = Nothing
+        Dim strStreamW As Stream = Nothing
+        Dim strStreamWriter As StreamWriter = Nothing
+        Dim ContenidoArchivo As String = Nothing
+        ' Donde guardamos los paths de los archivos que vamos a estar utilizando ..
+        Dim PathArchivo As String = ""
+
+
+        Dim i As Integer
+
+        Try
+
+            If Directory.Exists("C:\Capeta") = False Then ' si no existe la carpeta se crea
+                Directory.CreateDirectory("C:\carpeta")
+            End If
+
+            Windows.Forms.Cursor.Current = Cursors.WaitCursor
+            PathArchivo = "C:\carpeta\Archivo.xml" ' Se determina el nombre del archivo con la fecha actual
+
+            'verificamos si existe el archivo
+
+            If File.Exists(PathArchivo) Then
+                strStreamW = File.Open(PathArchivo, FileMode.Open) 'Abrimos el archivo
+            Else
+                strStreamW = File.Create(PathArchivo) ' lo creamos
+            End If
+
+            strStreamWriter = New StreamWriter(strStreamW, System.Text.Encoding.Default) ' tipo de codificacion para escritura
+
+
+            'escribimos en el archivo
+
+            strStreamWriter.WriteLine(texto)
+
+
+            strStreamWriter.Close() ' cerramos
+
+        Catch ex As Exception
+            MsgBox("Error al Guardar la ingormacion en el archivo. " & ex.ToString, MsgBoxStyle.Critical, Application.ProductName)
+            strStreamWriter.Close() ' cerramos
+        End Try
+
+        Return PathArchivo
+
+    End Function

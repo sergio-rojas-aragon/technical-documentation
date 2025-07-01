@@ -1,0 +1,14 @@
+				jQuery.ajax({
+					url: "/clientes/bloqueos/proc_bloqueos.asp",
+					type: "POST",
+					async:false,
+					dataType: "xml",
+					success: function(regreso){
+						jQuery(regreso).find("paginas").each(function(){
+							var TOP = jQuery(this).find("TOP").text();
+							var MAIN = jQuery(this).find("MAIN").text();
+							var MENU = jQuery(this).find("MENU").text();
+						});
+
+					}
+				}); 

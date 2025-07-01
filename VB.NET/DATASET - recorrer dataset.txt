@@ -1,0 +1,14 @@
+se tiene que llenar el dataset
+	llenaDataSeries()
+
+recorrer dataset
+
+		
+     Dim TablaSeries As DataTable
+        TablaSeries = variables.SeriesDataset.Tables("SeriesSII")
+
+        Dim drCurrent As DataRow
+        For Each drCurrent In TablaSeries.Rows
+            prueba = drCurrent("sercue").ToString()
+
+        Next

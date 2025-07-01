@@ -1,0 +1,10 @@
+http://getbootstrap.com/javascript/#modals
+
+Ejemplo
+http://stacktips.com/tutorials/bootstrap/vertical-horizontal-and-inline-form-example-in-bootstrap
+
+
+
+---
+PARA MOSTRAR VIA JS
+$('#myModal').modal('show')

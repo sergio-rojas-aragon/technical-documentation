@@ -1,0 +1,1 @@
+SELECT UPPER(ProductName) as ProductName FROM Products

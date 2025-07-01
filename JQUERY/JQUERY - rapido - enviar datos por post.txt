@@ -1,0 +1,7 @@
+			jQuery.post("grelinmo_clientes.php",	{ 
+				accion:"6"
+				},
+				function(data){
+						alert(data);
+					}
+				})	

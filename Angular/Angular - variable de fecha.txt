@@ -1,0 +1,10 @@
+se abre el archivo ts del html en donde se va a crear la variable.
+
+
+se agrega una nueva propiedad (justo antes del constructor):
+
+anio: number = new Date().getFullYear();
+
+luego se va al html y se agrega:
+
+

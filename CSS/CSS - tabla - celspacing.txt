@@ -1,0 +1,5 @@
+en html:
+cellspacing="0"
+
+en css:
+border-spacing: 0;

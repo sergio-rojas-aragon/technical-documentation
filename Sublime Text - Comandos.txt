@@ -1,0 +1,96 @@
+A file Icon
+AdvancedNewFile
+Agila Theme
+Alignment
+ASP Snippets
+Comment-Snippets
+Console Exec
+Console Wrap
+Emmet
+GitGutter
+Javascript Completions
+JSHint
+Markdown Extended
+MarkdonwLivePreview
+PyV8
+Terminal
+Text Highlighter
+Theme - Soda
+Theme - SoDaReloaded
+zzz a File Icon zzz
+
+{
+	"color_scheme": "Packages/Agila Theme/Agila Neon Monocyanide.tmTheme",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Terminal",
+		"Vintage",
+		"zzz A File Icon zzz"
+	],
+	"show_encoding": true,
+	"theme": "Adaptive.sublime-theme"
+}
+
+
+
+Nueva pestaña			Ctrl + N
+Nueva ventana			Ctrl + Shift + N
+
+Paleta de comandos		Ctrl + Shift + P
+Barra lateral			Ctrl + K + B
+
+Dividir el código		alt + Shift + 1
+Seleccionar palabra(s)	Ctrl + D
+
+Seleccionar línea(s)		Ctrl + L
+Selección dentro de llaves	Ctrl + Shift + M
+
+Selección múltiple			Ctrl + Click
+
+Búsqueda de funciones		Ctrl + R
+Con esta opción vamos a poder hacer una búsqueda de todas las funciones en nuestro código.
+
+Texto en mayúsculas			Ctrl + KU
+Este comando transforma el texto que hayamos seleccionado a mayúsculas.
+
+Texto en minúsculas			Ctrl + KL
+Este comando transforma el texto que hayamos seleccionado a minúsculas.
+
+Indentación multiple (retroseso)	Shift + Tab
+Funciona de forma contraría a tab y hace que el texto que hayamos seleccionado retroceda.
+
+Obtén Una Lista de Proyectos Guardados  ALT-CTRL-P.
+Para acceder rápidamente a una lista de proyectos previos usa el atajo
+
+Copiar la Línea Actual ALT-SHIFT-D
+Haz clic en la línea que quieres copiar y después presiona 
+
+Instalar paquete: Pulsar Ctrl + Shift + P
+
+html:5‘ y pulsando TAB
+en archivo html, crea estructura completa
+
+Generar texto Lorem Ipsum: Escribir ‘Lorem‘ y pulsar TAB
+
+repeticion cantidad de veces el mismo texto
+‘p*2>Lorem‘ y pulsamos TAB
+
+Buscar selectores y funciones: CMD + R y escribir el nombre de la clase o ID correspondiente.
+
+Pegar respetando sangrías: Copiamos normalmente. Al pegar usamos CMD + Shift + V.
+
+GutterColor
+
+Si sueles escribir archivos de estilos CSS con frecuencia, este paquete te será de mucha ayuda, puesto que se encarga de colocar un pequeño círculo a la izquierda de la línea en la que has colocado un color hexadecimal.
+
+ColorPicker
+
+También para diseñadores, este paquete permite abrir un panel de elección de color al pulsar la combinación de teclas CTRL+SHIFT+C. Al seleccionar un color y pulsar aceptar, nos establecerá el código hexadecimal, ahorrándonos el tener que utilizar un programa externo para tal fin.
+
+Pantalla dividida mismo archivo
+“File” -> “New View into File”
+Make a second view (Alt+Shift+2 or View -> Layout -> Columns: 2)
+
+MarkdownLivePreview
+You can choose to enable MarkdownLivePreview by pressing alt+m or selecting in the command palette MarkdownLivePreview: Edit Current File. Note that you need to be editing (simply having the focus on) a markdown file. Because Markdown Extended did a good job, it's compatible with this plugin.

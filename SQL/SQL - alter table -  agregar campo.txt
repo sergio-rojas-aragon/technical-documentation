@@ -1,0 +1,4 @@
+ llena con null
+ 
+ alter table TBDOCUMENTO_ELECTRONICO
+  add ACUSE_GLOSA_SII varchar(150);

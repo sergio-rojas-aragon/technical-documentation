@@ -1,0 +1,9 @@
+       'Dim mCodigo = XMLDOC.Attributes.GetNamedItem("status").Value
+        Dim Lector = New System.Xml.XmlTextReader("data.xml")
+
+        Lector.ReadStartElement("root") 'lee el nodo inicial, en este caso "Menu contiene el nodo que me interesa.
+
+        Lector.ReadStartElement("status") ' he aquí el nodo que me interesa.
+
+
+        MsgBox(Lector.ReadString())

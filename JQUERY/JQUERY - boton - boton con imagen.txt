@@ -1,0 +1,2 @@
+agregar el estilo a un spam
+<span class='ui-icon ui-icon-closethick blue'></span>

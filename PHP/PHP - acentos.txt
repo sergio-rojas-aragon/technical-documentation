@@ -1,0 +1,6 @@
+depende de la codificacion de la base de datos.
+
+se tiene que insertar con acentos.
+
+utf8_encode
+utf8_decode

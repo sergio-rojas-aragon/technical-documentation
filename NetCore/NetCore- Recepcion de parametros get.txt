@@ -1,0 +1,29 @@
+Ejemplo de como se accederia
+localhost/api/listado/5
+
+[HttpGet("{id}")]
+public IEnumerable<WeatherForecast> Get( int id)
+
+
+
+Ejemplo de como se accederia
+localhost/api/listado/5/sergio
+
+[HttpGet("{id}/{param2}")]
+public IEnumerable<WeatherForecast> Get( int id, string param2)
+
+
+
+Ejemplo de como se accederia con uno o dos parametros, el segundo parametro es opcional
+localhost/api/listado/5/
+
+[HttpGet("{id}/{param2?}")]
+public IEnumerable<WeatherForecast> Get( int id, string param2)
+
+
+
+Ejemplo de como se accederia con uno o dos parametros, el segundo parametro si no viene, se deja un valor por defecto
+localhost/api/listado/5/
+
+[HttpGet("{id}/{param2=sergio}")]
+public IEnumerable<WeatherForecast> Get( int id, string param2)

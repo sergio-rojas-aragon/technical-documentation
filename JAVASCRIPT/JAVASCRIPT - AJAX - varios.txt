@@ -1,0 +1,47 @@
+Documentacion Mia
+
+Ajax
+
+// Llamar la funcion desde el input a travez del keypress
+onKeyPress='clieprov(13)'
+
+// se crea la funcion que va a ser llamada a travez del keypress
+function clieprov(numero){
+// valida si la tecla que se presiona es enter
+	if(window.event.keyCode==9 || window.event.keyCode==13){
+    	if(numero==13){
+// validacion del navegador, aun no completa (revisar esto despues)
+			peticion = new XMLHttpRequest();
+			function basico() {
+				alert ("entro a la funcion");
+				if(window.XMLHttpRequest) {
+					peticion = new XMLHttpRequest();
+				}
+				else if(window.ActiveXObject) {
+					peticion = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+			}
+// revisar la llamada de la funcion
+			window.onload = basico;	
+// esto indica que cuando recibe respuesta del servidor se debe ejecutar la funcion contenido
+			peticion.onreadystatechange = contenido;
+// se crea la peticion indicando el metodo, a la url a la cual se realiza la peticion y el velor true
+			peticion.open('GET', "cambiar.php?accion=BUSCAR&aux="+document.form1.ruttitular.value, true);
+// se envia la peticion		
+			peticion.send(null);
+// funcion contenido
+			function contenido() {
+// ready state indica si se a recibido respuesta, 0 indica que no se pudo incializar
+// 4 indica que se realizo correctamente
+				if(peticion.readyState == 4) {
+// se valida si la respuesta es correcta, 200 indica que es correcta
+					if(peticion.status == 200) {
+// se muestra el contenido de la respuesta
+						alert(peticion.responseText);
+					}
+				}
+			}				
+		}
+	}
+	
+}

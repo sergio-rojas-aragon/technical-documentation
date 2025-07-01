@@ -1,0 +1,1 @@
+		if(jQuery('#otros_cabecera').is(':hidden') == true){			jQuery( "#otros_cabecera" ).show("blind", { direction: "vertical" }, 1000);		}else{			jQuery( "#otros_cabecera" ).hide("blind", { direction: "vertical" }, 1000);		}

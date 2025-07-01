@@ -1,0 +1,6 @@
+desabilitar
+jQuery("#codcli").attr('disabled','disabled'); 
+.attr('disabled', false);
+
+habilitar
+jQuery('#folioReferencia').attr('disabled', false);

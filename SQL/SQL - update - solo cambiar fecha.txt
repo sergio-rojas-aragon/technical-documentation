@@ -1,0 +1,1 @@
+update tblcvh set fecemi=dateadd(year, (2020 - year(fecemi)), FECEMI) where idempresa='3458' and procedencia in ('5','6')

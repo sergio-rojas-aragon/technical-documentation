@@ -1,0 +1,8 @@
+		function sacaracento(texto){
+			texto = texto.replace(/[ÀÁÄáàä]/gi,'a');
+			texto = texto.replace(/[ÈÉËèéë]/gi,'e');
+			texto = texto.replace(/[ÌÍÏìíï]/gi,'i');
+			texto = texto.replace(/[ÒÓÖòóö]/gi,'o');
+			texto = texto.replace(/[ÙÚÜùúü]/gi,'u');
+			return texto;
+		}

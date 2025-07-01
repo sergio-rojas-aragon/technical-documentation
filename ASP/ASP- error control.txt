@@ -1,0 +1,38 @@
+<%
+ConnectionString = "DBQ=c:\inetpub\wwwroot\mysite\data\mydatabase.mdb;Driver={Microsoft Access Driver (*.mdb)};"
+ 
+'*** This code checks the ConnectionString info you entered and reports back the error code if it is not ok
+Err.Clear
+On Error Resume Next
+Set ConnPasswords = Server.CreateObject("ADODB.Connection")
+ConnPasswords.Open ConnectionString
+ 
+If Err.Number <> 0 Then
+ 
+  Response.Write (Err.Description& "<br><br>")
+  
+  Response.Write("This means there is most likely a problem with the" & vbCrLf)
+  Response.Write("""ConnectionString"" info that you specified.<br>" & vbCrLf)
+  Response.End
+ 
+End If
+On Error GoTo 0
+
+
+---------------------------------------
+%>
+
+		Err.Clear
+		On Error Resume Next	
+			Conexion.Execute(sql)			 
+		If Err.Number <> 0 Then
+			mensaje = ""
+			mensaje = mensaje & "error en accion = conecta_facturacion" & vbCrLf
+			mensaje = mensaje & "descripcion: "& Err.Description & vbCrLf
+			mensaje = mensaje & "fecha: " & now & vbCrLf
+			mensaje = mensaje & "idempresa: " & session("idempresa") & vbCrLf
+			mensaje = mensaje & "pagina: PROCESOSFACTURACION.ASP" & vbCrLf
+			envia_error mensaje,"",sql
+			response.write "1-/-/-/-Error en ingreso de datos."	
+		End If
+		On Error GoTo 0		

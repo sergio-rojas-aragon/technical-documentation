@@ -1,0 +1,38 @@
+    $( "#rut" ).autocomplete({
+        source: "IngresoDI_proc.asp?accion2=traeClientes",
+         minLength: 2,
+
+        select: function( event, ui ) {
+
+            if(ui.item.nombres!= ""){
+                $("#rut").val("");
+                $("#nombre").val("");
+                $("#nombre").html(ui.item.nombres);
+                $("#glosaDoc").focus();  
+            }
+
+        },
+        search: function(event, ui){
+            $("#loadProducto").show();
+        },
+        response: function(event, ui) {
+            $('#loadProducto').hide();
+
+            // valor si no encuentra el item.
+            if (!ui.content.length) {
+                var noResult = { value:"",label:"Cliente no encontrado", nombres : "", direccion: "" };
+                ui.content.push(noResult);
+                //$("#message").text("No results found");
+            } 
+        }
+    }).focus(function() {
+        $(this).autocomplete("search", $(this).val().replace("-", ""));
+
+
+    }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+  
+    return $( "<li style='background-color: white;'>" )
+        .append( "<div><b>" + item.label + "</b><br><div class='text-capitalize'><em>Nombres: " + item.nombres + ", DIrección: "+ item.direccion +"</em></div></div>" )
+                .appendTo( ul );
+
+    }; 

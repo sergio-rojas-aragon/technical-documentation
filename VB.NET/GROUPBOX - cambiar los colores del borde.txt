@@ -1,0 +1,11 @@
+    Private Sub GroupBox5_Paint(sender As Object, e As PaintEventArgs) Handles GroupImpresoras.Paint, GroupBox6.Paint, GroupBox4.Paint, GroupBox3.Paint, GroupBox2.Paint, GroupBox1.Paint
+        Dim gfx As Graphics = e.Graphics
+        Dim p As Pen = New Pen(Color.DarkGray, 1)
+
+        gfx.DrawLine(p, 0, 5, 0, e.ClipRectangle.Height - 2)
+        gfx.DrawLine(p, 0, 5, 5, 5)
+        gfx.DrawLine(p, 120, 5, e.ClipRectangle.Width - 2, 5)
+        gfx.DrawLine(p, e.ClipRectangle.Width - 2, 5, e.ClipRectangle.Width - 2, e.ClipRectangle.Height - 2)
+        gfx.DrawLine(p, e.ClipRectangle.Width - 2, e.ClipRectangle.Height - 2, 0, e.ClipRectangle.Height - 2)
+
+    End Sub

@@ -1,0 +1,28 @@
+	function rutverificador(cc_rut){
+		var pos = cc_rut.indexOf("-");
+		if( pos == -1 )
+			return false;
+		var valRut = cc_rut.substring(0,pos);
+		var digito = cc_rut.substring(pos+1,cc_rut.length);
+		var factor = 2;
+		var suma = 0;
+		for( var i = valRut.length-1; i >= 0; i -= 1)
+			{
+			var ch = valRut.substring(i, i + 1);
+			if (ch < "0" || ch > "9")
+				return false;
+			suma = parseInt(ch) * factor + suma;
+			factor = factor + 1;
+			if( factor == 8)
+				factor = 2;
+			}
+		suma = suma % 11;
+		suma = 11 - suma;
+		if( suma == 11 )
+			suma = 0;
+		if( suma == 10 && ( digito == "k" || digito == "K" ))
+			return true;
+		else if( suma == parseInt(digito) )
+			return true;
+		return false;
+	}

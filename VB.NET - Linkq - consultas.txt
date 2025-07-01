@@ -1,0 +1,13 @@
+
+                        Dim ref = From lineadet As DtoReferenciaDte In objDte.ListadoReferencia
+                                  Where lineadet.CodRef <> ""
+                                  Select lineadet
+                        Dim a As String
+                        For Each refconelimina In ref
+                            a = refconelimina.CodRef
+
+
+                        Next
+
+                        Dim b = objDte.ListadoReferencia.Single(Function(c) c.CodRef <> "").CodRef
+                        Dim lineaConRef = objDte.ListadoReferencia.Single(Function(c) c.CodRef <> "")

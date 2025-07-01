@@ -1,0 +1,22 @@
+
+retorno de clase rigido, es posible pero se pierde un poco de flexibilidad al manejar el retorno
+
+[HttpGet("{id}/{param2?}")]
+public Autor Get( int id, string param2)
+
+
+
+ActionResult permite retornar resultados http genericos
+como se muestra en el ejemplo se puede retornar valores http, o valores que entrega la clase autor
+
+[HttpGet("{id}/{param2?}")]
+public ActionResult<Autor> Get( int id, string param2)
+
+
+
+IActionResult permite retornar resultados http genericos
+pero tambien cualquier tipo de dato, esta es una accion NO recomendada
+
+[HttpGet("{id}/{param2?}")]
+public ActionResult<Autor> Get( int id, string param2)
+	return OK("lo que sea");

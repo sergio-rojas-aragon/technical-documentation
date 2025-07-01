@@ -1,0 +1,6 @@
+.bind("select_node.jstree", function (e, data) {
+        var a = jQuery.jstree._focused().get_selected();
+        alert(a);
+                        var selectedObj = data.rslt.obj;
+            alert(selectedObj.attr("id") + selectedObj.attr("data"));
+    });

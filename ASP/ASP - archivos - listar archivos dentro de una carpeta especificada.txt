@@ -1,0 +1,6 @@
+			
+			set fs = createobject("scripting.filesystemobject")
+			set folder = fs.GetFolder(ruta)
+			for each item in folder.Files
+    			response.Write "<br>" & item.Name
+			next 

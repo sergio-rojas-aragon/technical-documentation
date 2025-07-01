@@ -1,0 +1,8 @@
+					for (i=0; i< cadena.length; i++){
+						if (llenador == ""){
+							llenador = 	"<option></option><option>"+cadena[i]+"</option>"
+						}else{
+							llenador = llenador + "<option>"+cadena[i]+"</option>"
+						}
+					}
+					jQuery("#cuenta").html(llenador);	

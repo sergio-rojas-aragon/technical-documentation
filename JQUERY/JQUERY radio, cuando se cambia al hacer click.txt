@@ -1,0 +1,4 @@
+			var opt="input[name=tipoarch]:radio";
+			jQuery(opt).change(function(){
+				alert(jQuery(this).attr("value"));
+			});

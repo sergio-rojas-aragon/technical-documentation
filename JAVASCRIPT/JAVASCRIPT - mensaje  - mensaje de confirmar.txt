@@ -1,0 +1,7 @@
+if(confirm('Esta seguro de eliminar la Direccion?')){
+	alert(aceptado);
+}
+
+		if(!confirm('Esta seguro de eliminar la Direccion?')){
+			alert("no aceptado")	
+		}

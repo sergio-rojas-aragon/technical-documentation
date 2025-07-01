@@ -1,0 +1,22 @@
+
+ERROR_NUMBER() -- regresa el numero del error
+ERROR_SEVERITY() -- regresa la severidad
+-- 0 - 10 no severa.
+-- 11 - 16 error que programador puede corregir
+-- 11- 17 errores que tienen que ser corregidos por un admin.
+-- 19 - 24, errores fatales, el script fallara
+
+ERROR_PROCEDURE() -- se regresa el nombre del SP o trigger donde ocurrio el error.
+ERROR_LINE() -- Numero de  linea donde se encuentra el error
+ERROR_MESSAGE() -- descripcion del error
+
+begin try
+	select 1/0
+end try
+begin catch
+	select ERROR_NUMBER(),
+			ERROR_SEVERITY(,
+			ERROR_PROCEDURE(),
+			ERROR_LINE(),
+			ERROR_MESSAGE()
+end catch

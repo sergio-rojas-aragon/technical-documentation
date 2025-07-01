@@ -1,0 +1,9 @@
+--- solo dura la sesion y despues desaparece
+
+select Mnomateria, Mnombre into #tempComputacion from materia where Mnocarrera = 32
+
+
+select * from #tempComputacion
+
+
+drop table #tempComputacion

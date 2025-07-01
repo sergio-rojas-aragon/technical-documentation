@@ -1,0 +1,7 @@
+        If RadioButton1.Checked Then
+            variables.strConexionContabilidad = "Data Source=192.168.0.51;Initial Catalog=contaline;User Id=SA;Password=MiA4401;"
+            variables.RutaLogArchivos = "\\192.168.0.51\c$\contaline_info\BSALEFILES\"
+        ElseIf RadioButton2.Checked Then
+            variables.strConexionContabilidad = "Data Source=192.168.1.219;Initial Catalog=contaline;User Id=SA;Password=MiA4401;"
+            variables.RutaLogArchivos = "\\192.168.1.219\c$\contaline_info\BSALEFILES\"
+        End If

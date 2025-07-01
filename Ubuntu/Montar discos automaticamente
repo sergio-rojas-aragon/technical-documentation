@@ -1,0 +1,3 @@
+https://ubunlog.com/como-montar-discos-duros-al-iniciar-ubuntu/
+
+ara comenzar hemos de ir al Dash y buscar la aplicación “Discos”. Una vez que se ha abierto la aplicación, buscamos en la parte izquierda la unidad o disco duro que queremos que se monte en el inicio o sencillamente que no se cargue al iniciar Ubuntu.Montaje de discos Una vez que lo hemos marcado, en la barra de la parte derecha pulsamos las ruedecitas y nos vamos “Editar las acciones de montaje…” Cuando pulsamos esta opción nos aparecerá una pantalla como la siguiente

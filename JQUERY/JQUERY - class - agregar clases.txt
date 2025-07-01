@@ -1,0 +1,7 @@
+		jQuery(".botones-ui:button").each(function(){
+			if (jQuery(this).is(':disabled')  == true){
+				alert(jQuery(this).is(':disabled') +"--"+ jQuery(this).attr("id") );
+				jQuery(this).addClass("botones-ui-dis");
+			}
+			
+		});

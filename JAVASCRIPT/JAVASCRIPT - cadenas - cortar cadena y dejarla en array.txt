@@ -1,0 +1,7 @@
+var cadena = data.split(",");
+
+		var cadena = cdatos.split("_/_/_");
+		for (x=1;x<cadena.length;x++){
+			alert(cadena[x]);
+		}
+

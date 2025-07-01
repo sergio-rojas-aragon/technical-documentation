@@ -1,0 +1,5 @@
+declare @a numeric;
+declare @b numeric;
+declare @tablas table(ESTADO varchar(30), folio varchar(30), tipo varchar(30));
+set @a = 71062; set @b = 33; INSERT into @tablas (estado, folio, tipo) select case COUNT(FOLIO_SII) when 0 then  'NO' ELSE 'SI' end, @a, @b from documentotributario where folio_sii in (@a) and TIPODTE = @b;
+select folio as FOLIO, tipo as TIPO, ESTADO AS EnBD from @tablas 

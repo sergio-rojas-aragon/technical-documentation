@@ -1,0 +1,7 @@
+git config --global -e
+
+para salir :q
+
+git config --global -l
+
+muestra el listado de las configuraciones sin abrir o editar el archivo

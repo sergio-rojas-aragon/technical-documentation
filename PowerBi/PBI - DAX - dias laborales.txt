@@ -1,0 +1,17 @@
+agregar columna adicional (llamada Laborable)
+columna nombre del dia
+	valor 5 y 6 colocar 0
+	de lo contrario colocar 1
+
+
+días festivos
+	crear tabla con los días festivos
+	se combinan las tablas (seleccionando las fechas de las dos tablas)
+	se expande la tabla del los días festivos
+
+	Se agrega columna condicional
+		el primer filtro se evalula la fila creada anteriormente (por ejemplo Laborable)
+			es igual a 0, salida = Laborable
+		segundo filtro
+			festivo no es igual a null entonces 0
+

@@ -1,0 +1,5 @@
+declare @variable1 decimal, @variable2 decimal
+
+select @variable1 = max(mcostolab), @variable2 = min(mcostolab) from materia
+
+

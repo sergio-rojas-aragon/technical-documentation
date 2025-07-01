@@ -1,0 +1,27 @@
+	function FormatNumberSR(num,decimalNum){ 
+		
+		if (isNaN(parseInt(num))) return "NaN";
+
+		var tmpNum = num;
+		//toma el signo del numero
+		var iSign = num < 0 ? -1 : 1;
+		
+		tmpNum *= Math.pow(10,decimalNum);
+		tmpNum = Math.round(Math.abs(tmpNum))
+		tmpNum /= Math.pow(10,decimalNum);
+		//reajusta para que se vea el signo
+		tmpNum *= iSign;					
+
+		var tmpNumStr = new String(tmpNum);
+		tmpNumStr = tmpNumStr.replace(".",",");
+		var iStart = tmpNumStr.indexOf(",");
+		if (iStart < 0){
+			iStart = tmpNumStr.length;
+		}
+		iStart -= 3;
+		while (iStart >= 1) {
+			tmpNumStr = tmpNumStr.substring(0,iStart) + "." + tmpNumStr.substring(iStart,tmpNumStr.length)
+			iStart -= 3;
+		}		
+		return tmpNumStr;
+	}

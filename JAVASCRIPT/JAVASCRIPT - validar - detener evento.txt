@@ -1,0 +1,7 @@
+        if(e.preventDefault){
+            // forma estandar de evitar el submit.
+	            e.preventDefault();
+	        }else{
+	            // forma de IE de evitar el submit
+	            e.returnValue = false;
+ }

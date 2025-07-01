@@ -1,0 +1,13 @@
+// Opcion 1
+var isChk = $('#checkboxId').is(':checked'); // return true o false
+
+// Opcion 2
+var isChk = $('#checkboxId').attr('checked'); // return true o false
+
+if( isChk ) {
+// TODO Something
+}
+
+otra forma
+
+if(jQuery('input[name*="nt"]').is(':checked') == false){

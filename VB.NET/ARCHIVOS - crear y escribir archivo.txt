@@ -1,0 +1,18 @@
+Imports System.IO
+
+
+    Public Shared Function creaArchivo(ByVal fecha As String, ByVal idempresa As Double, ByVal codSii As Double, ByVal datos As String, ByVal tipo As String)
+
+        Dim nombreArchivo As String
+        Dim nombreRuta As String
+        nombreArchivo = fecha & " " & idempresa & " " & codSii & " " & tipo & ".txt"
+
+        nombreRuta = variables.RutaLogArchivos & nombreArchivo
+
+        Dim a As New System.IO.StreamWriter(nombreRuta)
+        a.WriteLine(datos)
+        a.Close()
+
+
+        Return "OK"
+    End Function

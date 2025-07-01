@@ -1,0 +1,14 @@
+						<script language="javascript"> 
+						 var segundos = 5; //Segundos de la cuenta atrás 
+							function tiempo(){  
+						  var t = setTimeout("tiempo()",1000);  
+						  document.getElementById('contenedor').innerHTML = 'Será redireccionado en '+segundos--+" segundos.";  
+						  if (segundos==0){
+								window.location.href='http://www.google.es';  //Págiana a la que redireccionará a X segundos
+						  
+						   clearTimeout(t);  
+						  }  
+						 }  
+						 tiempo()
+							</script> 
+				<center><h5 id="contenedor"></h5></center>

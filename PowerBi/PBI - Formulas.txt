@@ -1,0 +1,19 @@
+
+Contextos = contexto donde se evalula
+	contexto de fila = columnas calculadas, donde la expresion se evalua para cada fila de la tabla
+		solo para una fila
+		algunas ignoran el contexto de fila
+		
+	contexto de filtro
+		a partir del conjunto de filtros visuales, anivel de pagina o informe
+		son para ordenar los contexto de filtro
+		
+-------------------------		
+Calculate
+	expresion a evaluar (obligactorio)
+		es el nombre de una medida
+		contexto de filtro actual
+		
+	filtros opcionales, se puede agregar todos los que se quiera agregar
+	
+	unica que utiliza ambos contextos

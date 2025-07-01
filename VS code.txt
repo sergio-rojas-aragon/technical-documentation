@@ -1,0 +1,30 @@
+copiar linea abajo: shift alt abajo
+eliminar linea Ctrl + Shift + K
+Opening and Closing the Sidebar Ctrl+ b
+Add Cursor Above/Below Ctrl + Alt + Up arrow / Down arrow
+Column (Box) Selection Shift + Alt
+
+Join line https://cult.honeypot.io/reads/20-vs-code-shortcuts-developers/
+F1 join lines
+
+simple react snippets
+
+sfc =>  arrow function
+class => nueva clase
+ecl class export default
+ece export default class con extends
+con constructor
+met add method
+pge add propiedad
+
+react
+
+usf nuevo state
+uef useEffect
+nfn arrow function
+rafc nuevo componente
+enf export const
+
+
+
+listar pods

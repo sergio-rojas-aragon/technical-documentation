@@ -1,0 +1,7 @@
+mayusculas
+
+UCase(cadena)
+
+minusculas 
+
+LCase(cadena)

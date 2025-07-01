@@ -1,0 +1,30 @@
+calculate
+	campo
+	filtro
+		DATESINPERIOD(tablaColumna, /* fecha */ Today(), -1, Month)
+
+calcular los valores del mes anterior
+calculate
+	periodmonth
+	
+	parallelperdiod = niveles en que se puede ver, año mes trimestre
+	dateadd = año mes dia trimestre
+		RECOMENDADO
+
+Para no crear una función por tiempo se tiene que usar hipótesis
+Modelado=>Parametro nuevo
+Minimo -12, máximo 12
+incremento 1, valor predeterminado 1
+
+comparación entre 12 meses atrás y adelante
+
+Al aceptar y crea una tabla con el nombre puesto
+
+para utilizarlo se puede agregar un filtro donde mostrara del -12 al 12
+luego se modifica la consulta que calcula hacia un mes atrás, por ejemplo DATEADD
+y se selecciona la tablaColumna
+
+
+
+
+	

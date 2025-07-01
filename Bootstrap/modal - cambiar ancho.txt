@@ -1,0 +1,7 @@
+
+agregar 
+	modal-lg
+	modal-sm
+a la linea de modal-dialog
+
+<div class="modal-dialog modal-lg" role="document">

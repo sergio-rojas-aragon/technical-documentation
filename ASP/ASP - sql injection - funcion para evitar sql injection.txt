@@ -1,0 +1,8 @@
+	function reemplaza(valor)
+		valor = trim(valor)
+		valor = replace(valor, "'", "`")
+		valor = replace(valor, """", "`")
+		valor = replace(valor, "--", "")
+		valor = replace(valor, ";", "")  
+		reemplaza = valor
+	end function

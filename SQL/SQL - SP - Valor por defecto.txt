@@ -1,0 +1,4 @@
+
+create procedure getMateria 
+	@carrera char(2) = '32'
+

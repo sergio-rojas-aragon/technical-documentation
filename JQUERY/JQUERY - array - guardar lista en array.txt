@@ -1,0 +1,12 @@
+				var i = 0	
+				// GUARDA LOS ELEMENTOS DE LA LISTA EN UN ARRAY
+				$('#lista2 li').each(function(index) {
+    				orden(i) = $(this).text();
+					//alert(index + ': ' + $(this).text());
+					i = i +1;
+ 				 });
+				 
+				 			var selecteditems = new Array();
+			jQuery("input[@name='seleccionados[]']:checked").each(function(){
+				selecteditems.push(jQuery(this).val());
+			});

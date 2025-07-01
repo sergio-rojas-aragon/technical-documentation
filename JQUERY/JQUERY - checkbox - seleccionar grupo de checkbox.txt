@@ -1,0 +1,10 @@
+			jQuery('input[name=seltodos]').change(function(){
+				alert('click');	
+				jQuery('input[type=checkbox]').each( function() {			
+					if(jQuery("input[name=seltodos]:checked").length == 1){
+						this.checked = true;
+					} else {
+						this.checked = false;
+					}
+				});
+			});

@@ -1,0 +1,12 @@
+        try {
+            // crear el registro en docs y obtener el ID
+            if (documentos.length > 0) {
+                let file : ArchivosUpload = documentos[0];
+                const objDocsServ = new DocsService();
+                idDocumento = await objDocsServ.uploadFileIndividual(file);
+            }
+        } catch (error) {
+            let msgError = (error as Error).message;
+            return next(boom.serverUnavailable("Problema al crear Documento en postColabPilares: " + msgError, error ));
+            
+        }

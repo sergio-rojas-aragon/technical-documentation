@@ -1,0 +1,14 @@
+	destinatario = --CORREO DE DESTINATARIO--
+	asunto = "ALERTA CONTALINE - CONSUMO DE FOLIOS"
+	mensaje = "Estimado cliente:<br>Se ha detectado que posee pocos folios disponibles para continuar emitiendo. Recuerde descargarlos en el Portal del Servicio de Impuestos Internos y subirlos a la página de Contaline. ¡No espere a último minuto!<br><br>Saludos y no sea pavo!"
+	formatoHTML = True
+	configuracion = "CONSUMOFOLIOS"
+	
+	Set obj_correo = Server.CreateObject("DllEnvioCorreos.DllEnvioCorreos")
+	envio = obj_correo.EnvioCorreo(configuracion,destinatario,asunto,mensaje, formatoHTML)
+	
+	if envio = True then
+		response.write "enviado" & vbCrLf
+		else
+		response.write "No enviado. " & obj_correo.informaError & " " & vbCrLf
+	end if

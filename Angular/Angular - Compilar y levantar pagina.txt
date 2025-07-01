@@ -1,0 +1,5 @@
+por defecto puerto 4200
+
+ng serve -o
+
+para cancelar el proceso es ctrl+c

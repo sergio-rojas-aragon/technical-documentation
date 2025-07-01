@@ -1,0 +1,5 @@
+			SET @cad01=REPLACE(@cad01,'_/_','''')
+			SET @cad02=REPLACE(@cad02,'_/_','''')
+			SET @cad03=REPLACE(@cad03,'_/_','''')
+			SET @cad04=REPLACE(@cad04,'_/_','''')
+			EXEC(@encabezado+@cad01+@cad02+@cad03+@cad04+@final)

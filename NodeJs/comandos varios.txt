@@ -1,0 +1,10 @@
+ctrl k+u 	descomentar
+npm install	reconstruye toda la carpeta node_modules
+
+npm uninstall color
+	eliminar libreria color
+	
+
+iniciar server
+	npm start
+	nodemon start

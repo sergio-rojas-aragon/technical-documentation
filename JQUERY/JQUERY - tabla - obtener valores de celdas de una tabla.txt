@@ -1,0 +1,31 @@
+jQuery("#tabla tbody tr").each(function (index) {
+	var campo1, campo2, campo3;
+	jQuery(this).children("td").each(function (index2) {
+		switch (index2) {
+			case 0:
+				campo1 = jQuery(this).text();
+				break;
+			case 1:
+				campo2 = jQuery(this).text();
+				break;
+			case 2:
+				campo3 = jQuery(this).text();
+				break;
+		}
+		jQuery(this).css("background-color", "#ECF8E0");
+	})
+	alert(campo1 + ' - ' + campo2 + ' - ' + campo3);
+})
+
+
+		var swimpt=0;
+		jQuery("#imptos tbody tr").each(function (){
+			jQuery(this).children("td").each(function (index2) {
+				if(index2 == 0){
+					if(jQuery(this).text() == "No hay Impuestos"){
+						swimpt = 1;
+					}
+				}
+			});
+		});
+		alert(swimpt);

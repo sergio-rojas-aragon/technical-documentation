@@ -1,0 +1,10 @@
+https://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects
+
+If you want to get an array of matching elements, use the filter() method instead:
+
+myArray.filter(x => x.id === '45');
+
+
+Use the find() method: retorna solo el primer elemento que encuentra
+
+myArray.find(x => x.id === '45').foo;

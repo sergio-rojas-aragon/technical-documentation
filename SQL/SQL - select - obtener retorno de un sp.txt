@@ -1,0 +1,5 @@
+	declare @IDMOV decimal(18)
+
+	exec @IDMOV = SP_Mov_BuscaIdMov 937, 760 , '0110', 500, 1
+
+	select @IDMOV

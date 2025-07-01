@@ -1,0 +1,21 @@
+					ruta = "d:\REMUN_v2.0\remun_a\" & trim(idempresa_aio) & "\BANCOS\" &session("periodo")&""
+					rutav = "/cotizaciones/" & trim(idempresa_aio) & "/BANCOS/" &session("periodo")&"\"
+					set fs = createobject("scripting.filesystemobject")
+					set folder = fs.GetFolder(ruta)
+					encontrado = false
+					for each item in folder.Files
+			'			Response.Write item.Name
+						set t=fs.OpenTextFile(ruta & "\" &item.Name ,1)
+						do while t.AtEndOfStream = false
+							ruts = t.ReadAll
+					
+					'ruts =  instr("78158247", t.readLine)
+							if instr(ruts, rst("rut")) > 0 then
+								encontrado = true
+							end if
+						loop
+				'ruts =  instr("", x) 
+					next 		'7.815.824-7
+					t.Close
+					Set t=Nothing
+					Set fs=Nothing

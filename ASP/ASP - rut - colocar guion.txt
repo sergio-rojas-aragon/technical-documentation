@@ -1,0 +1,6 @@
+
+
+left(Emprut,len(Emprut)-1) & "-" & right(Emprut,1)
+
+
+

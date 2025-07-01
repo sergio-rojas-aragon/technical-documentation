@@ -1,0 +1,2 @@
+    Dim doc as XmlDocument = new XmlDocument()
+    doc.LoadXml("<item><name>wrench</name></item>")

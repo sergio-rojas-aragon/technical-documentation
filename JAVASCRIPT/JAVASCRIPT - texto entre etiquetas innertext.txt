@@ -1,0 +1,30 @@
+---------------------------------
+innerText
+---------------------------------
+El contenido de texto de un elemento, incluyendo el texto de cualquier etiqueta contenida, pero excluyendo cualquier etiqueta HTML. Asignando un nuevo texto solo se reemplaza el contenido de la etiqueta referida. Si el nuevo texto asignado contiene etiquetas HTML, estas son presentadas como texto, no interpretadas. 
+<h3id="Tit1">Encabezado de la página</h3>
+objTit1 = document.all["Tit1"];
+objTit1.innerText = "Encabezado nuevo de la página";
+
+<h3 id= "Tit1">Encabezado de<i>la</i> página</h3>
+objTit1 = document.all["Tit1"];
+objTit1.innerText = "Encabezado nuevo de la página";
+
+Resultaría en la siguiente etiqueta
+
+<h3 id="Tit1"> Encabezado nuevo de la página</h3>
+
+En cambio si a la etiqueta:
+
+<h3id="Tit1">Encabezado de la página</h3>
+
+le aplicáramos el siguiente código
+
+objTit1 = document.all["Tit1"];
+objTit1.innerText =  "Encabezado<b>nuevo</b> de la página";
+
+resultaría la siguiente línea resuelta en la pantalla del usuario
+
+Encabezado<b>nuevo</b> de la página
+
+y no la interpretación de la etiqueta <B> (negritas)

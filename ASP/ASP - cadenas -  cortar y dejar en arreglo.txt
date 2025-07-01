@@ -1,0 +1,2 @@
+		arreglo = Split(datos,"||")
+		response.write arreglo(2)

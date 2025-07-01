@@ -1,0 +1,6 @@
+git commit -m "Template listo sin rutas"
+
+git commit
+Abre un archivo commit en donde se puede editar multilinea
+para editar colocar la letra a
+luego de terminar de escribir colocar escape :wq

@@ -1,0 +1,4 @@
+clieprov(2, event)
+		clieprov(op, event)
+			kcode = event.keyCode;
+			if (kcode == 9 || kcode == 13){

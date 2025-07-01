@@ -1,0 +1,5 @@
+incluir libreria
+<script type="text/javascript" src="../../js/jquery.numeric.js" ></script>
+
+
+jQuery('#folio').numeric();	

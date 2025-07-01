@@ -1,0 +1,10 @@
+	function sacarenter(texto)
+		if texto = "" or isnull(texto) then
+			sacarenter = texto
+		else
+			texto = replace(texto,vbCrLf,". ")
+			texto = replace(texto,Chr(13),". ")
+			texto = replace(texto,Chr(10),". ")	
+			sacarenter = texto
+		end if
+	end function

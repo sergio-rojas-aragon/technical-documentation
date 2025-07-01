@@ -1,0 +1,4 @@
+-------------------------------
+outerHTML
+-------------------------------
+Contiene el contenido completo del elemento incluyendo las etiquetas de comienzo y fin del elemento. Asignando un nuevo texto, se reemplaza enteramente el elemento y cualquier referencia HTML contenida en el nuevo texto será interpretada y mostrada adecuadamente. 

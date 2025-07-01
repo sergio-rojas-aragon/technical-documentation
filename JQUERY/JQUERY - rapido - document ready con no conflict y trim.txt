@@ -1,0 +1,10 @@
+<script>
+	jQuery.noConflict();
+	jQuery(document).ready(function(){
+		
+	});
+//---------- FIN DOCUMENT READY ----------------------
+	function trim (myString){
+		return myString.replace(/^\s+/g,'').replace(/\s+$/g,'')
+	}	
+</script>

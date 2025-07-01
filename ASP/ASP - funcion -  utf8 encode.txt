@@ -1,0 +1,13 @@
+	Function EncodeUTF8(StrText)
+	  Dim i,c
+			i = 1
+		  Do While i <= Len(StrText)
+			c = Asc(Mid(StrText,i,1))
+			If c >= &H80 Then
+			  StrText = Left(StrText,i-1) + Chr(&HC2 + ((c and &H40) / &H40)) + Chr(c and &HBF) + Mid(StrText,i+1)
+			  i = i + 1
+			End If
+			i = i + 1
+		  loop
+		  EncodeUTF8 = StrText
+	End Function	

@@ -1,0 +1,6 @@
+private List<Claim> claimsIngreso;
+
+claimsIngreso = User.Claims.ToList();
+
+string p = claimsIngreso.Where(a => a.Type == "IdEmpresa").Select(b => b.Value).FirstOrDefault().ToString();
+

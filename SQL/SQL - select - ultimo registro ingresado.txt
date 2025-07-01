@@ -1,0 +1,11 @@
+SELECT MAX(id_tbcontactoobs)as maximo FROM tbcontacto_obs
+
+" declare @idd numeric;" &_
+" set nocount on; " &_
+"insert into " &_
+" set @idd = @@identity select idcon=@@identity; " &_ 
+" set nocount off"
+
+set rs2 = con.Execute(query)
+idasignatura = rs2("idcon")
+

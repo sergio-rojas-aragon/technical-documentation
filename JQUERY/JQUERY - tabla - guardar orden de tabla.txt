@@ -1,0 +1,21 @@
+var tabla = document.getElementById('lista2');
+				var numFilas = tabla.rows.length;
+				//alert(numFilas);
+				numFilas = numFilas - 1;
+				
+				var texto = tabla.tBodies[0].rows[1].cells[0].innerHTML;
+				alert(texto);
+				
+if (numFilas < 7 ){
+					alert("Seleccione todos los Campos Antes de Guardar");
+					return false;
+				}
+				for(i=1;i<=numFilas;i++){
+					if (i==1){
+						var texto = tabla.tBodies[0].rows[i].cells[0].innerHTML;
+						cadenaenvio = transforma(texto);
+					}else{
+						var texto = tabla.tBodies[0].rows[i].cells[0].innerHTML;
+						cadenaenvio =  cadenaenvio + "," + transforma(texto);
+					}
+				}

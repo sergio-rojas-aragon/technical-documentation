@@ -1,0 +1,1 @@
+var boton = '<center><button type="button" onclick="pdfGreyBox(\'' +folio+ '\', \'' +rut+ '\',\'' + digito +'\' );" class="claseBoton">Ver pdf termico</button><button type="button" onclick="recargar();" class="claseBoton">Volver</button></center>';

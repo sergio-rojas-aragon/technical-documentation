@@ -1,0 +1,20 @@
+
+            sql = "declare @id numeric; "
+            sql = sql & " set nocount on; "
+            sql = sql & "insert into bsale_logprocesos(idempresa) "
+            sql = sql & "values ('" & idempresa & "')"
+            sql = sql & " set @id = @@identity; select idcon=@@identity; "
+            sql = sql & " set nocount off; "
+            Dim objConn As New SqlConnection(variables.strConexionContabilidad)
+            Dim command As SqlCommand = New SqlCommand
+            command.CommandText = sql
+            command.Connection = objConn
+
+            objConn.Open()
+            Dim reader As SqlDataReader = command.ExecuteReader()
+
+            If reader.HasRows Then
+                reader.Read()
+                Return reader("idcon")
+
+            End If

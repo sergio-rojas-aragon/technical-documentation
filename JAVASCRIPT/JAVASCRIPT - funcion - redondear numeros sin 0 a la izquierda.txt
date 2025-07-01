@@ -1,0 +1,1 @@
+	function roundf(numero, lugares_decimales){	  var p = Math.pow(10, lugares_decimales);	  return Math.round(numero * p) / p;	}

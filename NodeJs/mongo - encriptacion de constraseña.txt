@@ -1,0 +1,25 @@
+npm i bcryptjs
+
+
+// encriptacion de contraseña
+const bcryptjs = require('bcryptjs');
+
+
+// se cambia a async
+const usuariosPost = async (req, res = response) => {
+
+    //const { nombre, edad } = req.body;
+    
+    const { nombre, correo, password, rol } = req.body;
+
+    //se obtiene la instancia del modelo y se envia el modelo json
+    // mongo se encargara de guardar solo los datos que coincidan con su esquema.
+    const usuario = new Usuario({
+        nombre, correo, password, rol
+    });
+
+
+
+    // encriptacion contraseña
+    const salt = bcryptjs.genSaltSync();
+    usuario.password = bcryptjs.hashSync(password, salt);

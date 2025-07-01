@@ -1,0 +1,7 @@
+git config --global alias.lg "log --oneline --decorate --all --graph"
+
+git lg
+
+git config --global alias.s "status -s -b"
+
+git s 

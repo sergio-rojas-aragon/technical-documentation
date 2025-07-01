@@ -1,0 +1,2 @@
+usar columnas solo para columnas calculadas (dentro de la misma fila), utilizar medida con calculate
+

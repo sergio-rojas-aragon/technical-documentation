@@ -1,0 +1,4 @@
+ir a vista=>Segnemtacion de sincronización (check)
+	Ver= en que pagina se tiene que ver (quita el filtro visual)
+	
+	

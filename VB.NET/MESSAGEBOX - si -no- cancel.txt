@@ -1,0 +1,8 @@
+Dim result As Integer = MessageBox.Show("message", "caption", MessageBoxButtons.YesNoCancel)
+If result = DialogResult.Cancel Then
+    MessageBox.Show("Cancel pressed")
+ElseIf result = DialogResult.No Then
+    MessageBox.Show("No pressed")
+ElseIf result = DialogResult.Yes Then
+    MessageBox.Show("Yes pressed")
+End If

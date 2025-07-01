@@ -1,0 +1,7 @@
+
+Public Class consultasBD
+    Public Shared Function consultaIdempresa(ByVal idempresa As Double)
+	
+	End Function
+End Class
+

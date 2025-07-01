@@ -1,0 +1,3 @@
+
+
+// hola = "<input type='text' onClick='miFuncionFunciona("""& variableSTR &""")'>"

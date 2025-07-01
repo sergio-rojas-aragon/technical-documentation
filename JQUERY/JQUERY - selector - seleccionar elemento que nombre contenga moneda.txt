@@ -1,0 +1,5 @@
+jQuery('input[name*="moneda"]').val("hola mundo");
+jQuery('div[id*="canti_productos"]').text()
+
+
+_t

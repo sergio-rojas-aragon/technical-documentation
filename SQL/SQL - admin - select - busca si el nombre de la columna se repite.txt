@@ -1,0 +1,7 @@
+
+---  SE BUSCA EL CAMPO ---
+select * FROM sys.columns where name like '%_tipos%'
+
+
+--- SE BUSCA LA TABLA A LA CUAL PERTENECE EL CAMPO ---
+select * from sys.tables where object_id = 901578250

@@ -1,0 +1,21 @@
+consulta a la bd
+
+Dim dtable As DataTable
+dtable = dbs.EjecutaSql(SqlQuery)
+dbs.DBClose()
+
+Obtener resultado
+
+ Dim dt As DataTable
+ Dim objBd = New BD
+dt = objBd.ConsultaSelectConta(sql)
+
+
+        If dt.Rows.Count > 0 Then
+            For Each dr As Data.DataRow In dt.Rows
+                RutEmpresa = Trim(dr("rut")).ToUpper
+                RutEmpresaGuion = UtilidadesNet.cRut.FormateaRUTGuion(RutEmpresa)
+                NombreEmpresa = Trim(dr("EMPNOM"))
+
+            Next
+        End If

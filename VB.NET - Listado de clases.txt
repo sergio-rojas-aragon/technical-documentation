@@ -1,0 +1,5 @@
+ Public Property ListadoReferencia As New List(Of DtoReferenciaDte)
+ 
+ recorrer listado
+ 
+ For Each detadte In objDte.ListadoDetalleDte

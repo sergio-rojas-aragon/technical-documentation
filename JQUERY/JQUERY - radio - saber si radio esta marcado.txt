@@ -1,0 +1,6 @@
+	if(jQuery('#reg_trib').is(':checked') == false){
+	    alert('Por favor seleccione un Regimen Tributario');
+	    return false;
+	};
+	
+	$('input:radio[name=edad]:checked').val())

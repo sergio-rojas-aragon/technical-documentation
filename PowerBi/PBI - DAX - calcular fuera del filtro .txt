@@ -1,0 +1,2 @@
+por ejemplo que un contador no se mueva cuando se filtra por algún elemento
+se debe utilizar CALCULATE
