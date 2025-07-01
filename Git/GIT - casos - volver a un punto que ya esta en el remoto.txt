@@ -1,0 +1,9 @@
+se elimina el punto anterior
+
+git reset HEAD^ --hard
+
+se fuerza el push con los cambios a la branch seleccionada
+
+git push origin FS-161-ListadoDocs --force
+
+

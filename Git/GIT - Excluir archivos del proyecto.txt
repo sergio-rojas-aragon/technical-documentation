@@ -1,0 +1,3 @@
+git reset *.xml
+
+saca del stage todos los archivos xml

@@ -1,0 +1,4 @@
+git diff
+muestra las diferencia de archivos que no estan en el stage
+
+git diff --staged

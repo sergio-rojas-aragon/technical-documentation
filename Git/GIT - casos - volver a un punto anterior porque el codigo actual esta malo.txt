@@ -1,0 +1,14 @@
+suponiendo que se hicieron varios commits y que se hizo 2 o 3 commits con codigo malo y se quiere volver al 3 o 4 punto hacia atras.
+
+git reset --mixed 860c6c2
+
+se mueve al punto en que se quiere partir denuevo. los dos o 3 commits hacia adelante se deben destruir
+se realizan cambios.
+
+git reset --hard 860c6c2
+
+se resetea hasta ese punto.
+
+
+
+

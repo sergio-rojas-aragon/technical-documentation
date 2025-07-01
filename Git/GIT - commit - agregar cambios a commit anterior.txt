@@ -1,0 +1,9 @@
+git reset --soft HEAD^
+
+Head apunta al ultimo commit que se hizo.
+HEAD^ apunta al commit anterior
+
+despues de agregar los cambios al commit anterior se tiene que hacer un commit otra vez
+
+git commit -am "se actualiza la wea"
+

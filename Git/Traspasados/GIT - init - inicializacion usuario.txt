@@ -1,0 +1,11 @@
+git config --global user.name "Valkthor"
+git config --global user.email "sergio.rojas.aragon09@gmail.com"
+
+
+
+190.20.192.181
+
+
+ldw-dbserver.database.windows.net
+dbadmin
+Passw0rd
