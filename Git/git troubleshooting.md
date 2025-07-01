@@ -12,6 +12,7 @@ Menu
 - [trouble shooting](#trouble-shooting)
     - [git ignore no funciona](#git-ignore-no-funciona)
     - [Carpeta mayuscula no se guarda en repo](#carpeta-mayuscula-no-se-guarda-en-repo)
+    - [Delete branch in Local/Remote](#delete-branch-in-localremote)
 
 ### git ignore no funciona
 
@@ -27,4 +28,16 @@ Fuente: https://bytefreaks.net/programming-2/my-gitignore-file-is-ignored-by-git
 
 ```terminal
 git config core.ignorecase false
+```
+
+### Delete branch in Local/Remote
+
+Local:
+```terminal
+git branch -d 
+```
+
+Remote:
+```terminal
+git push --delete origin nombre_rama
 ```
