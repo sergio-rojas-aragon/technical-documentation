@@ -1,3 +1,11 @@
+---
+title: Terminal
+layout: home
+parent: Docker
+nav_order: 4
+---
+
+
 # Use Terminal in docker container
 
 * Entrar en una terminal de un contenedor.

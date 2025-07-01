@@ -1,3 +1,10 @@
+---
+title: Network
+layout: home
+parent: Docker
+nav_order: 2
+---
+
 ## Network
 
 Si dos o más contenedores están en la misma red, podrán hablar entre sí. Si no lo están, no podrán.

@@ -1,5 +1,5 @@
 ---
-title: Technical Information
+title: Home
 layout: home
 nav_order: 0
 description: "Informacion tecnica en varios lenguajes de programacion"
