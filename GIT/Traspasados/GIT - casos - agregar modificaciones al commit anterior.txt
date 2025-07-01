@@ -1,9 +1,0 @@
-git add modal.js
-git commit --ammend --no-edit
-
-no edit sirve para no modificar el texto del commit anterior.
-
-ojo, es posible que el push no funcione, se tiene que hacer un
-git push --force origin master
-
-posible problema por branch protegida, para esto se tiene que ir settings-reposotory-branch protected branch

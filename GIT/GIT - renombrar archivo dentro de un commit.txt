@@ -1,3 +1,0 @@
-git mv planes-destruir-mundo.txt salvar-mundo.txt
-
-luego de esto hacer el commit para no perder la historia.

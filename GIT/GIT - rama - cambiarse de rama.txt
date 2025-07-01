@@ -1,2 +1,0 @@
-git checkout rama-villanos
-se cambia de rama a la que se esta mencionando

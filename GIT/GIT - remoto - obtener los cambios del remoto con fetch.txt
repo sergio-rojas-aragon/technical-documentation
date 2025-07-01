@@ -1,4 +1,0 @@
-se obtienen los cambios del origen remoto.
-a diferencia del git pull, el fetch permite que uno escoja que hacer.
-
-git fetch

@@ -1,4 +1,0 @@
-git gc
-
-
-https://translate.google.com/translate?hl=es&sl=en&u=https://git-scm.com/docs/git-gc&prev=search

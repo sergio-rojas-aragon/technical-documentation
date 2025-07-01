@@ -1,7 +1,0 @@
-es una buena practica eliminar la rama una vez que se termina de usar
-
-git branch -d rama-villanos
-
-para eliminar remoto
-
-git push <remote_name> --delete <branch_name>

@@ -1,9 +1,0 @@
-git log
-
-muestra todo el log
-
-git log --oneline
-se visualiza el hash corto
-
-git log -- oneline --decorate --all --graph
-

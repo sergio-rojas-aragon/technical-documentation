@@ -1,3 +1,0 @@
-git rm salvar-mundo.txt
-
-despues de eso se tiene que hacer el commit

@@ -1,8 +1,0 @@
-Git status
-
-muestra los archivos que faltan agregar.
-
-git status -s
-
-git status -s -b
-muestra la rama y el archivo si esta en el stage
