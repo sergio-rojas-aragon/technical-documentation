@@ -2,12 +2,25 @@
 
 
 
+
+
+
+
 Ejemplo:
 
-```yml
+## container
 
+* mostrar todos los contenedores
 
-```
+    ```yml
+    docker container ls -a
+    ```
+* detener y eliminar los contenedores de forma forzada
+
+    ```yml
+    docker container rm -f <container-id> o <ID1 ID2...> 
+    ```
+
 ## Volumes
 
 Hay 3 tipos de volúmenes, son usados para hacer persistente la data entre reinicios y levantamientos de imágenes.
@@ -41,35 +54,5 @@ Hay 3 tipos de volúmenes, son usados para hacer persistente la data entre reini
   
     ```powershell
     docker volume prune
-    ```
-
-## Network
-
-Si dos o más contenedores están en la misma red, podrán hablar entre sí. Si no lo están, no podrán.
-
-
-* Listar redes: 
-    ```powershell
-    docker network ls
-    ```
-* Crear red:
-    ```powershell
-    docker network create nombre-red
-    ```
-
-* Eliminar redes:
-    ```powershell
-    docker network prune
-    ```
-
-
-* Agregar un contenedor a una red:
-    ```powershell
-    docker network connect nombre-red nombre-contenedor
-    ```
-
-* inspect. Show list of containers in the selected network.
-    ```powershell
-    docker network inspect <NAME o ID>
     ```
 
