@@ -28,3 +28,6 @@ comando `vi nombreArchivo` para ver archivo y ademas sirve para editar:
 * para salir colocar `ESC` y agregar `:wq!` y enter.
 
 para salir escribir `exit`
+
+
+docker exec -it PostgresContenedor psql -U admin -d next
