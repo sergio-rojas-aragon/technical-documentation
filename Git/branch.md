@@ -7,51 +7,52 @@ nav_order: 2
 
 # Branchs commands
 
-- Ver branches
+### Ver branchs
 
-    ```powershell
-    git branch
-    ```
+```terminal
+git branch
+```
 
-- Se cambia de rama a la que se esta mencionando
+### Se cambia de rama a la que se esta mencionando
 
-    ```powershell
-    git checkout rama-villanos
-    ```
+```terminal
+git checkout rama-villanos
+```
 
-- Crear rama en repositorio remoto.
+### Crear rama en repositorio remoto
 
-```powershell
+```terminal
 git push origin rama-capitan-loco
 ```
 
-- Crear una rama nueva:
+### Crear una rama nueva:
   
-    ```powershell
-    git branch rama-villanos
-    ```
+```terminal
+git branch rama-villanos
+```
 
-- Crea rama y se posiciona en ella
+### Crea rama y se posiciona en ella
   
-    ```powershell
-    git checkout -b <branch_name>
-    ```
+```terminal
+git checkout -b <branch_name>
+```
 
-- se cambia de rama a la que se esta mencionando
+### se cambia de rama a la que se esta mencionando
 
-    ```powershell
-    git checkout rama-villanos
-    ```
+```terminal
+git checkout rama-villanos
+```
+## Delete branchs
 
 - Eliminar una rama. es una buena practica eliminar la rama una vez que se termina de usar.
 
-    ```powershell
+    ```terminal
     git branch -d rama-villanos
     ```
 
 - Eliminar una rama del remoto
 
-    ```powershell
+    ```terminal
     git push <remote_name> --delete <branch_name>
     ```
 
@@ -61,6 +62,6 @@ git diff rama-villanos master
 
 - Merge con mensaje
 
-    ```powershell
+    ```terminal
     git merge --no-f rama -m "mensaje"
     ```
