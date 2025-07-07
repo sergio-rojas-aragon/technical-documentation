@@ -42,14 +42,16 @@ git config --global user.email "cambiar@gmail.com"
 
 - Crear Alias
 
-```powershell
+```terminal
 git config --global alias.lg "log --oneline --decorate --all --graph"
+```
+```terminal
 git config --global alias.s "status -s -b"
 ```
 
 - Ver configuracion creada:
 
-```powershell
+```terminal
 git config --global -e
 ```
 

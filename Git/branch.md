@@ -44,24 +44,32 @@ git checkout rama-villanos
 ```
 ## Delete branchs
 
-- Eliminar una rama. es una buena practica eliminar la rama una vez que se termina de usar.
+### Eliminar una rama. es una buena practica eliminar la rama una vez que se termina de usar.
 
-    ```terminal
-    git branch -d rama-villanos
-    ```
+```terminal
+git branch -d rama-villanos
+```
 
-- Eliminar una rama del remoto
+### Eliminar una rama del remoto
 
-    ```terminal
-    git push <remote_name> --delete <branch_name>
-    ```
+```terminal
+git push <remote_name> --delete <branch_name>
+```
 
-- Saber diferencia entre dos ramas:
+### Saber diferencia entre dos ramas:
 
+```terminal
 git diff rama-villanos master
+```
 
-- Merge con mensaje
+### Merge con mensaje
 
-    ```terminal
-    git merge --no-f rama -m "mensaje"
-    ```
+```terminal
+git merge --no-f rama -m "mensaje"
+```
+
+### Volver al punto anterior
+
+```terminal
+git checkout -- .
+```
