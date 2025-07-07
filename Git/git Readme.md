@@ -1,8 +1,8 @@
 ---
-title: Git
+title: Branch
 layout: home
+parent: Git
 nav_order: 1
-has_children: true
 ---
 
 # Apuntes Git
