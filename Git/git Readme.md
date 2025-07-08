@@ -31,6 +31,10 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
   - [Alias](#alias)
   - [Stage commands](#stage-commands)
   - [Commit commands](#commit-commands)
+    - [commit simple](#commit-simple)
+    - [commit en una linea](#commit-en-una-linea)
+    - [Agregar cambios a commit anterior](#agregar-cambios-a-commit-anterior)
+    - [Cambiar mensaje de commit](#cambiar-mensaje-de-commit)
   - [Procedimientos](#procedimientos)
     - [Cambiar Commit anterior](#cambiar-commit-anterior)
     - [Unir ramas](#unir-ramas)
@@ -109,12 +113,78 @@ git s
 
 ## Commit commands
 
-- Modifica el commit anterior (amend significa enmendar)
+### commit simple
+
+```terminal
+git commit
+```
+Abre un archivo commit en donde se puede editar multilinea
+para editar colocar la letra a
+luego de terminar de escribir colocar escape :wq
+
+### commit en una linea
+
+```terminal
+git commit -m "Template listo sin rutas"
+```
+
+
+Modifica el commit anterior (amend significa enmendar)
 
 ```terminal
 git commit --amend -m "Actualizacion de mensaje"
 ```
 
+git add .
+
+deja los archivos en el stage o escenario
+
+git add .*png
+
+agrega todos los archivos que tengan la extencion png dentro del proyecto
+
+git add css/
+
+agrega todos los archivos que estan en esa carpeta
+
+git add -A
+
+Agrega todos los archivos que han sido modificados
+
+git add ".*png"
+
+agregara todos los archivos dentro del directorio actual
+
+git add --all
+agrega todos los archivos
+
+git add pdfs/*.pdf
+agega todos los pdfs dentro de la carpeta pdfs
+
+### Agregar cambios a commit anterior
+
+```terminal
+git reset --soft HEAD^
+```
+
+Head apunta al ultimo commit que se hizo. HEAD^ apunta al commit anterior.
+
+despues de agregar los cambios al commit anterior se tiene que hacer un commit otra vez
+
+```terminal
+git commit -am "message"
+```
+
+### Cambiar mensaje de commit
+
+se selecciona el ultimo elemento
+
+git rebase - HEAD~1
+
+en el editor de texto cambiar el pick por reword
+escape+:wq
+
+se abrira otra vez el editor de texto y ahi se cambia el mensaje
 
 ## Procedimientos
 
