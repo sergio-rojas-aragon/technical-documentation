@@ -13,16 +13,24 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
 1. [troubleshooting](<git troubleshooting.md>)
 
-## Tabla de Contenidos
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Tabla de Contenidos
 - [Apuntes Git](#apuntes-git)
   - [Menu](#menu)
+  - [Table of contents](#table-of-contents)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Get Started](#get-started)
   - [Alias](#alias)
   - [Stage commands](#stage-commands)
   - [Commit commands](#commit-commands)
-  - [Tags commands](#tags-commands)
   - [Procedimientos](#procedimientos)
     - [Cambiar Commit anterior](#cambiar-commit-anterior)
     - [Unir ramas](#unir-ramas)
@@ -35,7 +43,7 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
 - Configuracion de GIT:
 
-```powershell
+```terminal
 git config --global user.name "cambiar"
 git config --global user.email "cambiar@gmail.com"
 ```
@@ -57,7 +65,7 @@ git config --global -e
 
 - Si se cambia de pasword usar lo siguiente
 
-```powershell
+```terminal
 git config --global --unset user.password
 ```
 
@@ -69,13 +77,13 @@ Alias son atajos que se pueden crear en el sistema git en forma local, para eso 
 
 - Crear alias:
 
-```powershell
+```terminal
 git config --global alias.lg "log --oneline --decorate --all --graph"
 ```
 
 - Como se usa:
 
-```powershell
+```terminal
 git lg
 ```
 
@@ -85,7 +93,7 @@ git config --global alias.s "status -s -b"
 
 - Como se usa:
 
-```powershell
+```terminal
 git s 
 ```
 
@@ -94,7 +102,7 @@ git s
 
 - Quitar archivos del stage
 
-    ```powershell
+    ```terminal
     git reset *.xml
     git reset nombrearchivo
     ```
@@ -103,47 +111,10 @@ git s
 
 - Modifica el commit anterior (amend significa enmendar)
 
-```powershell
+```terminal
 git commit --amend -m "Actualizacion de mensaje"
 ```
 
-## Tags commands
-
-- ver tags
-
-    ```powershell
-    git tag
-    ```
-
-- borrar tags
-
-    ```powershell
-    git tag -d superRelease
-    ```
-
-- agregar tag con anotaciones
-
-    ```powershell
-    git tag -a v1.0.0 -m "Version 1.0.0"
-    ```
-
-- agregar tag con anotaciones a otro punto de la rama
-
-    ```powershell
-    git tag -a v0.1.0 345d7de -m "Version alfa"
-    ```
-
-- para ver lo que contiene cierto tag
-
-    ```powershell
-    git show v0.1.0
-    ```
-
-- Enviar Tags al servidor
-
-    ```powershell
-    git push origin --tags
-    ```
 
 ## Procedimientos
 
@@ -153,7 +124,7 @@ git commit --amend -m "Actualizacion de mensaje"
 - se agregan al stage (git add .)
 - Se agrega al commit anterior, fijarse que el mensaje sea el mismo que el commit anterior:
 
-```powershell
+```terminal
 git commit --amend -m "mensaje commit anterior"
 ```
 
@@ -161,19 +132,19 @@ Otra forma (Con ejemplo):
 
 - se agrega la modificacion al stage:
   
-```powershell
+```terminal
 git add modal.js
 ```
 
 - se agrega al commit anterior, no edit sirve para no modificar el texto del commit anterior: 
 
-```powershell
+```terminal
 git commit --ammend --no-edit
 ```
 
 ojo, es posible que el push no funcione, se tiene que hacer un:
 
-```powershell
+```terminal
 git push --force origin master
 ```
 
@@ -183,19 +154,19 @@ posible problema por branch protegida, para esto se tiene que ir settings-reposo
 
 para unir ramas se tiene que posicionarse e la rama en donde se quiere fucionar algo:
 
-```powershell
+```terminal
 git checkout master
 ```
 
 head = apunta al ultimo commit a la rama de al cual estamos
 
-```powershell
+```terminal
 git merge rama-villanos
 ```
 
 merge ramas con commit de mensaje
 
-```powershell
+```terminal
 git merge --no-f rama -m "mensaje"
 ```
 
@@ -203,14 +174,14 @@ git merge --no-f rama -m "mensaje"
 
 Cuando se van a unir ramas es probable que salga un mensaje:
 
-```powershell
+```terminal
 CONFLICT CONTENT: Merge conflict in archivo.txt
 automatic merge failed.
 ```
 
 Dentro del head y el == es el cambio de la rama actual. Dentro del == y el nombre de la rama es el cambio que esta en la rama.
 
-```powershell
+```terminal
 <<<<<< HEAD
 hola
 ======
@@ -220,7 +191,7 @@ chao
 
 Simplemente se deja el texto que se quiere dejar y el resto se borra
 
-```powershell
+```terminal
 chao
 ```
 
@@ -230,13 +201,13 @@ chao
 
 - volver a un punto especifico
 
-```powershell
+```terminal
 git reset --soft d70db2a
 ```
 
 - volver al punto anterior
 
-```powershell
+```terminal
 git checkout -- .
 ```
 
@@ -246,13 +217,13 @@ git checkout -- .
 
 Se debe indicar hasta que hash se tiene que resetar:
 
-```powershell
+```terminal
 git reset --hard hash
 ```
 
 En el Caso que el cambio alla sido enviado al servidor remoto, se puede forzar:
 
-```powershell
+```terminal
 git push --force
 ```
 
