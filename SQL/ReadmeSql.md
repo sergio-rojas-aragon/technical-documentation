@@ -1,7 +1,7 @@
 ---
 title: Sql
 layout: home
-parent: Git
+parent: Sql
 nav_order: 1
 ---
 # Sql Server

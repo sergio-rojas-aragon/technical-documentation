@@ -1,13 +1,11 @@
 ---
-title: Docker
+title: Get Started
 layout: home
-nav_order: 3
-has_children: true
+parent: Docker
+nav_order: 1
 ---
 
-
 # Docker commands
-
 
 
 Ejemplo:
