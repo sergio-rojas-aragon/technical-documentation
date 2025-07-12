@@ -15,4 +15,4 @@ Menu for to repo navigation through github.
    
 URL from page generate with just-the-docs:
 
-https://sergio-rojas-aragon.github.io/technical-documentation/
+[GIthub.io/technical-documentation](https://sergio-rojas-aragon.github.io/technical-documentation/)
