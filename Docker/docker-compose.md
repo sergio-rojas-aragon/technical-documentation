@@ -1,5 +1,5 @@
 ---
-title: Compose
+title: Docker Compose
 layout: home
 parent: Docker
 nav_order: 4

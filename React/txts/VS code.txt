@@ -3,6 +3,7 @@ eliminar linea Ctrl + Shift + K
 Opening and Closing the Sidebar Ctrl+ b
 Add Cursor Above/Below Ctrl + Alt + Up arrow / Down arrow
 Column (Box) Selection Shift + Alt
+ordenar el codigo seleccionado: Shift + Alt + F
 
 Join line https://cult.honeypot.io/reads/20-vs-code-shortcuts-developers/
 F1 join lines

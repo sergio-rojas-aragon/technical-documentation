@@ -6,3 +6,13 @@ git add "*.txt" agrega el archgivo txt de todo el proyecto
 git add *.txt agrega todos los archivos del directorio actual
 git add --all agrega todos 
 git add pdf/*.pdf
+
+
+quitar archivos de stage
+
+git reset
+
+restarurar archivos de una carpeta
+
+git restore carpeta
+

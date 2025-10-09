@@ -22,27 +22,6 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
 ---
 
-## Tabla de Contenidos
-- [Apuntes Git](#apuntes-git)
-  - [Menu](#menu)
-  - [Table of contents](#table-of-contents)
-  - [Tabla de Contenidos](#tabla-de-contenidos)
-  - [Get Started](#get-started)
-  - [Alias](#alias)
-  - [Stage commands](#stage-commands)
-  - [Commit commands](#commit-commands)
-    - [commit simple](#commit-simple)
-    - [commit en una linea](#commit-en-una-linea)
-    - [Agregar cambios a commit anterior](#agregar-cambios-a-commit-anterior)
-    - [Cambiar mensaje de commit](#cambiar-mensaje-de-commit)
-  - [Procedimientos](#procedimientos)
-    - [Cambiar Commit anterior](#cambiar-commit-anterior)
-    - [Unir ramas](#unir-ramas)
-    - [Unir ramas con conflicto](#unir-ramas-con-conflicto)
-    - [Recorrer ramas](#recorrer-ramas)
-    - [Eliminar Commits](#eliminar-commits)
-    - [Descartar cambios](#descartar-cambios)
-
 ## Get Started
 
 - Configuracion de GIT:

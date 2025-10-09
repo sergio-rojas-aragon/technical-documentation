@@ -8,20 +8,27 @@ nav_order: 3
 
 # Volumes in Docker
 
-* Create Volume
+## Create Volume
 
+```terminal
 docker volume create todo-db
+```
 
-* List of volumes
+## List of volumes
 
+```terminal
 docker volume ls
+```
 
-* Inspect
+## Inspect
 
+```terminal
 docker volume inspect id
+```
 
-* remove not used volume
+## remove not used volume
 
+```terminal
 docker volume prune
-
+```
 
