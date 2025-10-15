@@ -45,3 +45,6 @@ ng new . --directory . --routing --style=scss
 ```terminal
 ng serve --open
 ```
+
+
+ng generate service services/tareas

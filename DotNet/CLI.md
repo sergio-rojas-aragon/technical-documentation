@@ -144,3 +144,15 @@ dentro de la carpeta de las pruebas unitarias:
 ```terminal
 dotnet test
 ```
+
+## Entity FrameWorkCore
+
+### Instalar
+
+```terminal
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+### activar migraciones
+
+dotnet ef migrations add InitialCreate
