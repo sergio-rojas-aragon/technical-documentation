@@ -68,4 +68,12 @@ Cuando hay conflictos en el archivo se resuelve igual que cualquier conflicto de
 ```terminal
 git stash drop
 ```
+### Case - Que hacer cuando se cambia el nombre del repositorio
+
+Revisar origin con `git remote -v`. Actualizar la url del remoto(recordar que los repositorios terminan en .git):
+
+```terminal
+git remote set-url origin https://github.com/usuario/nuevo-nombre.git
+```
+
 

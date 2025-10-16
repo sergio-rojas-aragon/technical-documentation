@@ -5,6 +5,7 @@ parent: Angular
 nav_order: 1
 ---
 
+## Instalacion
 
 ### instalar angular
 
@@ -26,6 +27,14 @@ npx -p @angular/cli@18.2.21 ng new nombre-del-proyecto
 ng version
 ```
 
+o tambien:
+
+```terminal
+ng v
+```
+
+## Inicio
+
 ### crear proyecto nuevo
 
 ```terminal
@@ -46,5 +55,18 @@ ng new . --directory . --routing --style=scss
 ng serve --open
 ```
 
+## Desarrollo
 
+### Crear Servicio
+
+```terminal
 ng generate service services/tareas
+```
+
+### crear componente standalone (angular 18)
+
+```terminal
+ng generate component componentes/lista-productos --standalone
+```
+
+ng add @angular/cdk

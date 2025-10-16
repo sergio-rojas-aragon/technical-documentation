@@ -24,14 +24,14 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
 ## Get Started
 
-- Configuracion de GIT:
+### Configuracion de GIT:
 
 ```terminal
 git config --global user.name "cambiar"
 git config --global user.email "cambiar@gmail.com"
 ```
 
-- Crear Alias
+### Crear Alias
 
 ```terminal
 git config --global alias.lg "log --oneline --decorate --all --graph"
@@ -40,13 +40,13 @@ git config --global alias.lg "log --oneline --decorate --all --graph"
 git config --global alias.s "status -s -b"
 ```
 
-- Ver configuracion creada:
+###  Ver configuracion creada:
 
 ```terminal
 git config --global -e
 ```
 
-- Si se cambia de pasword usar lo siguiente
+### Si se cambia de pasword usar lo siguiente
 
 ```terminal
 git config --global --unset user.password
@@ -58,23 +58,23 @@ despues pedira las credenciales
 
 Alias son atajos que se pueden crear en el sistema git en forma local, para eso se usa git config. Ejemplos:
 
-- Crear alias:
+### Crear alias:
 
 ```terminal
 git config --global alias.lg "log --oneline --decorate --all --graph"
 ```
 
-- Como se usa:
+### Como se usa:
 
 ```terminal
 git lg
 ```
 
-- Crear alias:
+### Crear alias:
 
 git config --global alias.s "status -s -b"
 
-- Como se usa:
+### Como se usa:
 
 ```terminal
 git s 
@@ -114,31 +114,36 @@ Modifica el commit anterior (amend significa enmendar)
 git commit --amend -m "Actualizacion de mensaje"
 ```
 
+### deja los archivos en el stage o escenario
+
+```terminal
 git add .
+```
 
-deja los archivos en el stage o escenario
+### agrega todos los archivos que tengan la extencion png dentro del proyecto
 
+```terminal
 git add .*png
+```
 
-agrega todos los archivos que tengan la extencion png dentro del proyecto
+### agrega todos los archivos que estan en esa carpeta
 
+```terminal
 git add css/
+```
+### Agrega todos los archivos que han sido modificados
 
-agrega todos los archivos que estan en esa carpeta
-
+```terminal
 git add -A
+```
 
-Agrega todos los archivos que han sido modificados
+### agrega todos los pdfs dentro de la carpeta pdfs
 
-git add ".*png"
-
-agregara todos los archivos dentro del directorio actual
-
-git add --all
-agrega todos los archivos
-
+```terminal
 git add pdfs/*.pdf
-agega todos los pdfs dentro de la carpeta pdfs
+```
+
+
 
 ### Agregar cambios a commit anterior
 
@@ -254,7 +259,7 @@ chao
 git reset --soft d70db2a
 ```
 
-- volver al punto anterior
+### volver al punto anterior
 
 ```terminal
 git checkout -- .
