@@ -1,6 +1,8 @@
 title: Technical Information
 remote_theme: just-the-docs/just-the-docs
 
+color_scheme: dark
+
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true
@@ -39,7 +41,7 @@ nav_enabled: true
 heading_anchors: true
 
 
-color_scheme: dark
+
 
 # callouts_level: quiet # or loud
 # callouts:
