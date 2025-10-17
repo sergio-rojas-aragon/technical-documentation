@@ -69,4 +69,19 @@ ng generate service services/tareas
 ng generate component componentes/lista-productos --standalone
 ```
 
-ng add @angular/cdk
+### crear componente dashboard prefabricado
+
+```terminal
+ng generate @angular/material:dashboard <component-name>
+```
+
+## Sesiones
+
+### Crear guard
+
+```terminal
+ng generate guard guards/auth.guard
+```
+
+preguntara que tipo de guard crear.
+
