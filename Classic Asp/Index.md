@@ -81,6 +81,13 @@ for x=0 to ubound(prestamos,2)
 ```
 ### valida elemento null
 
-```
+```vbnet
 isNull(elemento)
 ```
+
+### redimencionar array
+
+```vbnet
+ReDim cadenas(10)
+```
+
