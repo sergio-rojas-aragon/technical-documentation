@@ -1,7 +1,11 @@
 title: Technical Information
+description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
-color_scheme: darksergio
+url: https://sergio-rojas-aragon.github.io/technical-documentation/
+
+
+color_scheme: dark
 
 # Enable or disable the site search
 # Supports true (default) or false
