@@ -39,21 +39,21 @@ nav_enabled: true
 heading_anchors: true
 
 
-color_scheme: nil
+color_scheme: dark
 
-callouts_level: quiet # or loud
-callouts:
-  highlight:
-    color: yellow
-  important:
-    title: Important
-    color: blue
-  new:
-    title: New
-    color: green
-  note:
-    title: Note
-    color: purple
-  warning:
-    title: Warning
-    color: red
+# callouts_level: quiet # or loud
+# callouts:
+#   highlight:
+#     color: yellow
+#   important:
+#     title: Important
+#     color: blue
+#   new:
+#     title: New
+#     color: green
+#   note:
+#     title: Note
+#     color: purple
+#   warning:
+#     title: Warning
+#     color: red
