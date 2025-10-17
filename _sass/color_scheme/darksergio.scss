@@ -1,0 +1,43 @@
+// ====================================================================
+// _sass/color_schemes/midnight.scss
+// 
+// Esquema de color customizado basado en 'dark'
+// ====================================================================
+
+// 1. IMPORTAR el esquema 'dark' para heredar todas sus variables base.
+@import "./color_schemes/dark";
+
+
+// 2. SOBRESCRIBIR las variables del esquema 'dark' con tus nuevos valores.
+
+// --- Variables de Color de Fondo/Superficie ---
+
+// Fondo principal de la página (más oscuro que el dark por defecto)
+$body-background-color: #1139db; 
+
+// Fondo de la barra lateral (sidebar) y tarjetas (cards)
+$sidebar-color: #1f2833; 
+
+// Color de borde de tarjetas, cajas de código, y líneas divisorias
+$border-color: #45a29e; // Un azul cian para un contraste 'futurista'
+
+
+// --- Variables de Color de Texto ---
+
+// Color principal del texto (un poco más claro para mejor contraste)
+$body-text-color: #c5c6c7; 
+
+// Color de los encabezados (headers)
+$heading-color: #66fcf1; // Un tono de cian más brillante
+
+
+// --- Variables de Color de Interacción/Acento ---
+
+// Color del enlace (link), usado también para elementos activos
+$link-color: #66fcf1; 
+
+// Color de énfasis para resaltados y bloques de nota
+$accent-color: $link-color; 
+
+// Color del hover de los enlaces
+$link-hover-color: lighten($link-color, 15%);

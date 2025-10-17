@@ -1,0 +1,46 @@
+// ====================================================================
+// _sass/custom/custom.scss
+//
+// 1. Sobrescribir variables de Just-the-Docs.
+// 2. Agregar CSS personalizado (ejemplo: estilos para un bloque de nota).
+// ====================================================================
+
+// --- 1. Sobrescribir Variables del Tema ---
+
+// Variables de color (revisa el código fuente del tema para la lista completa)
+// Nota: Usa los nombres de las variables del tema para sobrescribir los valores.
+
+// Color principal para enlaces, iconos, etc. (normalmente un tono de azul/morado)
+$link-color: #e63946; // Un rojo vibrante (por ejemplo, para darle un toque más agresivo)
+
+// Color de fondo para la barra lateral (sidebar)
+$sidebar-color: #f1faee; // Un blanco muy suave (más claro que el default)
+
+// Color de texto del cuerpo
+$body-text-color: #1d3557; // Azul oscuro (más legible)
+
+// Color de la tipografía de encabezados
+$heading-color: #457b9d; // Un tono de azul medio
+
+// --- 2. Agregar Estilos CSS Customizados ---
+
+// Estilo para un nuevo tipo de bloque de nota llamado "advertencia"
+// Puedes usar esta clase en tu Markdown con <p class="custom-warning">Contenido...</p>
+.custom-warning {
+  background-color: #fff0f0; // Fondo rojo muy claro
+  border-left: 5px solid $link-color; // Barra izquierda con el color principal customizado
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: $link-color; // El texto usa el color principal customizado
+
+  p {
+    margin: 0; // Remueve el margen interior
+  }
+}
+
+// Sobrescribir el tamaño de fuente para todo el contenido principal
+.main-content {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
