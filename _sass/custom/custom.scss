@@ -7,7 +7,14 @@
 
 // --- 1. Sobrescribir Variables del Tema ---
 
-$body-background-color: $purple-100;
+// Define un tono de azul. Puedes usar códigos hex, rgb o nombres de color.
+$blue-background: #007bff; // Un azul brillante de ejemplo
+
+// Anula la variable principal del esquema.
+$color-scheme-main: $blue-background;
+
+// Podrías necesitar anular el fondo específico del cuerpo si el anterior no funciona
+$body-background-color: $blue-background;
 
 // Variables de color (revisa el código fuente del tema para la lista completa)
 // Nota: Usa los nombres de las variables del tema para sobrescribir los valores.
