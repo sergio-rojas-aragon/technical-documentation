@@ -1,15 +1,9 @@
-
-$body-background-color: #007bff !default;
-
-
-// 🔧 Cambiar tamaño base de fuente
-body {
-  font-size: 17px; // por defecto es ~16px
-  line-height: 1.7; // mejora legibilidad
+.custom-warning {
+  background-color: #2d1e0f;
+  border-left: 5px solid #f0883e;
+  padding: 1rem;
+  color: #f5deb3;
+  font-weight: 600;
+  border-radius: 6px;
 }
 
-.main-content {
-  font-size: 17px; // por defecto es ~16px
-  line-height: 1.7;
-  max-width: 1100px;
-}
