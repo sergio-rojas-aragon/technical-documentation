@@ -5,7 +5,8 @@ theme: just-the-docs
 url: https://sergio-rojas-aragon.github.io/technical-documentation/
 
 
-color_scheme: dark
+# color_scheme: dark
+color_scheme: custom
 
 # Enable or disable the site search
 # Supports true (default) or false

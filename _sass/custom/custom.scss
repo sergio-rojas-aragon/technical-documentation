@@ -1,50 +1,30 @@
-// ====================================================================
-// _sass/custom/custom.scss
-//
-// 1. Sobrescribir variables de Just-the-Docs.
-// 2. Agregar CSS personalizado (ejemplo: estilos para un bloque de nota).
-// ====================================================================
 
-// --- 1. Sobrescribir Variables del Tema ---
-
-// Define un tono de azul. Puedes usar códigos hex, rgb o nombres de color.
 $blue-background: #007bff; // Un azul brillante de ejemplo
 
-// Anula la variable principal del esquema.
 $color-scheme-main: $blue-background;
 
-// Podrías necesitar anular el fondo específico del cuerpo si el anterior no funciona
 $body-background-color: $blue-background;
 
-// Variables de color (revisa el código fuente del tema para la lista completa)
-// Nota: Usa los nombres de las variables del tema para sobrescribir los valores.
+$link-color: #e63946; 
 
-// Color principal para enlaces, iconos, etc. (normalmente un tono de azul/morado)
-$link-color: #e63946; // Un rojo vibrante (por ejemplo, para darle un toque más agresivo)
+$sidebar-color: #43f507; 
 
-// Color de fondo para la barra lateral (sidebar)
-$sidebar-color: #43f507; // Un blanco muy suave (más claro que el default)
 
-// Color de texto del cuerpo
-$body-text-color: #1d3557; // Azul oscuro (más legible)
+$body-text-color: #1d3557; 
 
 // Color de la tipografía de encabezados
-$heading-color: #457b9d; // Un tono de azul medio
+$heading-color: #457b9d; 
 
-// --- 2. Agregar Estilos CSS Customizados ---
-
-// Estilo para un nuevo tipo de bloque de nota llamado "advertencia"
-// Puedes usar esta clase en tu Markdown con <p class="custom-warning">Contenido...</p>
 .custom-warning {
-  background-color: #fff0f0; // Fondo rojo muy claro
-  border-left: 5px solid $link-color; // Barra izquierda con el color principal customizado
+  background-color: #fff0f0; 
+  border-left: 5px solid $link-color; 
   padding: 15px;
   margin-bottom: 20px;
   font-weight: bold;
-  color: $link-color; // El texto usa el color principal customizado
+  color: $link-color; 
 
   p {
-    margin: 0; // Remueve el margen interior
+    margin: 0; 
   }
 }
 
