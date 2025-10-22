@@ -7,8 +7,16 @@
   border-radius: 6px;
 }
 
-@media (min-width: 50rem){
-  .main {
-    max-width: 70drem;
-  }
+.main-content {
+  max-width: 1300px; // ancho deseado, por ejemplo 1100px
+}
+
+
+// prueba
+.sidebar {
+  font-size: 1.5rem; // Ajusta el tamaño deseado
+}
+
+.breadcrumb {
+  font-size: 1.5rem; // Ajusta el tamaño deseado
 }
