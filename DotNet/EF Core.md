@@ -54,6 +54,22 @@ dotnet ef database update nombreCompletoMigracion
 dotnet ef migrations remove
 ```
 
+### Crear tabla con datos
+
+Se tiene que ingresar la data en el DbContext usando hasData. Al hacer update en la migracion creara las tablas y ademas le agregara los datos.
+Se tiene que programar el HasData antes de que se genere la migracion.
+
+```
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Rol>().HasData(
+        new Rol { RolId = 1, Nombre = "Administador" },
+        new Rol { RolId = 2, Nombre = "Empleado" },
+        new Rol { RolId = 3, Nombre = "Vendedor" }
+        );
+}
+```
+
 ## Convenciones importantes
 
 ### nombres de tablas
@@ -99,7 +115,7 @@ public class Usuario
     [Required]
     [EmailAddress]
     public string Email { get; set; } = string.Empty;
-    
+
     // claves foraneas
     public int RolId { get; set; }
     public Rol Rol { get; set; } = null!;
