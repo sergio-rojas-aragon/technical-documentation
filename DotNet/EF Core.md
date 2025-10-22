@@ -7,9 +7,109 @@ nav_order: 2
 
 # Entity Framework Core
 
-## Data Annotations en EF Core
 
-# Data Annotations en EF Core
+## Instalacion
+
+```
+dotnet tool install --global dotnet-ef
+```
+
+## Migraciones
+
+Cuando se utilizan las migraciones, si existen datos y se modifica las tablas, se trata de mantener la data adaptando las tablas modificadas. Si el cambio es muy grande se tiene que eliminar toda la Base de datos, ya que la migracion fallara al no poder realizar el cambio necesario en la informacion.
+
+### Iniciar migraciones y tambien aplica para posteriores
+
+Donde dice Incial es el nombre de la migracion, por lo que puede ser el nombre que uno quiera:
+
+```
+dotnet ef migrations add Inicial
+```
+
+### actualizar migraciones
+
+```
+dotnet ef database update
+```
+
+### listar migraciones
+
+```
+dotnet ef migrations list
+```
+
+### revertir migracion a un paso anterior
+
+el nombre de las migraciones tiene fecha, es parte del nombre asi que se tiene que incluir
+Esto puede fallar
+
+```
+dotnet ef database update nombreCompletoMigracion
+```
+
+
+### Eliminar migraciones
+
+```
+dotnet ef migrations remove
+```
+
+## Convenciones importantes
+
+### nombres de tablas
+
+los objetos del Models deben ser en singular (por ejemplo Rol en vez de Roles).
+Cuando EF Core las migra a base de datos las pluraliza, es decir le coloca Roles.
+
+
+### Nombres de los Ids
+
+pueden ser Id o RolId para que EF Core pueda identificarla automaticamente por convencion. No puede Ser idRol.
+
+En las relaciones si puede ser plural.
+
+
+## Relaciones de tablas
+
+## uno a muchos
+
+Un rol puede tener muchos usuarios
+
+```
+public class Rol
+{
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int RolId { get; set; }
+    [Required]
+    public string Nombre { get; set; }
+
+    // Relacion uno a muchos
+    public ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
+
+}
+```
+
+```
+public class Usuario
+{
+    public int UsuarioId { get; set; }
+    [Required]
+    public string Nombre { get; set; } = string.Empty;
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; } = string.Empty;
+    
+    // claves foraneas
+    public int RolId { get; set; }
+    public Rol Rol { get; set; } = null!;
+
+}
+```
+
+
+
+## Data Annotations en EF Core
 
 | Atributo | Ejemplo | Descripción |
 |-----------|----------|-------------|

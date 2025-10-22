@@ -11,7 +11,7 @@ has_children: True
 
 ### Select Case
 
-```vbnet
+```
 Select Case VARIABLE
     Case 1
     formapago = "01"
