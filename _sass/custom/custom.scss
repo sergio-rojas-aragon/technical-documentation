@@ -7,3 +7,8 @@
   border-radius: 6px;
 }
 
+@media (min-width: 50rem){
+  .main {
+    max-width: 70drem;
+  }
+}
