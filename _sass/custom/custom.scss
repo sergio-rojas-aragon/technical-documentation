@@ -1,35 +1,29 @@
-
-$blue-background: #007bff; // Un azul brillante de ejemplo
-
-$color-scheme-main: $blue-background;
-
-$body-background-color: $blue-background;
-
-$link-color: #e63946; 
-
-$sidebar-color: #43f507; 
-
-
-$body-text-color: #1d3557; 
-
-// Color de la tipografía de encabezados
-$heading-color: #457b9d; 
-
 .custom-warning {
-  background-color: #fff0f0; 
-  border-left: 5px solid $link-color; 
-  padding: 15px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: $link-color; 
+  background-color: #2d1e0f;
+  border-left: 5px solid #f0883e;
+  padding: 1rem;
+  color: #f5deb3;
+  font-weight: 600;
+  border-radius: 6px;
+}
 
-  p {
-    margin: 0; 
+.main-content {
+  max-width: 1100px; // ancho deseado, por ejemplo 1100px
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    max-width: 1100px;
   }
 }
 
-// Sobrescribir el tamaño de fuente para todo el contenido principal
+// 🔧 Cambiar tamaño base de fuente
+body {
+  font-size: 17px; // por defecto es ~16px
+  line-height: 1.7; // mejora legibilidad
+}
+
 .main-content {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
