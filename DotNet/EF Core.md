@@ -123,6 +123,29 @@ public class Usuario
 }
 ```
 
+## Operaciones
+
+### buscar by id
+
+
+### buscar por campo
+
+## 🏃 Métodos de Ejecución y Recuperación en EF Core
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`ToList()`/`ToListAsync()`** | `List<T>` | Ejecuta y trae **todos** los resultados como una lista. | `await db.Productos.Where(p => p.Stock > 0).ToListAsync()` |
+| **`FirstOrDefault()`<br>`FirstOrDefaultAsync()`** | `T` o `null` | Retorna el **primer** elemento, o `null` si no encuentra ninguno. | `await db.Pedidos.FirstOrDefaultAsync(p => p.Id == 10)` |
+| **`Single()`/`SingleAsync()`** | `T` | Retorna el **único** elemento; lanza excepción si es cero o más de uno. | `db.Configuracion.Single(c => c.Activa == true)` |
+| **`Find()`/`FindAsync()`** | `T` o `null` | Busca por **clave primaria**, primero en memoria y luego en la DB. | `await db.Clientes.FindAsync(customerId)` |
+| **`ToArray()`/`ToArrayAsync()`** | `T[]` | Ejecuta y trae **todos** los resultados como un array. | `await db.Usuarios.OrderBy(u => u.Nombre).ToArrayAsync()` |
+
+### actualizar
+
+
+### guardar nuevo elemento
+
+
 
 
 ## Data Annotations en EF Core
