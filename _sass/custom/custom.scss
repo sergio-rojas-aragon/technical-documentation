@@ -8,9 +8,12 @@
 }
 
 .main-content {
-  max-width: 1300px; // ancho deseado, por ejemplo 1100px
+  max-width: 1300px !important; // ancho deseado, por ejemplo 1100px
 }
 
+.main {
+  max-width: 1300px !important;
+}
 
 // prueba
 .sidebar {
