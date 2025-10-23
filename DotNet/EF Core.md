@@ -130,7 +130,7 @@ public class Usuario
 
 ### buscar por campo
 
-## 🏃 Métodos de Ejecución y Recuperación en EF Core
+### Métodos de Ejecución y Recuperación en EF Core
 
 | Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
 | :--- | :--- | :--- | :--- |
