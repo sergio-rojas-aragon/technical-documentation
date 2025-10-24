@@ -128,7 +128,7 @@ public class Usuario
 ### buscar by id
 
 
-### buscar por campo
+### Resumen De Metodos EF Core
 
 ### Métodos de Ejecución y Recuperación en EF Core
 
@@ -140,9 +140,7 @@ public class Usuario
 | **`Find()`/`FindAsync()`** | `T` o `null` | Busca por **clave primaria**, primero en memoria y luego en la DB. | `await db.Clientes.FindAsync(customerId)` |
 | **`ToArray()`/`ToArrayAsync()`** | `T[]` | Ejecuta y trae **todos** los resultados como un array. | `await db.Usuarios.OrderBy(u => u.Nombre).ToArrayAsync()` |
 
-### Agregacion y Conteo
-
-## 📊 Métodos de Agregación y Conteo en EF Core
+###  Métodos de Agregación y Conteo en EF Core
 
 | Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
 | :--- | :--- | :--- | :--- |
@@ -152,6 +150,57 @@ public class Usuario
 | **`Average()`/`AverageAsync()`** | Tipo numérico | Calcula el **promedio** de los valores de una propiedad numérica. | `db.Notas.Average(n => n.Puntuacion)` |
 | **`Min()`/`MinAsync()`** | Tipo | Determina el valor **mínimo** de una propiedad en la secuencia. | `await db.Productos.MinAsync(p => p.Precio)` |
 | **`Max()`/`MaxAsync()`** | Tipo | Determina el valor **máximo** de una propiedad en la secuencia. | `db.Empleados.Max(e => e.Salario)` |
+
+### Métodos Condicionales en EF Core
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`Any()`/`AnyAsync()`** | `bool` | Determina si **al menos un** elemento satisface la condición. | `await db.Usuarios.AnyAsync(u => u.Rol == "Admin")` |
+| **`All()`/`AllAsync()`** | `bool` | Determina si **todos** los elementos satisfacen la condición. | `db.Tareas.All(t => t.Prioridad > 0)` |
+| **`Contains()`** | `bool` | Determina si una secuencia **contiene** un elemento específico. | `db.Categorias.Contains(miCategoria)` |
+
+### Proyection y transformacion
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`Select()`** | `IQueryable<TResult>` | Transforma o proyecta la secuencia en un **nuevo formulario** (columnas/objeto). | `db.Autores.Select(a => a.NombreCompleto)` |
+| **`SelectMany()`** | `IQueryable<TResult>` | Proyecta y **aplana** colecciones anidadas en una sola secuencia. | `db.Blogs.SelectMany(b => b.Posts)` |
+
+### FIltrado
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`Where()`** | `IQueryable<T>` | Filtra la secuencia de valores basada en una **condición** (predicado). | `db.Libros.Where(l => l.Publicado > 2020)` |
+| **`OfType<TResult>()`** | `IQueryable<TResult>` | Filtra elementos basados en un **tipo específico** (útil para herencia). | `db.Entidades.OfType<EntidadHija>()` |
+
+### Ordenamiento
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`OrderBy()`/`OrderByDescending()`** | `IOrderedQueryable<T>` | Ordena los elementos en orden **ascendente** o **descendente**. | `db.Articulos.OrderBy(a => a.Fecha)` |
+| **`ThenBy()`/`ThenByDescending()`** | `IOrderedQueryable<T>` | Define un **ordenamiento secundario** (debe seguir a `OrderBy`). | `db.Personas.OrderBy(p => p.Apellido).ThenBy(p => p.Nombre)` |
+
+### Paginacion
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`Skip()`** | `IQueryable<T>` | **Omite** un número especificado de elementos al inicio. | `db.Comentarios.Skip(20)` |
+| **`Take()`** | `IQueryable<T>` | Devuelve un número **especificado** de elementos al inicio. | `db.Productos.Take(10)` |
+
+### Relaciones (Eager Loading)
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`Include()`** | `IQueryable<T>` | Incluye una **propiedad de navegación** (relación) en la consulta. | `db.Pedidos.Include(p => p.Cliente)` |
+| **`ThenInclude()`** | `IIncludableQueryable<T, TProperty>` | Encadena la inclusión para cargar **relaciones anidadas** (más profundas). | `db.Pedidos.Include(p => p.Cliente).ThenInclude(c => c.Direccion)` |
+
+### Modificadores de Consulta
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`AsNoTracking()`** | `IQueryable<T>` | Indica al contexto **no rastrear** entidades (para consultas de solo lectura). | `db.Reportes.AsNoTracking().ToList()` |
+| **`GroupBy()`** | `IQueryable<IGrouping<TKey, TElement>>` | **Agrupa** los elementos que comparten una clave en común. | `db.Ventas.GroupBy(v => v.Mes)` |
+| **`Distinct()`** | `IQueryable<T>` | Retorna solo los elementos **únicos** o distintos. | `db.Correos.Select(c => c.Dominio).Distinct()` |
 
 
 ### guardar nuevo elemento
