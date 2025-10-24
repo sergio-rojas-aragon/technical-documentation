@@ -140,7 +140,18 @@ public class Usuario
 | **`Find()`/`FindAsync()`** | `T` o `null` | Busca por **clave primaria**, primero en memoria y luego en la DB. | `await db.Clientes.FindAsync(customerId)` |
 | **`ToArray()`/`ToArrayAsync()`** | `T[]` | Ejecuta y trae **todos** los resultados como un array. | `await db.Usuarios.OrderBy(u => u.Nombre).ToArrayAsync()` |
 
-### actualizar
+### Agregacion y Conteo
+
+## 📊 Métodos de Agregación y Conteo en EF Core
+
+| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
+| :--- | :--- | :--- | :--- |
+| **`Count()`/`CountAsync()`** | `int` | Retorna el número **total** de elementos que cumplen la condición. | `await db.Items.CountAsync(i => i.Estado == "Activo")` |
+| **`LongCount()`/`LongCountAsync()`** | `long` | Similar a `Count`, pero para conjuntos de datos **muy grandes**. | `db.Logs.LongCount()` |
+| **`Sum()`/`SumAsync()`** | Tipo numérico | Calcula la **suma** de los valores de una propiedad numérica. | `await db.Ordenes.SumAsync(o => o.Total)` |
+| **`Average()`/`AverageAsync()`** | Tipo numérico | Calcula el **promedio** de los valores de una propiedad numérica. | `db.Notas.Average(n => n.Puntuacion)` |
+| **`Min()`/`MinAsync()`** | Tipo | Determina el valor **mínimo** de una propiedad en la secuencia. | `await db.Productos.MinAsync(p => p.Precio)` |
+| **`Max()`/`MaxAsync()`** | Tipo | Determina el valor **máximo** de una propiedad en la secuencia. | `db.Empleados.Max(e => e.Salario)` |
 
 
 ### guardar nuevo elemento
