@@ -239,6 +239,34 @@ flowchart TD
     class API api;
 ```
 
+```
+graph TD
+    %% ======== PROYECTOS .NET ======== %%
+    A[🟢 PedidosApp.Domain] --> B[🟡 PedidosApp.Application]
+    B --> C[🟣 PedidosApp.Api]
+    A --> D[🔵 PedidosApp.Infrastructure]
+    B --> D
+    D --> C
+
+    %% ======== FLECHAS REALES (dependencias permitidas) ======== %%
+    C --> B
+    B --> A
+    D --> A
+    D --> B
+
+    %% ======== ESTILO ======== %%
+    classDef domain fill:#eaffea,stroke:#6c6,stroke-width:1px;
+    classDef app fill:#fff9e6,stroke:#cc6,stroke-width:1px;
+    classDef infra fill:#e6f0ff,stroke:#66c,stroke-width:1px;
+    classDef api fill:#f3e6ff,stroke:#96c,stroke-width:1px;
+
+    class A domain;
+    class B app;
+    class C api;
+    class D infra;
+```
+
+
 ## Dominio 
 
 

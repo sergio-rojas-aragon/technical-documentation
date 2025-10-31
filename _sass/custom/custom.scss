@@ -41,7 +41,16 @@ table{
 //   background-color: darkgrey !important;
 // }
 
-pre:has(code.language) {
-  /* Este selector selecciona el <pre> */
+// pre:has(code.language) {
+//   /* Este selector selecciona el <pre> */
+//   background-color: darkgrey !important;
+// }
+
+
+pre:has(> code[class^="language"]) {
+  background-color: darkgrey !important;
+}
+
+pre {
   background-color: darkgrey !important;
 }
