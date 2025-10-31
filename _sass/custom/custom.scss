@@ -36,3 +36,12 @@ code{
 table{
   border: 1px solid #998870 !important;
 }
+
+// pre{
+//   background-color: darkgrey !important;
+// }
+
+pre:has(code.language) {
+  /* Este selector selecciona el <pre> */
+  background-color: darkgrey !important;
+}
