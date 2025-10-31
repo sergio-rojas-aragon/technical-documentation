@@ -239,7 +239,9 @@ flowchart TD
     class API api;
 ```
 
-```
+El segundo diagrama Mermaid mostrando las dependencias entre los proyectos .NET (assemblies) dentro de una solución basada en DDD + Clean Architecture.
+
+```mermaid
 graph TD
     %% ======== PROYECTOS .NET ======== %%
     A[🟢 PedidosApp.Domain] --> B[🟡 PedidosApp.Application]
