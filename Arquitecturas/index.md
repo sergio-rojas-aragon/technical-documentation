@@ -53,6 +53,8 @@ Es el corazón del negocio.
 
 Centrar el diseño del software en el lenguaje y reglas del negocio, no en los detalles técnicos.
 
+### Conceptos básicos de DDD
+
 | Concepto                              | Qué es                                                      | Ejemplo                                  |
 | ------------------------------------- | ----------------------------------------------------------- | ---------------------------------------- |
 | **Entidad (Entity)**                  | Un objeto con identidad propia                              | Un `Pedido` o un `Cliente`               |
@@ -62,6 +64,29 @@ Centrar el diseño del software en el lenguaje y reglas del negocio, no en los d
 | **Servicio de dominio**               | Lógica de negocio que no encaja en una sola entidad         | “Calcular total del pedido”              |
 | **Caso de uso / Application Service** | Ejecuta una acción del sistema                              | “Crear pedido”, “Pagar pedido”           |
 
+## Qué es Clean Architecture
+
+Clean Architecture (Arquitectura Limpia) fue propuesta por Robert C. Martin (“Uncle Bob”).
+Su objetivo es separar responsabilidades por capas.
+
+Imagina círculos concéntricos:
+
+```
+┌──────────────────────────┐
+│        Infraestructura   │  (frameworks, DB, API, etc.)
+├──────────────────────────┤
+│     Casos de Uso         │  (aplicación)
+├──────────────────────────┤
+│     Dominio              │  (reglas de negocio puras)
+└──────────────────────────┘
+```
+
+**Reglas principales:**
+
+1. Las dependencias siempre van hacia adentro.
+   - El dominio no debe depender de frameworks ni bases de datos.
+1. La lógica del negocio no debería saber si usas SQL, Mongo o Firebase.
+1. Puedes cambiar la tecnología sin tocar las reglas del negocio.
 
 
 ## Dominio 
