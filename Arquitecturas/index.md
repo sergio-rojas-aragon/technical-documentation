@@ -244,27 +244,30 @@ El segundo diagrama Mermaid mostrando las dependencias entre los proyectos .NET 
 ```mermaid
 graph TD
     %% ======== PROYECTOS .NET ======== %%
-    Api[🟣 PedidosApp.Api]
-    Application[🟡 PedidosApp.Application]
-    Domain[🟢 PedidosApp.Domain]
-    Infrastructure[🔵 PedidosApp.Infrastructure]
 
-    %% ======== DEPENDENCIAS PERMITIDAS ======== %%
-    Api --> Application
-    Application --> Domain
-    Infrastructure --> Application
-    Infrastructure --> Domain
+    C[🟣 PedidosApp.Api]
+    B[🟡 PedidosApp.Application]
+    A[🟢 PedidosApp.Domain]
+    D[🔵 PedidosApp.Infrastructure]
 
-    %% ======== ESTILO VISUAL ======== %%
+    %% ======== DEPENDENCIAS REALES ======== %%
+    C --> B
+    B --> A
+    D --> A
+    D --> B
+    C --> D
+
+    %% ======== ESTILOS ======== %%
     classDef domain fill:#eaffea,stroke:#6c6,stroke-width:1px;
     classDef app fill:#fff9e6,stroke:#cc6,stroke-width:1px;
     classDef infra fill:#e6f0ff,stroke:#66c,stroke-width:1px;
     classDef api fill:#f3e6ff,stroke:#96c,stroke-width:1px;
 
-    class Domain domain;
-    class Application app;
-    class Infrastructure infra;
-    class Api api;
+    class A domain;
+    class B app;
+    class C api;
+    class D infra;
+
 
 ```
 
