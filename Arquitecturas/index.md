@@ -7,6 +7,9 @@ nav_order: 23
 # Clean Architecture
 {: .no_toc }
 
+[TOC]
+
+
 Clean Architecture desde Cero, una explicacion mas sencilla a como se enseña tecnicamente para entender mejor los conceptos.
 {: .fs-6 .fw-100 }
 
@@ -50,7 +53,7 @@ En una app de pedidos, el dominio es cómo se crean, pagan, y entregan los pedid
 No es la base de datos, ni la API, ni la interfaz.
 Es el corazón del negocio.
 
-📚 Objetivo de DDD:
+## Objetivo de DDD:
 
 Centrar el diseño del software en el lenguaje y reglas del negocio, no en los detalles técnicos.
 
@@ -105,7 +108,7 @@ Por ejemplo, si tu aplicación permite gestionar pedidos, podrías tener casos d
 * CancelarPedido
 * ListarPedidosDeCliente
 
-📜 ** Diferencia entre capa de dominio y casos de uso**
+**📜 Diferencia entre capa de dominio y casos de uso**
 
 | Capa                          | Qué contiene                    | Ejemplo                                 | Se preocupa por                          |
 | ----------------------------- | ------------------------------- | --------------------------------------- | ---------------------------------------- |
@@ -115,7 +118,7 @@ Por ejemplo, si tu aplicación permite gestionar pedidos, podrías tener casos d
 
 ---
 
-🧱 ** ¿Qué hace un Caso de Uso?**
+** 🧱  ¿Qué hace un Caso de Uso?**
 
 1. Recibe una solicitud (request) con datos de entrada (por ejemplo, “crear pedido para el cliente 123”).
 1. Usa el dominio para ejecutar las reglas de negocio (por ejemplo, crea un Pedido, calcula el total).
@@ -241,64 +244,92 @@ flowchart TD
 
 El segundo diagrama Mermaid mostrando las dependencias entre los proyectos .NET (assemblies) dentro de una solución basada en DDD + Clean Architecture.
 
-```mermaid
-graph TD
-    %% ======== PROYECTOS .NET ======== %%
-
-    C[🟣 PedidosApp.Api]
-    B[🟡 PedidosApp.Application]
-    A[🟢 PedidosApp.Domain]
-    D[🔵 PedidosApp.Infrastructure]
-
-    %% ======== DEPENDENCIAS REALES ======== %%
-    C --> B
-    B --> A
-    D --> A
-    D --> B
-    C --> D
-
-    %% ======== ESTILOS ======== %%
-    classDef domain fill:#eaffea,stroke:#6c6,stroke-width:1px;
-    classDef app fill:#fff9e6,stroke:#cc6,stroke-width:1px;
-    classDef infra fill:#e6f0ff,stroke:#66c,stroke-width:1px;
-    classDef api fill:#f3e6ff,stroke:#96c,stroke-width:1px;
-
-    class A domain;
-    class B app;
-    class C api;
-    class D infra;
-
+```
++----------------------------------------------------+
+|                    🟣 API Layer                    |
+|  (Controllers / Endpoints / Program.cs)            |
+|                                                    |
+|  -> Llama a los Casos de Uso                       |
++----------------------------|-----------------------+
+                             |
+                             v
++----------------------------------------------------+
+|               🟡 Application Layer                 |
+|  (UseCases / DTOs / Interfaces)                    |
+|                                                    |
+|  -> Orquesta la lógica de negocio                  |
+|  -> Usa Entidades y Repositorios (interfaces)      |
++----------------------------|-----------------------+
+                             |
+                             v
++----------------------------------------------------+
+|                   🟢 Domain Layer                  |
+|  (Entities / ValueObjects / Rules / Interfaces)    |
+|                                                    |
+|  -> Contiene la lógica del negocio puro            |
+|  -> No depende de otras capas                      |
++----------------------------|-----------------------+
+                             |
+                             v
++----------------------------------------------------+
+|             🔵 Infrastructure Layer                |
+|  (EF Core / Repositories / External Services)      |
+|                                                    |
+|  -> Implementa las interfaces del dominio          |
+|  -> Conecta con la base de datos u otros sistemas  |
++----------------------------------------------------+
 
 ```
 
+El usuario → API → Caso de Uso → Dominio → Repositorio (Infraestructura) → Base de datos
+Las dependencias van siempre hacia abajo, pero la infraestructura implementa interfaces definidas arriba, no al revés.
 
-## Dominio 
 
-
-Es donde vive la lógica de negocio pura, libre de frameworks, bases de datos o UI.
+## Estructura Recomendada
 
 ```
-/Domain
+PedidosApp/                                 ← 📁 Repositorio raíz (Git)
 │
-├── Entities/
-│   ├── CuentaBancaria.cs
-│   ├── Cliente.cs
-│   └── Transaccion.cs
+├── src/                                    ← Código fuente principal
+│   ├── PedidosApp.sln                      ← Archivo de solución
+│   │
+│   ├── PedidosApp.Domain/                  ← 🟢 Proyecto de dominio
+│   │   └── PedidosApp.Domain.csproj
+│   │
+│   ├── PedidosApp.Application/             ← 🟡 Proyecto de aplicación
+│   │   └── PedidosApp.Application.csproj
+│   │
+│   ├── PedidosApp.Infrastructure/          ← 🔵 Proyecto de infraestructura
+│   │   └── PedidosApp.Infrastructure.csproj
+│   │
+│   └── PedidosApp.Api/                     ← 🟣 Proyecto de presentación (Web API)
+│       └── PedidosApp.Api.csproj
 │
-├── ValueObjects/
-│   ├── Dinero.cs
-│   └── Email.cs
-│
-├── Events/
-│   ├── TransaccionRealizadaEvent.cs
-│
-├── Services/
-│   ├── ServicioTransferencia.cs
-│
-├── Interfaces/
-│   ├── ICuentaBancariaRepository.cs
-│
-└── Exceptions/
-    ├── SaldoInsuficienteException.cs
+└── tests/                                  ← 📁 Pruebas unitarias
+    ├── PedidosApp.UnitTests/               ← Proyecto de tests
+    │   └── PedidosApp.UnitTests.csproj
+    └── PedidosApp.IntegrationTests/ (opcional)
+        └── PedidosApp.IntegrationTests.csproj
+
 ```
 
+# Construccion
+
+El error más común: empezar por la base de datos.
+
+**"Voy a crear las tablas en SQL primero, luego hago los modelos y ya está."**
+
+Eso no es DDD, eso es data-driven design.
+
+DDD hace lo contrario, empieza desde el negocio (el dominio), no desde la base de datos.
+
+## Cómo se parte en DDD (flujo conceptual)
+
+| Etapa                                                 | Qué defines                                         | Capa involucrada |
+| ----------------------------------------------------- | --------------------------------------------------- | ---------------- |
+| 🧠 **1. Descubrir el dominio**                        | Qué entidades y reglas de negocio existen           | Dominio          |
+| 🧱 **2. Modelar entidades y relaciones**              | Entidades, value objects, agregados                 | Dominio          |
+| 🧩 **3. Definir casos de uso (acciones del sistema)** | Qué operaciones puede hacer el usuario o el sistema | Application      |
+| ⚙️ **4. Crear interfaces técnicas**                   | Repositorios, servicios externos, puertos           | Dominio          |
+| 💾 **5. Implementar la infraestructura real**         | EF Core, persistencia, APIs externas, logs          | Infrastructure   |
+| 🧾 **6. Exponerlo**                                   | Endpoints en la API (controllers)                   | API              |
