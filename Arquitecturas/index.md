@@ -318,10 +318,13 @@ PedidosApp/                                 ← 📁 Repositorio raíz (Git)
 El error más común: empezar por la base de datos.
 
 **"Voy a crear las tablas en SQL primero, luego hago los modelos y ya está."**
+**"Necesito 8 tablas"**
 
 Eso no es DDD, eso es data-driven design.
 
 DDD hace lo contrario, empieza desde el negocio (el dominio), no desde la base de datos.
+
+**“Tengo 8 conceptos o cosas del dominio que interactúan entre sí.”**
 
 ## Cómo se parte en DDD (flujo conceptual)
 
@@ -333,3 +336,33 @@ DDD hace lo contrario, empieza desde el negocio (el dominio), no desde la base d
 | ⚙️ **4. Crear interfaces técnicas**                   | Repositorios, servicios externos, puertos           | Dominio          |
 | 💾 **5. Implementar la infraestructura real**         | EF Core, persistencia, APIs externas, logs          | Infrastructure   |
 | 🧾 **6. Exponerlo**                                   | Endpoints en la API (controllers)                   | API              |
+
+### 1. Descubrir el dominio
+
+Es el proceso de:
+
+1. Entender qué problema resuelve el sistema.
+1. Identificar los conceptos principales (entidades, eventos, acciones).
+1. Nombrarlos con palabras del negocio, no técnicas.
+
+**Ejemplo práctico: Sistema de Pedidos**
+
+Supongamos que la empresa dice:
+
+>“Nuestros clientes hacen pedidos de productos.
+ Cada pedido tiene varios ítems, y dependiendo de la categoría del cliente,
+ los impuestos cambian. Después, se genera una factura y se registra un pago.”
+
+Mapa visual del dominio:
+
+```
+Cliente
+  └── hace muchos Pedidos
+          ├── tiene muchos ItemPedido
+          │       └── pertenecen a Productos
+          ├── genera una Factura
+          └── se paga con un Pago
+```
+
+### 2. Modelar entidades y relaciones
+
