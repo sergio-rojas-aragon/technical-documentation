@@ -2,6 +2,7 @@
 title: Arquitecturas
 layout: home
 nav_order: 23
+has_children: True
 ---
 
 # Clean Architecture
