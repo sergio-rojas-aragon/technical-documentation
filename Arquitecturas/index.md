@@ -8,7 +8,6 @@ has_children: True
 # Clean Architecture
 {: .no_toc }
 
-[TOC]
 
 
 Clean Architecture desde Cero, una explicacion mas sencilla a como se enseña tecnicamente para entender mejor los conceptos.
