@@ -177,6 +177,14 @@ public class FiguraConRecursos : IDisposable
 }
 
 ```
+Cuando tienes una clase base que implementa IDisposable, las clases derivadas también deben participar en la limpieza de recursos, pero sin interferir ni duplicar lo que hace la base.
+
+Para eso se usa un patrón estándar recomendado por Microsoft, con un método protegido virtual:
+
+```
+protected virtual void Dispose(bool disposing)
+```
+
 
 Ejemplo funcional en el repo https://github.com/sergio-rojas-aragon/ConceptosBasePOO
 

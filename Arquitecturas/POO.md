@@ -1,10 +1,10 @@
-
 ---
 title: POO
 layout: home
 parent: Arquitecturas
 nav_order: 2
 ---
+
 # Conceptos Base en la Programacion Orientada a Objetos Aplicado
 {: .no_toc }
 
