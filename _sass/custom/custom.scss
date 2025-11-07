@@ -56,8 +56,9 @@ pre:has(> code[class^="language"]) {
 //   background-color: darkgrey !important;
 // }
 
-
-.language,
-.language .highlight {
+// border del codigo
+.language-plaintext,
+.language-plaintext .highlight {
   border-radius: 15px !important;
+  background-color: #000407 !important;
 }
