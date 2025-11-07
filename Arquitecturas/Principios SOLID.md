@@ -1,5 +1,5 @@
 ---
-title: Solid
+title: SOLID
 layout: home
 parent: Arquitecturas
 nav_order: 4
