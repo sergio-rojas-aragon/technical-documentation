@@ -184,6 +184,7 @@ Para eso se usa un patrón estándar recomendado por Microsoft, con un método p
 ```
 protected virtual void Dispose(bool disposing)
 ```
+Este método se puede sobrescribir (override) en las clases hijas.
 
 
 Ejemplo funcional en el repo https://github.com/sergio-rojas-aragon/ConceptosBasePOO

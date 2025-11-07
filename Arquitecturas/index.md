@@ -8,9 +8,10 @@ has_children: True
 # Clean Architecture
 {: .no_toc }
 
-
-
 Clean Architecture desde Cero, una explicacion mas sencilla a como se enseña tecnicamente para entender mejor los conceptos.
+{: .fs-6 .fw-100 }
+
+Todos fue aplicado en el repositorio https://github.com/sergio-rojas-aragon/ConceptosBasePOO
 {: .fs-6 .fw-100 }
 
 Finalmente esto se aplicara en un desarrollo en .net8
