@@ -123,8 +123,9 @@ Por ejemplo, si tu aplicación permite gestionar pedidos, podrías tener casos d
 1. Guarda o consulta datos a través de interfaces (repositorios).
 1. Devuelve un resultado (response) al mundo exterior.
 
+---
 
-## 🧮 Ejemplo conceptual: CrearPedido
+# Ejemplo conceptual: CrearPedido
 
 Paso a paso:
 
