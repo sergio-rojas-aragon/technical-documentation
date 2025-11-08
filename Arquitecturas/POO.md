@@ -9,6 +9,8 @@ nav_order: 2
 {: .no_toc }
 
 Para estos ejercicios se utilizo **.Net8** en una Consola Simple
+Todos fue aplicado en el repositorio https://github.com/sergio-rojas-aragon/ConceptosBasePOO
+{: .fs-6 .fw-100 }
 
 {: .no_toc .text-delta }
 
