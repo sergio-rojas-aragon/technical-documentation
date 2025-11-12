@@ -1,7 +1,7 @@
 ---
 title: Teoria
 layout: home
-parent: CI/CD
+parent: CiCd
 nav_order: 1
 ---
 
@@ -65,4 +65,14 @@ Diferencia:
 > Ejemplo:
 > Cada vez que pasas las pruebas en main, Jenkins o GitHub Actions despliega directamente en Kubernetes.
 
+## Heramientas clave (gratuitas)
+
+| Etapa                    | Herramientas gratuitas comunes |
+| ------------------------ | ------------------------------ |
+| **Código & Repositorio** | GitHub, GitLab                 |
+| **Integración continua** | GitHub Actions, Jenkins        |
+| **Calidad del código**   | SonarQube                      |
+| **Contenedores**         | Docker                         |
+| **Despliegue**           | Kubernetes (Minikube, k3s)     |
+| **Monitoreo**            | Prometheus, Grafana            |
 

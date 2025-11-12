@@ -15,9 +15,9 @@ Decidi hacerlo en este formato de pagina web utilizando just-the-docs, lo que me
 
 
 
-* Personal Repositories:  https://github.com/sergio-rojas-aragon
-* This repository: https://github.com/sergio-rojas-aragon/technical-documentation
-* just-the-docs: https://github.com/just-the-docs/just-the-docs
-* just-the-docs example: https://just-the-docs.com/
+* Personal Repositories:  (https://github.com/sergio-rojas-aragon)
+* This repository: (https://github.com/sergio-rojas-aragon/technical-documentation)
+* just-the-docs: (https://github.com/just-the-docs/just-the-docs)
+* just-the-docs example: https://just-the-docs.com/)
 
 [GIthub.io/technical-documentation](https://sergio-rojas-aragon.github.io/technical-documentation/)
