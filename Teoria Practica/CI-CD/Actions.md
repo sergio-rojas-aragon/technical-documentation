@@ -56,6 +56,18 @@ jobs:                            # 👈 Conjunto de trabajos (pipelines paralelo
 
 ```
 
+### Cómo leerlo (como alguien con experiencia)
+
+Cuando veas un YAML de Actions, piensa en tres capas:
+
+1. ***Evento*** → “¿Qué lo dispara?” (on:)
+2. ***Job*** → “¿Dónde y cómo se ejecuta?” (jobs: + runs-on:)
+3. ***Steps*** → “¿Qué hace en cada paso?” (steps: con uses: y run:)
+
+Si entiendes esas tres, puedes leer o escribir cualquier pipeline en GitHub Actions.
+
+### Tabla Resumen
+
 | Sección       | Explicación                                                                                                                   | Ejemplo                                           |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | **`name`**    | Nombre descriptivo del workflow. Aparece en la pestaña **Actions**.                                                           | `"CI - Build and Test"`                           |
@@ -66,3 +78,15 @@ jobs:                            # 👈 Conjunto de trabajos (pipelines paralelo
 | **`uses`**    | Indica que el step utiliza una **acción predefinida** de GitHub o de la comunidad.                                            | `uses: actions/checkout@v4`                       |
 | **`run`**     | Ejecuta comandos directamente en la consola del runner.                                                                       | `run: dotnet build`                               |
 | **`with`**    | Pasa parámetros a la acción que estás usando.                                                                                 | `with: dotnet-version: '8.0.x'`                   |
+
+## Desde la interfaz
+
+1. Ve a tu repositorio en GitHub.
+1. En la barra superior, haz clic en Actions.
+1. GitHub te sugerirá flujos preconfigurados — elige uno tipo “.NET”.
+1. Haz clic en Configure.
+1. Te abrirá un editor con un archivo similar al anterior (.github/workflows/dotnet.yml).
+1. Puedes editarlo ahí mismo y pulsar Commit changes para guardarlo en la rama main.
+
+> A partir de ese momento, cada push o PR activará automáticamente el workflow.
+
