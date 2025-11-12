@@ -12,3 +12,24 @@ Informacion General
 
 1. TOC
 {:toc}
+
+# Que es CI/CD
+
+CI/CD significa Integración Continua (Continuous Integration) y Entrega/Despliegue Continuo (Continuous Delivery/Deployment).
+
+Son prácticas que automatizan el ciclo de desarrollo de software para entregar código más rápido, estable y con menos errores.
+
+## Integración Continua (CI)
+
+👉 Objetivo: detectar errores rápido y mantener el código siempre “listo para entregar”.
+
+Qué implica:
+
+* Cada vez que un desarrollador sube código (push o pull request), se dispara un pipeline automático.
+* Ese pipeline compila, ejecuta pruebas unitarias, y valida calidad de código.
+* Si algo falla, el equipo lo sabe al instante.
+
+> **Beneficio:** evitas el clásico “funciona en mi máquina”.
+
+{: .highlight }
+Ejemplo: Cada commit en tu repo ejecuta pruebas automáticas en GitHub Actions o Jenkins.
