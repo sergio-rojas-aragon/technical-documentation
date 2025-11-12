@@ -8,8 +8,7 @@ permalink: /
 
 # Technical Information
 
-Informacion que he ido recopilando a lo largo de los años de programacion.
-{.fs-6 .fw-300 }
+Informacion que he ido recopilando a lo largo de los años de programacion.{.fs-6 .fw-300 }
 
 Decidi hacerlo en este formato de pagina web utilizando just-the-docs, lo que me facilita la busqueda de informacion que requiere en el momento sin consultar a alguna inteligencia artificial o Google.
 

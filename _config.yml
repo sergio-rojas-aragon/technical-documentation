@@ -45,6 +45,10 @@ nav_enabled: true
 # Supports true (default) or false
 heading_anchors: true
 
+aux_links:
+  "Repo on Github":
+    - "https://github.com/sergio-rojas-aragon/technical-documentation"
+
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
