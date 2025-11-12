@@ -1,5 +1,5 @@
 ---
-title: CI/CD 2
+title: Teoria
 layout: home
 parent: CI/CD
 nav_order: 1
@@ -21,6 +21,7 @@ Son prácticas que automatizan el ciclo de desarrollo de software para entregar 
 
 ## Integración Continua (CI)
 
+{: .important }
 👉 Objetivo: detectar errores rápido y mantener el código siempre “listo para entregar”.
 
 Qué implica:
@@ -33,3 +34,35 @@ Qué implica:
 
 {: .highlight }
 Ejemplo: Cada commit en tu repo ejecuta pruebas automáticas en GitHub Actions o Jenkins.
+
+## Entrega Continua (CD – Continuous Delivery)
+
+{: .important }
+👉 Objetivo: tener siempre una versión lista para desplegar.
+
+Qué hace:
+
+* Después de pasar CI, el sistema genera artefactos (por ejemplo, imágenes Docker).
+*Los guarda en un repositorio (Docker Hub, GitHub Packages, etc.).
+* Permite desplegar a ambientes (staging, QA, producción) con un solo clic o comando.
+
+{: .highlight }
+> Ejemplo:
+> El pipeline crea la imagen Docker de tu API y la deja lista para desplegar en Kubernetes.
+
+## Despliegue Continuo (Continuous Deployment)
+
+{: .important }
+👉 Objetivo: que el sistema se despliegue automáticamente tras superar todos los tests.
+
+Diferencia:
+
+* ***Delivery*** → requiere aprobación humana.
+
+* ***Deployment*** → 100% automático.
+
+{: .highlight }
+> Ejemplo:
+> Cada vez que pasas las pruebas en main, Jenkins o GitHub Actions despliega directamente en Kubernetes.
+
+
