@@ -1,11 +1,11 @@
-.custom-warning {
-  background-color: #2d1e0f;
-  border-left: 5px solid #f0883e;
-  padding: 1rem;
-  color: #f5deb3;
-  font-weight: 600;
-  border-radius: 6px;
-}
+// .custom-warning {
+//   background-color: #2d1e0f;
+//   border-left: 5px solid #f0883e;
+//   padding: 1rem;
+//   color: #f5deb3;
+//   font-weight: 600;
+//   border-radius: 6px;
+// }
 
 .main-content {
   max-width: 1100px !important; // ancho deseado, por ejemplo 1100px
@@ -59,6 +59,15 @@ pre:has(> code[class^="language"]) {
 // border del codigo
 .language-plaintext,
 .language-plaintext .highlight {
+  border-radius: 15px !important;
+  background-color: #000407 !important;
+  color: white !important;
+
+}
+
+// border del codigo
+.language-terminal,
+.language-terminal .highlight {
   border-radius: 15px !important;
   background-color: #000407 !important;
   color: white !important;

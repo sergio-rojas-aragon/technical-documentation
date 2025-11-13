@@ -21,3 +21,13 @@ Decidi hacerlo en este formato de pagina web utilizando just-the-docs, lo que me
 
 
 [GIthub.io/technical-documentation](https://sergio-rojas-aragon.github.io/technical-documentation/)
+
+Prueba de Warning
+
+{: .important }
+> importante
+
+{: .important }
+> doble
+> linea
+
