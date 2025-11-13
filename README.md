@@ -8,11 +8,13 @@ permalink: /
 
 # Technical Information
 
-Informacion que he ido recopilando a lo largo de los años de programacion.{.fs-6 .fw-300 }
+{: .fs-9 }
+Documentacion e informacion que he ido documentando a lo largo de los años.
 
-Decidi hacerlo en este formato de pagina web utilizando just-the-docs, lo que me facilita la busqueda de informacion que requiere en el momento sin consultar a alguna inteligencia artificial o Google.
+{.fs-6 .fw-300 }
+Es mucho mas facil para mi que consultar a alguna inteligencia artificial, me ayuda a buscar de la forma en como lo pienso. Ademas, escribir esta informacion me ayuda a asimilarla mejor.
 
-
+Decidi hacerlo en este formato de pagina web utilizando just-the-docs, dejo el link mas abajo.
 
 * Personal Repositories [https://github.com/sergio-rojas-aragon](https://github.com/sergio-rojas-aragon)
 * This repository: [https://github.com/sergio-rojas-aragon/technical-documentation](https://github.com/sergio-rojas-aragon/technical-documentation)
@@ -25,9 +27,4 @@ Decidi hacerlo en este formato de pagina web utilizando just-the-docs, lo que me
 Prueba de Warning
 
 {: .important }
-> importante
-
-{: .important }
-> doble
-> linea
-
+> he omitido informacion intencionalmente porque algunos codigos que documenté, pertenecen a alguna empresa.

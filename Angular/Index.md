@@ -8,7 +8,7 @@ nav_order: 1
 {: .no_toc }
 
 Apuntes que tomo cuando desarrollo en Angular para no olvidar los comandos aplicados.
-{: .fs-6 .fw-100 }
+{: .fs-6 .fw-70 }
 
 ## Table of contents
 {: .no_toc .text-delta }
