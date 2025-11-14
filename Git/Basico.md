@@ -1,5 +1,5 @@
 ---
-title: Get Started - Basico
+title: Get Started
 layout: home
 parent: Git
 nav_order: 1
@@ -18,31 +18,73 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 
 ---
 
-## Get Started
-
-### Configuracion de GIT:
-
-```terminal
-git config --global user.name "cambiar"
-git config --global user.email "cambiar@gmail.com"
-```
-
-### Crear Alias
+# Flujo Base
 
 ```
-git config --global alias.lg "log --oneline --decorate --all --graph"
-```
-```terminal
-git config --global alias.s "status -s -b"
+        ╔══════════════════════════════╗
+        ║      Working Directory       ║
+        ║   (editas archivos aquí)     ║
+        ╚───────────────╦──────────────╝
+                        │
+                        │ git add
+                        ▼
+            ┌────────────────────────┐
+            │      Staging Area      │
+            │  (índice: cambios OK)  │
+            └─────────────┬──────────┘
+                        │
+                        │ git commit
+                        ▼
+            ┌────────────────────────┐
+            │       Local Repo       │
+            │ (tus commits locales)  │
+            └───────────┬────────────┘
+                        │
+                        │ git push
+                        ▼
+            ┌────────────────────────┐
+            │      Remote Repo       │
+            │ (GitHub / GitLab etc.) │
+            └───────────┬────────────┘
+                        │
+                        │ git pull (fetch + merge)
+                        ▼
+            (Local Repo actualizado)
 ```
 
-###  Ver configuracion creada:
+# Configs
 
-```terminal
-git config --global -e
-```
+* **Configuracion de GIT**
 
-### Si se cambia de pasword usar lo siguiente
+    ```
+    git config --global user.name "cambiar"
+    git config --global user.email "cambiar@gmail.com"
+    ```
+
+* **Ver configuracion creada**
+
+    para salir hay que colocar `:wq`
+
+    ```
+    git config --global -e
+    ```
+
+# Alias
+
+Alias son atajos que se pueden crear en el sistema git en forma local, para eso se usa git config.
+
+* **Crear Alias**
+
+    ```
+    git config --global alias.lg "log --oneline --decorate --all --graph"
+    ```
+
+    ```terminal
+    git config --global alias.s "status -s -b"
+    ```
+
+
+# Cambio de password
 
 ```terminal
 git config --global --unset user.password
@@ -50,39 +92,4 @@ git config --global --unset user.password
 
 despues pedira las credenciales
 
-## Alias
-
-Alias son atajos que se pueden crear en el sistema git en forma local, para eso se usa git config. Ejemplos:
-
-### Crear alias:
-
-```terminal
-git config --global alias.lg "log --oneline --decorate --all --graph"
-```
-
-### Como se usa:
-
-```terminal
-git lg
-```
-
-### Crear alias:
-
-git config --global alias.s "status -s -b"
-
-### Como se usa:
-
-```terminal
-git s 
-```
-
-
-## Stage commands
-
-- Quitar archivos del stage
-
-    ```terminal
-    git reset *.xml
-    git reset nombrearchivo
-    ```
 

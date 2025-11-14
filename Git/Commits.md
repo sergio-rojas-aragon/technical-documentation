@@ -15,6 +15,40 @@ nav_order: 6
 
 ---
 
+# Flujo Base
+
+```
+        ╔══════════════════════════════╗
+        ║      Working Directory       ║
+        ║   (editas archivos aquí)     ║
+        ╚───────────────╦──────────────╝
+                        │
+                        │ git add
+                        ▼
+            ┌────────────────────────┐
+            │      Staging Area      │
+            │  (índice: cambios OK)  │
+            └─────────────┬──────────┘
+                        │
+                        │ git commit
+                        ▼
+            ┌────────────────────────┐
+            │       Local Repo       │
+            │ (tus commits locales)  │
+            └───────────┬────────────┘
+                        │
+                        │ git push
+                        ▼
+            ┌────────────────────────┐
+            │      Remote Repo       │
+            │ (GitHub / GitLab etc.) │
+            └───────────┬────────────┘
+                        │
+                        │ git pull (fetch + merge)
+                        ▼
+            (Local Repo actualizado)
+```
+
 # Basic
 
 * **commit simple**
