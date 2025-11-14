@@ -7,13 +7,14 @@ nav_order: 3
 
 # trouble shooting
 
-Menu
+## Table of contents
+{: .no_toc .text-delta }
 
-- [trouble shooting](#trouble-shooting)
-    - [git ignore no funciona](#git-ignore-no-funciona)
-    - [Carpeta mayuscula no se guarda en repo](#carpeta-mayuscula-no-se-guarda-en-repo)
-    - [Delete branch in Local/Remote](#delete-branch-in-localremote)
-    - [Case - Save the current changes and load previus commit or version](#case---save-the-current-changes-and-load-previus-commit-or-version)
+1. TOC
+{:toc}
+
+---
+
 
 ### git ignore no funciona
 

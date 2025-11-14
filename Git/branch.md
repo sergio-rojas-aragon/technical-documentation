@@ -1,75 +1,110 @@
 ---
-title: Branch
+title: Branch and Merges
 layout: home
 parent: Git
 nav_order: 2
 ---
 
-# Branchs commands
+# Branchs And Merges
 
-### Ver branchs
+## Table of contents
+{: .no_toc .text-delta }
 
-```terminal
-git branch
-```
+1. TOC
+{:toc}
 
-### Se cambia de rama a la que se esta mencionando
+# Basicos
 
-```terminal
-git checkout rama-villanos
-```
+* **Ver branchs**
 
-### Crear rama en repositorio remoto
+    ```
+    git branch
+    ```
 
-```terminal
-git push origin rama-capitan-loco
-```
+* **Se cambia de rama a la que se esta mencionando**
 
-### Crear una rama nueva:
+    ```
+    git checkout rama-villanos
+    ```
+
+## Crear Ramas
+
+* **Crear una rama nueva:**
+    
+    ```
+    git branch rama-villanos
+    ```
+
+* **Crear rama en repositorio remoto**
+
+    ```
+    git push origin rama-capitan-loco
+    ```
+
+* **Crea rama y se posiciona en ella**
   
-```terminal
-git branch rama-villanos
-```
+    ```
+    git checkout -b <branch_name>
+    ```
 
-### Crea rama y se posiciona en ella
-  
-```terminal
-git checkout -b <branch_name>
-```
-
-### se cambia de rama a la que se esta mencionando
-
-```terminal
-git checkout rama-villanos
-```
 ## Delete branchs
 
-### Eliminar una rama. es una buena practica eliminar la rama una vez que se termina de usar.
+* **Eliminar una rama** *es una buena practica eliminar la rama una vez que se termina de usar*
 
-```terminal
-git branch -d rama-villanos
-```
+    ```
+    git branch -d rama-villanos
+    ```
 
-### Eliminar una rama del remoto
+* **Eliminar una rama del remoto**
 
-```terminal
-git push <remote_name> --delete <branch_name>
-```
+    ```
+    git push <remote_name> --delete <branch_name>
+    ```
 
-### Saber diferencia entre dos ramas:
 
-```terminal
-git diff rama-villanos master
-```
+* **Cambiarse de branch**
 
-### Merge con mensaje
+    ```
+    git checkout rama-villanos
+    ```
 
-```terminal
-git merge --no-f rama -m "mensaje"
-```
+## Merges
+
+Its important to position on the branch taht will recieve the changes.
+If the changes is in BranchB, i position on branch A
+
+* **Merge fast forward**
+
+    ```
+    git merge RamaB
+    ```
+
+* **Merge con commit y mensaje**
+
+    ```
+    git merge --no-ff RamaB -m "mensaje"
+    ```
+
+## Others
+
+
+* **Saber diferencia entre dos ramas**
+
+    ```
+    git diff RamaA RamaB
+    ```
+    
+--- 
 
 ### Volver al punto anterior
 
-```terminal
+```
 git checkout -- .
 ```
+
+### volver a un punto especifico
+
+```
+git reset --soft d70db2a
+```
+
