@@ -2,7 +2,7 @@
 title: Troubleshooting
 layout: home
 parent: Git
-nav_order: 10
+nav_order: 8
 ---
 
 # trouble shooting

@@ -2,7 +2,7 @@
 title: Branch and Merges
 layout: home
 parent: Git
-nav_order: 2
+nav_order: 4
 ---
 
 # Branchs And Merges

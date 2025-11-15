@@ -8,10 +8,9 @@ permalink: /
 
 # Technical Information
 
-{: .fs-9 }
 Documentacion e informacion que he ido documentando a lo largo de los años.
+{: .fs-5 .fw-300 }
 
-{.fs-6 .fw-300 }
 Es mucho mas facil para mi que consultar a alguna inteligencia artificial, me ayuda a buscar de la forma en como lo pienso. Ademas, escribir esta informacion me ayuda a asimilarla mejor.
 
 Decidi hacerlo en este formato de pagina web utilizando just-the-docs, dejo el link mas abajo.
@@ -24,7 +23,6 @@ Decidi hacerlo en este formato de pagina web utilizando just-the-docs, dejo el l
 
 [GIthub.io/technical-documentation](https://sergio-rojas-aragon.github.io/technical-documentation/)
 
-Prueba de Warning
 
 {: .important }
 > he omitido informacion intencionalmente porque algunos codigos que documenté, pertenecen a alguna empresa.
