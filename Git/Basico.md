@@ -153,3 +153,23 @@ git diff
 
 
 head = apunta al ultimo commit a la rama de al cual estamos
+
+# Logs
+
+* **muestra todo el log**
+
+    ```
+    git log
+    ```
+
+* **se visualiza el hash corto**
+
+    ```
+    git log --oneline
+    ```
+
+* **Vista grafica**
+
+```
+git log -- oneline --decorate --all --graph
+```

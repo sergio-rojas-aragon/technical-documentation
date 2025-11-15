@@ -2,10 +2,12 @@
 title: Stage
 layout: home
 parent: Git
-nav_order: 5
+nav_order: 2
 ---
 
-# Stage
+# Stage Commands
+
+# Agregar
 
 * **deja los archivos en el stage**
 
@@ -13,28 +15,47 @@ nav_order: 5
     git add .
     ```
 
-### agrega todos los archivos que tengan la extencion png dentro del proyecto
+* **agrega archivo especifico**
 
-```
-git add .*png
-```
+    ```
+    git add README.md
+    ```
 
-### agrega todos los archivos que estan en esa carpeta
+* **agregar archivos por extension**
 
-```
-git add css/
-```
-### Agrega todos los archivos que han sido modificados
+    ```
+    git add .*png
+    ```
 
-```
-git add -A
-```
+* **agrega todos los archivos que estan en esa carpeta**
 
-### agrega todos los pdfs dentro de la carpeta pdfs
+    ```
+    git add css/
+    ```
 
-```
-git add pdfs/*.pdf
-```
+* **agrega el archgivo txt de todo el proyecto**
+
+    ```
+    git add "*.txt" 
+    ```
+
+* **agrega todos los archivos del directorio actual**
+
+    ```
+    git add *.txt 
+    ```
+
+* **Agrega todos los archivos que han sido modificados**
+
+    ```
+    git add -A
+    ```
+
+* **agrega todos los pdfs dentro de la carpeta pdfs**
+
+    ```
+    git add pdfs/*.pdf
+    ```
 
 * **saca del stage**
     todos los archivos xml
@@ -43,4 +64,17 @@ git add pdfs/*.pdf
     git reset *.xml
     ```
  
+ # Quitar
+
+* **quitar archivos de stage**
+
+    ```
+    git reset
+    ```
+
+* **restarurar archivos de una carpeta**
+
+    ```
+    git restore carpeta
+    ```
 
