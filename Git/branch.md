@@ -93,7 +93,7 @@ If the changes is in BranchB, i position on branch A
     ```
     git diff RamaA RamaB
     ```
-    
+
 --- 
 
 ### Volver al punto anterior
@@ -108,3 +108,31 @@ git checkout -- .
 git reset --soft d70db2a
 ```
 
+## Unir ramas con conflicto
+
+Cuando se van a unir ramas es probable que salga un mensaje:
+
+```
+CONFLICT CONTENT: Merge conflict in archivo.txt
+automatic merge failed.
+```
+
+Dentro del head y el == es el cambio de la rama actual. Dentro del == y el nombre de la rama es el cambio que esta en la rama.
+
+```
+<<<<<< HEAD
+hola
+======
+chao
+>>>>>> rama
+```
+
+Simplemente se deja el texto que se quiere dejar y el resto se borra
+
+```
+chao
+```
+
+### Descartar cambios
+
+git checkout .

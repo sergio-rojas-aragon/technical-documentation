@@ -6,9 +6,10 @@ nav_order: 1
 ---
 
 # Apuntes Git
+{: .no_toc }
 
 Aca dejare todos los comandos GIT para evitar buscarlos en google.
-
+{: .fs-6 .fw-70 }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -52,7 +53,7 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
             (Local Repo actualizado)
 ```
 
-# Configs
+# Inicializacion
 
 * **Configuracion de GIT**
 
@@ -86,10 +87,69 @@ Alias son atajos que se pueden crear en el sistema git en forma local, para eso 
 
 # Cambio de password
 
-```terminal
+```
 git config --global --unset user.password
 ```
 
 despues pedira las credenciales
 
 
+#  Comandos basicos
+
+
+* **Inicializacion de repositorio**
+
+    ```
+    git init
+    ```
+
+* **Colocar archivos en stage**
+
+    ```
+    git add index.html
+    ```
+
+* **Quitar archivos del stage**
+
+    ```
+    git reset HEAD README.md
+    ```
+
+* **revertir cambios en un archivos**
+
+    ```
+    git checkout -- README.md
+    ```
+
+* **Estado del repositorio**
+    muestra los archivos que han sido modificados y los que estan en stage
+    
+    ```
+    git status
+    ```
+-- Ver cambios que se hicieron en el commit anterior
+git diff
+
+* **ver cambios de archivos que estan en el stage**
+
+    ```
+    git diff --stagged
+    ```
+
+# Configuracion repositorio remoto
+
+* **para agregar repositorio remoto a repo ya existente**
+
+    ```
+    git remote add origin http://git.contaline.cl/SistemaASP/clasesasp.git
+    ```
+
+* **Clonar**
+
+    ```
+    git clone https://github.com/sergiorojas09/UdemyGitHeroes.git demo-10
+    ```
+
+
+
+head = apunta al ultimo commit a la rama de al cual estamos
