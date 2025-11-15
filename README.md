@@ -9,7 +9,7 @@ permalink: /
 # Technical Information
 
 Documentacion e informacion que he ido documentando a lo largo de los años.
-{: .fs-5 .fw-300 }
+{: .fs-6 .fw-300 }
 
 Es mucho mas facil para mi que consultar a alguna inteligencia artificial, me ayuda a buscar de la forma en como lo pienso. Ademas, escribir esta informacion me ayuda a asimilarla mejor.
 
