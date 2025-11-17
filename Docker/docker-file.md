@@ -231,13 +231,12 @@ Tipos:
 
 Porque en un pipeline de deploy:
 
-✔ Jenkins construye la imagen
-✔ La etiqueta
-✔ La sube al registry
-✔ Y el servidor donde se deploya la descarga desde ahí
+* Jenkins construye la imagen
+* La etiqueta
+* La sube al registry
+* Y el servidor donde se deploya la descarga desde ahí
 
 El registry es para Docker lo que un repositorio Git es para código.
-
 
 ### Autenticarse en el registry (login)
 
@@ -268,7 +267,7 @@ docker run -d -p 5000:5000 --name registry registry:2
 
 Esto crea:
 
-* un contenedor llamado registry
+* un contenedor llamado registry (puede llamarse RegistryServer)
 * escuchando en http://localhost:5000
 * que funciona como servidor de imágenes
 
