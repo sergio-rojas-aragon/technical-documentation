@@ -73,3 +73,12 @@ pre:has(> code[class^="language"]) {
   color: white !important;
 
 }
+
+// border del codigo YML
+.language-yml,
+.language-yml .highlight {
+  border-radius: 15px !important;
+  background-color: #000407 !important;
+  color: #19dd22 !important;
+
+}

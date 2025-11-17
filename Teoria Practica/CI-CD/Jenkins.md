@@ -5,6 +5,22 @@ parent: CI/CD
 nav_order: 3
 ---
 
+# Jenkins
+{: .no_toc }
+
+Documentacion de instalacion, configuracion y uso de Jenkins
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta .fs-4 }
+
+1. TOC
+{:toc}
+
+---
+
+# Jenkins en Docker
+
 Para mantenerlo en disco
 
 crear carpeta con `mkdir -p ~/jenkins_data`
@@ -16,11 +32,15 @@ version: '3.8'
 
 services:
   jenkins:
+    build: .
     image: jenkins/jenkins:jdk21
     container_name: jenkins
+    environment:
+      - DOCKER_HOST=tcp://host.docker.internal:2375    
     ports:
       - "8080:8080"
       - "50000:50000"
+
     volumes:
       - ./jenkins_data:/var/jenkins_home
     restart: unless-stopped
@@ -86,17 +106,18 @@ Llenar:
 * **Password:** pegar el token generado
 * **ID / Description:** colocar por ejemplo github-pat-demo
 
-(Alternativa moderna: usa la integración GitHub App; más segura pero requiere pasos adicionales en GitHub).
+
+> (Alternativa moderna: usa la integración GitHub App; más segura pero requiere pasos adicionales en GitHub).
 
 ## Crear nuevo pipeline en Jenkins (desde SCM)
 
-Jenkins → New Item → escribe nombre del job → Pipeline → OK.
+* *Jenkins → New Item → escribe nombre del job → **Pipeline** → OK.*
 
-En la configuración del job → sección Pipeline:
+En la configuración del job → sección **Pipeline**:
 
 * Definition: Pipeline from SCM
 * SCM: Git
-* Repository URL: https://github.com/<tu_usuario>/<tu_repo>.git
+* Repository URL: `https://github.com/<tu_usuario>/<tu_repo>.git`
 * Credentials: selecciona la credencial que agregaste (o None para repos públicos).
 * Branches to build: */main (o la rama que uses)
 * Script Path: Jenkinsfile (ruta dentro del repo)
@@ -105,9 +126,8 @@ Guardar.
 
 ## Probar manualmente
 
-En el job creado → Build Now.
-
-Revisa la consola de la ejecución (Console Output) para confirmar que Jenkins hizo git clone, ejecutó etapas del Jenkinsfile y completó build/test.
+* En el job creado → **Build Now.**
+* Revisa la consola de la ejecución (Console Output) para confirmar que Jenkins hizo git clone, ejecutó etapas del Jenkinsfile y completó build/test.
 
 ## (Opcional) Activar webhooks automáticos
 

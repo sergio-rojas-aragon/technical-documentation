@@ -8,7 +8,7 @@ nav_order: 4
 # Docker Compose
 
 
-### para ejecutar yml
+### para ejecutar 
 
 ```terminal
 docker compose up
@@ -24,20 +24,20 @@ docker compose down
 
 se tiene que comentar el volume external true. Se puede hacer para base de datos y aplicaciones.
 
-```yml
+```
 volumes:
 	- ./posrgres: #ruta de archivos del contenedor
 ```
 
 ### para ejecutar algun comando desde el docker compose. dentro del servicio.
 
-```yml
+```
 command: ['--auth']
 ```
 
 ### usar variables de entorno en docker compose. crear el archivo env.
 
-```yml
+```
 container_name: ${ NOMBRE_VARIABLE }
 ```
 

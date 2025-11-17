@@ -1,16 +1,15 @@
 ---
-title: Get Started
+title: Basic
 layout: home
 parent: Docker
 nav_order: 1
 ---
 
-# Docker commands
+# Basic
 
 
-Ejemplo:
 
-## container
+## Container
 
 * mostrar todos los contenedores
 

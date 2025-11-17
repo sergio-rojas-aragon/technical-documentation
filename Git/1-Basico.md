@@ -12,7 +12,7 @@ Aca dejare todos los comandos GIT para evitar buscarlos en google.
 {: .fs-6 .fw-70 }
 
 ## Table of contents
-{: .no_toc .text-delta }
+{: .no_toc .text-delta .fs-4 }
 
 1. TOC
 {:toc}
