@@ -154,7 +154,7 @@ Por qué: por defecto ASP.NET Core puede escuchar en un puerto distinto o solo e
 
 Establece el comando que se ejecutará cuando alguien arranque el contenedor. 
 
-```
+```yml
 ENTRYPOINT ["dotnet", "DemoCiCdApi.dll"]
 ```
 Qué hace (literal): En este caso ejecuta dotnet DemoCiCdApi.dll, que inicia la aplicación .NET.
@@ -166,7 +166,7 @@ Diferencia clave: ENTRYPOINT fija el principal proceso del contenedor (PID 1). S
 
 * **CMD**
     Define el comando que se ejecuta al arrancar el contenedor.
-    ```
+    ```yml
     CMD ["python", "app.py"]
     ```
 
@@ -181,12 +181,28 @@ Diferencia clave: ENTRYPOINT fija el principal proceso del contenedor (PID 1). S
 * ENTRYPOINT → comando fijo que se ejecuta cuando se arranca el contenedor.
 * CMD → argumentos por defecto que pueden ser sobreescritos cuando inicias el contenedor. (En este Dockerfile solo se usa ENTRYPOINT.)
 
-# Comandos
+# Comandos relacionados
+
+## Pilares para entender
+
+1. **Construir imagen** → docker build
+1. **Autenticarse en un registry** → docker login
+1. **Subir la imagen** → docker push
+1. **Ejecutar o actualizar contenedor** → docker run o docker-compose up
+
+## Explicacion de Comandos
 
 * **Construir una imagen:**
+    Crea la imagen con el nombre democicdapi con la version latest.
+    el punto significa que tiene que construir utilizando el dockerfile que se encuentra en este directorio.
+
     ```
-    docker build -t miapp .
+    docker build -t democicdapi:latest .
     ```
+
+    es importante colocarle un tag para saber que version estas mandando.
+
+
 * **Ejecutar un contenedor:**
     ```
     docker run -p 3000:3000 miapp
@@ -196,3 +212,118 @@ Diferencia clave: ENTRYPOINT fija el principal proceso del contenedor (PID 1). S
     ```
     docker images
     ```
+
+## Registry
+
+Es un servidor donde se guardan imágenes Docker.
+
+Tipos:
+
+* Docker Hub (el más conocido)
+* Azure Container Registry
+* AWS ECR
+* GitHub Container Registry
+* Harbor
+* GitLab Registry
+* etc.
+
+¿Por qué se necesita?
+
+Porque en un pipeline de deploy:
+
+✔ Jenkins construye la imagen
+✔ La etiqueta
+✔ La sube al registry
+✔ Y el servidor donde se deploya la descarga desde ahí
+
+El registry es para Docker lo que un repositorio Git es para código.
+
+
+### Autenticarse en el registry (login)
+
+Antes de subir una imagen necesitas loguearte:
+
+```
+docker login -u usuario -p contraseña registry-url
+```
+
+Ejemplos:
+
+```
+docker login -u user -p mypass docker.io
+docker login -u $CI_USER -p $CI_TOKEN ghcr.io
+docker login -u AWS -p $(aws ecr get-login-password) xxxxx.dkr.ecr.us-east-1.amazonaws.com
+```
+
+En Jenkins los credenciales se guardan siempre en Credentials y se leen desde environment o con `withCredentials`.
+
+### Registry en servidor local
+
+El registry local funciona como un servidor HTTP que guarda imágenes en formato Docker.
+Docker ya trae una imagen oficial llamada registry.
+
+```terminal
+docker run -d -p 5000:5000 --name registry registry:2
+```
+
+Esto crea:
+
+* un contenedor llamado registry
+* escuchando en http://localhost:5000
+* que funciona como servidor de imágenes
+
+## Subir imagen al registry
+
+```terminal
+docker push nombre_imagen:tag
+```
+
+***Para poder subirla, el nombre debe incluir el nombre del registry.***
+
+**Ejemplo para dockerhub:**
+
+```terminal
+docker build -t usuario/miapp:1.0 .
+docker push usuario/miapp:1.0
+```
+
+**ejemplo para registry privado:**
+
+```terminal
+docker build -t my-registry.com/miempresa/miapp:1.0 .
+docker push my-registry.com/miempresa/miapp:1.0
+```
+
+**Ejemplo para un registry local:**
+
+primero se etiqueta la imagen:
+
+```terminal
+docker tag miapp:1.0 localhost:5000/miapp:1.0
+```
+
+Luego push:
+
+```terminal
+docker push localhost:5000/miapp:1.0
+```
+
+### Consumir imagen desde registry local
+
+Desde un local:
+
+```terminal
+docker pull localhost:5000/miapp:1.0
+```
+
+y luego:
+
+```terminal
+docker run -d --name api -p 8080:8080 localhost:5000/miapp:1.0
+```
+
+### Ejecutar la imagen en un servidor
+
+```terminal
+docker run -d --name api -p 8080:8080 miapp:1.0
+```
