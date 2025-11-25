@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Instalacion
 
-```
+```terminal
 dotnet tool install --global dotnet-ef
 ```
 
@@ -22,19 +22,19 @@ Cuando se utilizan las migraciones, si existen datos y se modifica las tablas, s
 
 Donde dice Incial es el nombre de la migracion, por lo que puede ser el nombre que uno quiera:
 
-```
+```terminal
 dotnet ef migrations add Inicial
 ```
 
 ### actualizar migraciones
 
-```
+```terminal
 dotnet ef database update
 ```
 
 ### listar migraciones
 
-```
+```terminal
 dotnet ef migrations list
 ```
 
@@ -43,14 +43,14 @@ dotnet ef migrations list
 el nombre de las migraciones tiene fecha, es parte del nombre asi que se tiene que incluir
 Esto puede fallar
 
-```
+```terminal
 dotnet ef database update nombreCompletoMigracion
 ```
 
 
 ### Eliminar migraciones
 
-```
+```terminal
 dotnet ef migrations remove
 ```
 
@@ -59,7 +59,7 @@ dotnet ef migrations remove
 Se tiene que ingresar la data en el DbContext usando hasData. Al hacer update en la migracion creara las tablas y ademas le agregara los datos.
 Se tiene que programar el HasData antes de que se genere la migracion.
 
-```
+```C#
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.Entity<Rol>().HasData(
