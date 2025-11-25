@@ -26,3 +26,24 @@ Decidi hacerlo en este formato de pagina web utilizando just-the-docs, dejo el l
 
 {: .important }
 > he omitido informacion intencionalmente porque algunos codigos que documenté, pertenecen a alguna empresa.
+
+
+**`Skip()`**
+
+`Skip()`
+
+```terminal
+dotnet ls
+```
+
+```CSharp
+public class Producto
+{
+
+    public int ProductoId { get; set; }
+} 
+```
+
+```yml
+docker container ls -a
+```

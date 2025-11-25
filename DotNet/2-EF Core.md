@@ -59,7 +59,7 @@ dotnet ef migrations remove
 Se tiene que ingresar la data en el DbContext usando hasData. Al hacer update en la migracion creara las tablas y ademas le agregara los datos.
 Se tiene que programar el HasData antes de que se genere la migracion.
 
-```C#
+```CSharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.Entity<Rol>().HasData(
@@ -69,6 +69,23 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
         );
 }
 ```
+
+## Uso con distintos DbContexts y arquitecturas
+
+se tiene que especificar a que dbContext se quiere realizar la migracion
+
+### List from AppDbContext and DDD architecture
+
+```terminal
+dotnet ef migrations list --context AppDbContext --project ./src/TUM.Infrastructure --startup-project ./src/TUM.Api
+```
+
+### Create a migration from AppDbContext and DDD architecture
+
+```terminal
+dotnet ef migrations add PedidoCreatedByFK --context AppDbContext --project src/TUM.Infrastructure --startup-project src/TUM.Api
+```
+
 
 ## Convenciones importantes
 
@@ -204,8 +221,6 @@ public class Usuario
 
 
 ### guardar nuevo elemento
-
-
 
 
 ## Data Annotations en EF Core
