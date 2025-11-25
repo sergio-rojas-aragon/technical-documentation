@@ -84,9 +84,79 @@ pre:has(> code[class^="language"]) {
 }
 
 
+code
 .language-plaintext,
 .highlighter-rouge {
   border-radius: 2px !important;
   background-color: #000407 !important;
   color:red !important;
+  border: 0px;
+  font-weight: bold;
+}
+
+
+
+.language-csharp {
+    /* Color de fondo: Ya se define típicamente en el tema principal, pero se incluye para referencia */
+    /* background-color: #1e1e1e; */ 
+    
+    /* Color predeterminado del texto (para variables y nombres generales) */
+    color: #dcdcdc; 
+}
+
+/*  Etiquetas/Keywords (public, private, class, if, else, return, etc.) */
+.language-csharp .token.keyword {
+    color: #569cd6; /* Azul brillante */
+}
+
+/* Tipos de datos (string, int, bool, List, T, etc.) */
+.language-csharp .token.class-name,
+.language-csharp .token.type,
+.language-csharp .token.builtin {
+    color: #4ec9b0; /* Cian/Verde azulado */
+}
+
+/* Strings y Cadenas de Texto */
+.language-csharp .token.string {
+    color: #ce9178; /* Naranja pálido/Marrón */
+}
+
+/*  Números (enteros, decimales) */
+.language-csharp .token.number {
+    color: #b5cea8; /* Verde claro */
+}
+
+/* Comentarios */
+.language-csharp .token.comment {
+    color: #6a9955; /* Verde musgo */
+    font-style: italic;
+}
+
+/* Funciones, Métodos y Propiedades */
+.language-csharp .token.function,
+.language-csharp .token.property {
+    color: #dcdcdc; /* Blanco roto (para destacarlos menos que las keywords) */
+}
+
+/* Operadores (+, -, =, <, >, &, etc.) y Signos de Puntuación (puntos y comas, paréntesis, corchetes) */
+.language-csharp .token.operator,
+.language-csharp .token.punctuation {
+    color: #d4d4d4; /* Gris muy claro */
+}
+
+/* Directivas del Preprocesador (using, #region, etc.) */
+.language-csharp .token.namespace,
+.language-csharp .token.directive {
+    color: #c586c0; /* Púrpura */
+}
+
+/* Constantes (true, false, null) */
+.language-csharp .token.constant {
+    color: #569cd6; /* Usar el mismo color que la keyword para resaltarlas */
+}
+
+/* Variables/Parámetros definidos por el usuario */
+.language-csharp .token.variable,
+.language-csharp .token.parameter {
+    color: #9cdcfe; /* Azul claro (para diferenciarlos) */
 }

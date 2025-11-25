@@ -6,7 +6,16 @@ nav_order: 2
 ---
 
 # Entity Framework Core
+{: .no_toc }
 
+Apuntes que tomo cuando utilizo Entity Framework Core
+{: .fs-6 .fw-70 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ## Instalacion
 
@@ -26,11 +35,10 @@ Donde dice Incial es el nombre de la migracion, por lo que puede ser el nombre q
 dotnet ef migrations add Inicial
 ```
 
-### actualizar migraciones
-
-```terminal
-dotnet ef database update
-```
+* **actualizar migraciones**
+    ```terminal
+    dotnet ef database update
+    ```
 
 ### listar migraciones
 
@@ -86,6 +94,11 @@ dotnet ef migrations list --context AppDbContext --project ./src/TUM.Infrastruct
 dotnet ef migrations add PedidoCreatedByFK --context AppDbContext --project src/TUM.Infrastructure --startup-project src/TUM.Api
 ```
 
+### enviar cambios
+
+```terminal
+dotnet ef database update --context AppDbContext --project src/TUM.Infrastructure --startup-project src/TUM.Api
+```
 
 ## Convenciones importantes
 
