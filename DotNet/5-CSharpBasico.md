@@ -17,6 +17,17 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 1. TOC
 {:toc}
 
+
+# Funciones para caracteres
+
+* **Regex.IsMatch()** Verifica si una cadena cumple o contiene un patrón.
+
+  ```CSharp
+  bool resultado = Regex.IsMatch("Hola123", @"\d+");
+  Console.WriteLine(resultado); // True
+  ```
+
+
 # Expresiones Regulares
 
 Ejemplo basico: buscar si un texto contiene una palabra:

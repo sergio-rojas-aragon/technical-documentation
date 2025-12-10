@@ -7,13 +7,14 @@
 //   border-radius: 6px;
 // }
 
-.main-content {
-  max-width: 1100px !important; // ancho deseado, por ejemplo 1100px
-}
 
-.main {
-  max-width: 1100px !important;
-}
+// .main-content {
+//   max-width: 1100px !important; // ancho deseado, por ejemplo 1100px
+// }
+
+// .main {
+//   max-width: 1100px !important;
+// }
 
 // prueba
 .sidebar {
@@ -149,7 +150,7 @@ code.language-plaintext.highlighter-rouge {
 }
 
 
-.language-csharp
+.language-CSharp
 {
     color: #dcdcdc; 
     background-color: #000407 !important;
@@ -157,8 +158,8 @@ code.language-plaintext.highlighter-rouge {
 }
 
 
-.language-csharp,
-.language-csharp .highlight
+.language-CSharp,
+.language-CSharp .highlight
 {
     /* Color de fondo: Ya se define típicamente en el tema principal, pero se incluye para referencia */
     /* background-color: #1e1e1e; */ 
@@ -172,59 +173,59 @@ code.language-plaintext.highlighter-rouge {
 
 
 /*  Etiquetas/Keywords (public, private, class, if, else, return, etc.) */
-.language-csharp,
-.language-csharp .highlight .token.keyword {
+.language-CSharp,
+.language-CSharp .highlight .token.keyword {
     color: #569cd6; /* Azul brillante */
 }
 
 /* Tipos de datos (string, int, bool, List, T, etc.) */
-.language-csharp .token.class-name,
-.language-csharp .token.type,
-.language-csharp .token.builtin {
+.language-CSharp .token.class-name,
+.language-CSharp .token.type,
+.language-CSharp .token.builtin {
     color: #4ec9b0; /* Cian/Verde azulado */
 }
 
 /* Strings y Cadenas de Texto */
-.language-csharp .token.string {
+.language-CSharp .token.string {
     color: #ce9178; /* Naranja pálido/Marrón */
 }
 
 /*  Números (enteros, decimales) */
-.language-csharp .token.number {
+.language-CSharp .token.number {
     color: #b5cea8; /* Verde claro */
 }
 
 /* Comentarios */
-.language-csharp .token.comment {
+.language-CSharp .token.comment {
     color: #6a9955; /* Verde musgo */
     font-style: italic;
 }
 
 /* Funciones, Métodos y Propiedades */
-.language-csharp .token.function,
-.language-csharp .token.property {
+.language-CSharp .token.function,
+.language-CSharp .token.property {
     color: #dcdcdc; /* Blanco roto (para destacarlos menos que las keywords) */
 }
 
 /* Operadores (+, -, =, <, >, &, etc.) y Signos de Puntuación (puntos y comas, paréntesis, corchetes) */
-.language-csharp .token.operator,
-.language-csharp .token.punctuation {
+.language-CSharp .token.operator,
+.language-CSharp .token.punctuation {
     color: #d4d4d4; /* Gris muy claro */
 }
 
 /* Directivas del Preprocesador (using, #region, etc.) */
-.language-csharp .token.namespace,
-.language-csharp .token.directive {
+.language-CSharp .token.namespace,
+.language-CSharp .token.directive {
     color: #c586c0; /* Púrpura */
 }
 
 /* Constantes (true, false, null) */
-.language-csharp .token.constant {
+.language-CSharp .token.constant {
     color: #569cd6; /* Usar el mismo color que la keyword para resaltarlas */
 }
 
 /* Variables/Parámetros definidos por el usuario */
-.language-csharp .token.variable,
-.language-csharp .token.parameter {
+.language-CSharp .token.variable,
+.language-CSharp .token.parameter {
     color: #9cdcfe; /* Azul claro (para diferenciarlos) */
 }
