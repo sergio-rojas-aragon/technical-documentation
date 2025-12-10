@@ -40,7 +40,7 @@ table{
 }
 
 .table-wrapper{
-  box-shadow: 0 4px 12px #fd0000 !important;
+  box-shadow: 0 4px 12px #030202 !important;
 }
 
 table {
@@ -106,8 +106,9 @@ table .status-failed {
 
 pre:has(> code[class^="language"]) {
   background-color: #202020 !important;
-  border: 1px solid #5C5C5C !important;
-  border-radius: 15px !important;
+  border: 1px solid #181818 !important;
+  border-radius: 10px !important;
+  padding: 5px !important;
 }
 
 // pre {
@@ -151,23 +152,18 @@ code.language-plaintext.highlighter-rouge {
 }
 
 
-.language-CSharp
+code.language-CSharp
 {
     color: #dcdcdc; 
     background-color: #000407 !important;
-    border-radius: 15px !important;
+    border-radius: 10px !important;
 }
 
 
 .language-CSharp,
-.language-CSharp .highlight
-{
-    /* Color de fondo: Ya se define típicamente en el tema principal, pero se incluye para referencia */
-    /* background-color: #1e1e1e; */ 
-    
-    /* Color predeterminado del texto (para variables y nombres generales) */
-    color: #dcdcdc; 
-    background-color: #000407 !important;
-    border-radius: 15px !important;
-}
+.language-CSharp .highlight {
+  border-radius: 15px !important;
+  background-color: #000407 !important;
+  color: #ff8b2b !important;
 
+}
