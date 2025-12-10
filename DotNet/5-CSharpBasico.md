@@ -250,3 +250,113 @@ Console.WriteLine(resultado); // hola ###
   // 22
   // 333
   ```
+
+# Estructura de datos comunes
+
+## List (Lista) – List<T>
+
+Una colección dinámica, crece y se reduce de forma automática. Permite acceso por índice.
+Cuando necesitas una lista flexible de elementos con acceso rápido.
+
+* Colección dinámica de elementos.
+* Acceso por índice (como un arreglo mejorado).
+* Permite agregar, eliminar y buscar datos.
+
+```csharp
+List<int> numeros = new List<int>();
+numeros.Add(10);
+numeros.Add(20);
+numeros.Add(30);
+
+Console.WriteLine(numeros[1]); // 20
+```
+ ## Queue (Cola) – Queue<T>
+
+Estructura FIFO (First In, First Out).
+El primero en entrar es el primero en salir.
+Para procesos en orden de llegada (impresoras, colas de tareas).
+
+```csharp
+Queue<string> cola = new Queue<string>();
+cola.Enqueue("A");
+cola.Enqueue("B");
+cola.Enqueue("C");
+
+Console.WriteLine(cola.Dequeue()); // A
+```
+
+## Stack (Pila) – Stack<T>
+
+Estructura LIFO (Last In, First Out).
+El último en entrar es el primero en salir.
+Deshacer operaciones, navegación hacia atrás, parsing.
+
+```csharp
+Stack<int> pila = new Stack<int>();
+pila.Push(1);
+pila.Push(2);
+pila.Push(3);
+
+Console.WriteLine(pila.Pop()); // 3
+```
+
+## Dictionary (Tabla Hash / Hash Table) – Dictionary<TKey, TValue>
+
+Estructura basada en hashing.
+Acceso por clave, no por índice.
+Búsqueda muy rápida (O(1) promedio).
+Cuando quieres buscar valores por una clave única.
+
+```csharp
+Dictionary<string, int> edades = new Dictionary<string, int>();
+edades["Juan"] = 25;
+edades["Ana"] = 30;
+
+Console.WriteLine(edades["Ana"]); // 30
+```
+
+## LinkedList (Lista enlazada) – LinkedList<T>
+
+Cada elemento apunta al siguiente (y al anterior si es doblemente enlazada).
+Inserciones y eliminaciones rápidas en cualquier parte (O(1) si tienes el nodo).
+
+```csharp
+LinkedList<int> lista = new LinkedList<int>();
+lista.AddLast(10);
+lista.AddLast(20);
+lista.AddFirst(5);
+```
+
+## HashSet (Conjunto) – HashSet<T>
+
+No permite duplicados.
+Uso típico: comprobar existencia rápida.
+
+```csharp
+HashSet<int> hs = new HashSet<int>();
+hs.Add(1);
+hs.Add(1); // No se agrega
+hs.Add(2);
+
+Console.WriteLine(hs.Count); // 2
+```
+
+## SortedList – `SortedList<TKey,TValue>`
+
+Como un Dictionary pero mantiene las claves ordenadas.
+
+```csharp
+SortedList<int, string> sl = new SortedList<int, string>();
+sl.Add(20, "B");
+sl.Add(10, "A");
+
+Console.WriteLine(sl[10]); // A
+```
+
+## SortedDictionary – `SortedDictionary<TKey,TValue>`
+
+Similar a SortedList, pero más eficiente en inserciones grandes (usa árbol).
+
+## SortedSet – SortedSet<T>
+
+Como HashSet pero ordenado.

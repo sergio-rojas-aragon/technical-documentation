@@ -37,6 +37,17 @@ sin formato
 hola como estas
 ```
 
+* **sin formato tab**
+    ```
+    hola como estas
+    ```
+
+* **sin formato tab 2**
+    
+    ```
+    hola como estas
+    ```
+
 terminal
 ```terminal
 dotnet ls
@@ -55,3 +66,14 @@ yml
 ```yml
 docker container ls -a
 ```
+
+tablas
+
+
+| Expresión | Significado                         |
+| --------- | ----------------------------------- |
+| `[abc]`   | a, b o c                            |
+| `[^abc]`  | cualquier carácter excepto a, b o c |
+| `[a-z]`   | letras minúsculas                   |
+| `[A-Z]`   | letras mayúsculas                   |
+| `[0-9]`   | dígitos                             |
