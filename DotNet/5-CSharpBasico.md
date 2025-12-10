@@ -5,7 +5,7 @@ parent: DotNet
 nav_order: 5
 ---
 
-# Csharp
+# C Sharp
 {: .no_toc }
 
 Como todas las pruebas de desarrollo se basan en pruebas de logica con caracteres lo cual te dice para nada la forma de desarrollar de alguien, decidi hacer esta pagina para no olvidar el uso de distintas funciones de caracteres.
@@ -22,20 +22,20 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 
 * **IndexOf()** Devuelve la posición donde aparece un carácter o texto. Ej: Si no aparece, devuelve -1.
 
-  ```CSharp
+  ```csharp
   int pos = "Hola mundo".IndexOf("mundo");
   Console.WriteLine(pos); // 5
   ```
 
 * **LastIndexOf()** Devuelve la última posición donde aparece el texto.
 
-  ```CSharp
+  ```csharp
   int pos = "abc abc abc".LastIndexOf("abc");
   Console.WriteLine(pos); // 8
   ```
 * **Substring()** Extrae parte de una cadena.
 
-  ```CSharp
+  ```csharp
   string s = "Hola mundo".Substring(5); 
   Console.WriteLine(s); // mundo
 
@@ -45,21 +45,21 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 
 * **Contains()** Verifica si un texto está contenido en la cadena.
 
-  ```CSharp
+  ```csharp
   bool tiene = "Hola mundo".Contains("mun");
   Console.WriteLine(tiene); // True
   ```
 
 * **StartsWith() / EndsWith()** Verifica si la cadena empieza o termina con cierto texto.
 
-  ```CSharp
+  ```csharp
   "Programar".StartsWith("Pro"); // True
   "Programar".EndsWith("mar");  // True
   ```
   
 * **Split()** Divide un string usando uno o varios caracteres.
 
-  ```CSharp
+  ```csharp
   string[] palabras = "uno,dos,tres".Split(',');
 
   foreach (var p in palabras)
@@ -67,7 +67,7 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
   ```
 * **Replace()** Reemplaza texto simple sin usar regex.
 
-  ```CSharp
+  ```csharp
   string r = "hola mundo".Replace("o", "0");
   Console.WriteLine(r); // h0la mund0
   ```
@@ -76,21 +76,21 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 
 * **Regex.IsMatch()** Verifica si una cadena cumple o contiene un patrón.
 
-  ```CSharp
+  ```csharp
   bool resultado = Regex.IsMatch("Hola123", @"\d+");
   Console.WriteLine(resultado); // True
   ```
 
 * **Regex.Match()** Devuelve la primera coincidencia con el patrón.
 
-  ```CSharp
+  ```csharp
   Match m = Regex.Match("ABC123XYZ", @"\d+");
   Console.WriteLine(m.Value); // 123
   ```
 
 * **Regex.Matches()** Devuelve todas las coincidencias encontradas en la cadena.
 
-  ```CSharp
+  ```csharp
   MatchCollection mc = Regex.Matches("A1 B22 C333", @"\d+");
   foreach (Match m in mc)
       Console.WriteLine(m.Value);
@@ -101,14 +101,14 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 
 * **Regex.Replace()** Reemplaza el texto que coincide con el patrón por otro texto.
 
-  ```CSharp
+  ```csharp
   string r = Regex.Replace("hola 123", @"\d", "#");
   Console.WriteLine(r); // hola ###
   ```
 
 * **Regex.Split()** Divide una cadena usando un patrón como delimitador.
 
-  ```CSharp
+  ```csharp
   string[] partes = Regex.Split("uno,dos;tres cuatro", @"[,; ]");
 
   foreach (var p in partes)
@@ -123,7 +123,7 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 
 Ejemplo basico: buscar si un texto contiene una palabra:
 
-```CSharp
+```csharp
 string texto = "Hola mundo";
 bool encontrado = Regex.IsMatch(texto, "mundo");
 Console.WriteLine(encontrado);  // True
@@ -143,7 +143,7 @@ Las clases de caracteres permiten definir qué caracteres son válidos.
 
 Ejemplo:
 
-```CSharp
+```csharp
 Regex.IsMatch("hola", "[a-z]");   // True
 ```
 
@@ -163,7 +163,7 @@ Sirven para indicar cuántas veces debe aparecer un carácter o patrón.
 
 Ejemplo, validar que hay 3 números consecutivos
 
-```CSharp
+```csharp
 Regex.IsMatch("abc123def", "[0-9]{3}");  // True
 ```
 
@@ -180,7 +180,7 @@ Algunos caracteres deben “escaparse” usando `\`.
 
 Ejemplo:
 
-```CSharp
+```csharp
 Regex.IsMatch("2025", @"\d\d\d\d"); // True
 ```
 
@@ -196,7 +196,7 @@ Regex.IsMatch("2025", @"\d\d\d\d"); // True
 
 Ejemplo: validar que el texto es solo números
 
-```CSharp
+```csharp
 Regex.IsMatch("12345", @"^\d+$"); // True
 Regex.IsMatch("12a45", @"^\d+$"); // False
 ```
@@ -207,13 +207,13 @@ Regex.IsMatch("12a45", @"^\d+$"); // False
 
 devuelve abc123
 
-```CSharp
+```csharp
 Regex.Match("abc123", @"([a-z]+)(\d+)");
 ```
 
 **Extraer valores***
 
-```CSharp
+```csharp
 var m = Regex.Match("abc123", @"([a-z]+)(\d+)");
 Console.WriteLine(m.Groups[1].Value); // abc
 Console.WriteLine(m.Groups[2].Value); // 123
@@ -221,7 +221,7 @@ Console.WriteLine(m.Groups[2].Value); // 123
 
 ## Remplazos con Regex
 
-```CSharp
+```csharp
 string resultado = Regex.Replace("hola 123", @"\d", "#");
 Console.WriteLine(resultado); // hola ###
 ```
@@ -229,19 +229,19 @@ Console.WriteLine(resultado); // hola ###
 ## Ejemplos prácticos comunes
 
 * **validar Email**
-  ```CSharp
+  ```csharp
   Regex.IsMatch("correo@dom.com",
                 @"^[\w\.-]+@[\w\.-]+\.\w{2,}$");
   ```
 
 * **Validar numero de telefono simple**
-  ```CSharp
+  ```csharp
   Regex.IsMatch("311-555-1234",
                 @"^\d{3}-\d{3}-\d{4}$");
   ```
 * **Extraer números de una cadena**
 
-  ```CSharp
+  ```csharp
   var nums = Regex.Matches("A1 B22 C333", @"\d+");
   foreach (Match n in nums)
       Console.WriteLine(n.Value);
