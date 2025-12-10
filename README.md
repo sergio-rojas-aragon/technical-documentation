@@ -44,6 +44,14 @@ public class Producto
 } 
 ```
 
+```csharp
+public class Producto
+{
+
+    public int ProductoId { get; set; }
+} 
+```
+
 ```yml
 docker container ls -a
 ```
