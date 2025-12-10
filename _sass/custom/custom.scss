@@ -100,6 +100,8 @@ code.language-plaintext.highlighter-rouge {
     
     /* Color predeterminado del texto (para variables y nombres generales) */
     color: #dcdcdc; 
+    background-color: #000407 !important;
+    border-radius: 15px !important;
 }
 
 /*  Etiquetas/Keywords (public, private, class, if, else, return, etc.) */

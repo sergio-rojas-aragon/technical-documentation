@@ -63,7 +63,7 @@ Para `.net8`
 
 ## Registrar usuario (Sign Up)
 
-Endpoint: POST /register
+Endpoint: `POST /register`
 
 JSON body:
 
