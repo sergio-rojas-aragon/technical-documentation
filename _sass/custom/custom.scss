@@ -117,7 +117,7 @@ pre:has(> code[class^="language"]) {
 
 // border del codigo
 //.language-plaintext,
-//.language-plaintext .highlight 
+.language-plaintext .highlight 
 .language-plaintext.highlighter-rouge 
 {
   border-radius: 10px !important;
@@ -126,6 +126,16 @@ pre:has(> code[class^="language"]) {
   color: white !important;
 
 }
+
+// color del texto inline
+code.language-plaintext.highlighter-rouge {
+  //border-radius: 2px !important;
+  background-color: #000407 !important;
+  color:red !important;
+  border: 0px !important;
+  //font-weight: bold;
+}
+
 
 // border del codigo
 .language-terminal,
@@ -145,14 +155,7 @@ pre:has(> code[class^="language"]) {
 
 }
 
-// color del texto inline
-code.language-plaintext.highlighter-rouge {
-  border-radius: 2px !important;
-  background-color: #000407 !important;
-  color:red !important;
-  border: 0px;
-  font-weight: bold;
-}
+
 
 .language-csharp,
 .language-csharp .highlight,

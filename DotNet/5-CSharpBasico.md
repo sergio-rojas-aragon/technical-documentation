@@ -360,3 +360,133 @@ Similar a SortedList, pero más eficiente en inserciones grandes (usa árbol).
 ## SortedSet – SortedSet<T>
 
 Como HashSet pero ordenado.
+
+# Algorintmos de ordenamiento y busqueda
+
+## Búsqueda Lineal (Linear Search)
+
+Revisa elemento por elemento.
+
+```csharp
+int Buscar(int[] arr, int x) {
+    for (int i = 0; i < arr.Length; i++)
+        if (arr[i] == x) return i;
+    return -1;
+}
+```
+## Búsqueda Binaria (Binary Search)
+
+```csharp
+int BinarySearch(int[] arr, int x) {
+    int i = 0, j = arr.Length - 1;
+
+    while (i <= j) {
+        int mid = (i + j) / 2;
+
+        if (arr[mid] == x) return mid;
+        else if (arr[mid] < x) i = mid + 1;
+        else j = mid - 1;
+    }
+    return -1;
+}
+```
+
+## Bubble Sort
+
+```csharp
+void BubbleSort(int[] arr) {
+    for (int i = 0; i < arr.Length - 1; i++)
+        for (int j = 0; j < arr.Length - 1 - i; j++)
+            if (arr[j] > arr[j + 1])
+                (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+}
+```
+
+## Selection Sort
+Busca el elemento menor y lo pone al inicio repetidamente.
+
+```csharp
+void SelectionSort(int[] arr) {
+    for (int i = 0; i < arr.Length; i++) {
+        int min = i;
+        for (int j = i + 1; j < arr.Length; j++)
+            if (arr[j] < arr[min]) min = j;
+
+        (arr[i], arr[min]) = (arr[min], arr[i]);
+    }
+}
+```
+
+## Insertion Sort
+Inserta cada elemento en la parte ya ordenada.
+
+```csharp
+void InsertionSort(int[] arr) {
+    for (int i = 1; i < arr.Length; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+```
+
+## Merge Sort
+
+Divide y combina (divide y vencerás).
+Muy eficiente y estable.
+
+```csharp
+int[] MergeSort(int[] arr) {
+    if (arr.Length <= 1) return arr;
+
+    int mid = arr.Length / 2;
+    var left = MergeSort(arr[..mid]);
+    var right = MergeSort(arr[mid..]);
+
+    return Merge(left, right);
+}
+
+int[] Merge(int[] a, int[] b) {
+    List<int> res = new List<int>();
+    int i = 0, j = 0;
+
+    while (i < a.Length && j < b.Length)
+        res.Add(a[i] < b[j] ? a[i++] : b[j++]);
+
+    res.AddRange(a[i..]);
+    res.AddRange(b[j..]);
+    return res.ToArray();
+}
+```
+
+## QuickSort
+
+Divide usando un pivote.
+Muy rápido en promedio.
+
+```csharp
+void QuickSort(int[] arr, int left, int right) {
+    if (left >= right) return;
+
+    int pivot = arr[(left + right) / 2];
+    int i = left, j = right;
+
+    while (i <= j) {
+        while (arr[i] < pivot) i++;
+        while (arr[j] > pivot) j--;
+
+        if (i <= j) {
+            (arr[i], arr[j]) = (arr[j], arr[i]);
+            i++; j--;
+        }
+    }
+
+    QuickSort(arr, left, j);
+    QuickSort(arr, i, right);
+}
+```
