@@ -18,7 +18,61 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
 {:toc}
 
 
-# Funciones para caracteres
+# Funciones básicas de string en C# para manejo de caracteres
+
+* **IndexOf()** Devuelve la posición donde aparece un carácter o texto. Ej: Si no aparece, devuelve -1.
+
+  ```CSharp
+  int pos = "Hola mundo".IndexOf("mundo");
+  Console.WriteLine(pos); // 5
+  ```
+
+* **LastIndexOf()** Devuelve la última posición donde aparece el texto.
+
+  ```CSharp
+  int pos = "abc abc abc".LastIndexOf("abc");
+  Console.WriteLine(pos); // 8
+  ```
+* **Substring()** Extrae parte de una cadena.
+
+  ```CSharp
+  string s = "Hola mundo".Substring(5); 
+  Console.WriteLine(s); // mundo
+
+  string s2 = "Hola mundo".Substring(0, 4);
+  Console.WriteLine(s2); // Hola
+  ```
+
+* **Contains()** Verifica si un texto está contenido en la cadena.
+
+  ```CSharp
+  bool tiene = "Hola mundo".Contains("mun");
+  Console.WriteLine(tiene); // True
+  ```
+
+* **StartsWith() / EndsWith()** Verifica si la cadena empieza o termina con cierto texto.
+
+  ```CSharp
+  "Programar".StartsWith("Pro"); // True
+  "Programar".EndsWith("mar");  // True
+  ```
+  
+* **Split()** Divide un string usando uno o varios caracteres.
+
+  ```CSharp
+  string[] palabras = "uno,dos,tres".Split(',');
+
+  foreach (var p in palabras)
+      Console.WriteLine(p);
+  ```
+* **Replace()** Reemplaza texto simple sin usar regex.
+
+  ```CSharp
+  string r = "hola mundo".Replace("o", "0");
+  Console.WriteLine(r); // h0la mund0
+  ```
+
+# Funciones Regex
 
 * **Regex.IsMatch()** Verifica si una cadena cumple o contiene un patrón.
 
@@ -27,6 +81,43 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
   Console.WriteLine(resultado); // True
   ```
 
+* **Regex.Match()** Devuelve la primera coincidencia con el patrón.
+
+  ```CSharp
+  Match m = Regex.Match("ABC123XYZ", @"\d+");
+  Console.WriteLine(m.Value); // 123
+  ```
+
+* **Regex.Matches()** Devuelve todas las coincidencias encontradas en la cadena.
+
+  ```CSharp
+  MatchCollection mc = Regex.Matches("A1 B22 C333", @"\d+");
+  foreach (Match m in mc)
+      Console.WriteLine(m.Value);
+  // 1
+  // 22
+  // 333
+  ```
+
+* **Regex.Replace()** Reemplaza el texto que coincide con el patrón por otro texto.
+
+  ```CSharp
+  string r = Regex.Replace("hola 123", @"\d", "#");
+  Console.WriteLine(r); // hola ###
+  ```
+
+* **Regex.Split()** Divide una cadena usando un patrón como delimitador.
+
+  ```CSharp
+  string[] partes = Regex.Split("uno,dos;tres cuatro", @"[,; ]");
+
+  foreach (var p in partes)
+      Console.WriteLine(p);
+  // uno
+  // dos
+  // tres
+  // cuatro
+  ```
 
 # Expresiones Regulares
 

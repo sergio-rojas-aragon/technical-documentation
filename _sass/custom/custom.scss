@@ -105,8 +105,9 @@ table .status-failed {
 
 
 pre:has(> code[class^="language"]) {
-  background-color: darkgrey !important;
-  border: 2px solid #887357 !important;
+  background-color: #202020 !important;
+  border: 1px solid #5C5C5C !important;
+  border-radius: 15px !important;
 }
 
 // pre {
@@ -170,62 +171,3 @@ code.language-plaintext.highlighter-rouge {
     border-radius: 15px !important;
 }
 
-
-
-/*  Etiquetas/Keywords (public, private, class, if, else, return, etc.) */
-.language-CSharp,
-.language-CSharp .highlight .token.keyword {
-    color: #569cd6; /* Azul brillante */
-}
-
-/* Tipos de datos (string, int, bool, List, T, etc.) */
-.language-CSharp .token.class-name,
-.language-CSharp .token.type,
-.language-CSharp .token.builtin {
-    color: #4ec9b0; /* Cian/Verde azulado */
-}
-
-/* Strings y Cadenas de Texto */
-.language-CSharp .token.string {
-    color: #ce9178; /* Naranja pálido/Marrón */
-}
-
-/*  Números (enteros, decimales) */
-.language-CSharp .token.number {
-    color: #b5cea8; /* Verde claro */
-}
-
-/* Comentarios */
-.language-CSharp .token.comment {
-    color: #6a9955; /* Verde musgo */
-    font-style: italic;
-}
-
-/* Funciones, Métodos y Propiedades */
-.language-CSharp .token.function,
-.language-CSharp .token.property {
-    color: #dcdcdc; /* Blanco roto (para destacarlos menos que las keywords) */
-}
-
-/* Operadores (+, -, =, <, >, &, etc.) y Signos de Puntuación (puntos y comas, paréntesis, corchetes) */
-.language-CSharp .token.operator,
-.language-CSharp .token.punctuation {
-    color: #d4d4d4; /* Gris muy claro */
-}
-
-/* Directivas del Preprocesador (using, #region, etc.) */
-.language-CSharp .token.namespace,
-.language-CSharp .token.directive {
-    color: #c586c0; /* Púrpura */
-}
-
-/* Constantes (true, false, null) */
-.language-CSharp .token.constant {
-    color: #569cd6; /* Usar el mismo color que la keyword para resaltarlas */
-}
-
-/* Variables/Parámetros definidos por el usuario */
-.language-CSharp .token.variable,
-.language-CSharp .token.parameter {
-    color: #9cdcfe; /* Azul claro (para diferenciarlos) */
-}
