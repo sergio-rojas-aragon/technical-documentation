@@ -152,9 +152,10 @@ code.language-plaintext.highlighter-rouge {
 }
 
 .language-csharp,
-.language-yml .highlight {
-  border-radius: 15px !important;
+.language-csharp .highlight,
+.language-csharp .highlighter-rouge
+{
+  border-radius: 10px !important;
   background-color: #000407 !important;
-  color: #ff8b2b !important;
-
+  
 }

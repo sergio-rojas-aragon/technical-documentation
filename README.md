@@ -32,18 +32,17 @@ Decidi hacerlo en este formato de pagina web utilizando just-the-docs, dejo el l
 
 `Skip()`
 
+sin formato
+```
+hola como estas
+```
+
+terminal
 ```terminal
 dotnet ls
 ```
 
-```CSharp
-public class Producto
-{
-
-    public int ProductoId { get; set; }
-} 
-```
-
+csharp
 ```csharp
 public class Producto
 {
@@ -52,6 +51,7 @@ public class Producto
 } 
 ```
 
+yml
 ```yml
 docker container ls -a
 ```
