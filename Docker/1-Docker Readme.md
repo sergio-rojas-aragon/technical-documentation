@@ -5,13 +5,20 @@ parent: Docker
 nav_order: 1
 ---
 
-# Basic
+# Get Started Docker
+{: .no_toc }
 
+{: .fs-6 .fw-70 }
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ## Container
 
-* mostrar todos los contenedores
+* **mostrar todos los contenedores**
 
     ```yml
     docker container ls -a

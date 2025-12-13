@@ -2,10 +2,19 @@
 title: Docker Compose
 layout: home
 parent: Docker
-nav_order: 4
+nav_order: 5
 ---
 
 # Docker Compose
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+--- 
 
 
 ### para ejecutar 

@@ -5,6 +5,16 @@ parent: Docker
 nav_order: 4
 ---
 
+# Terminal
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+--- 
 
 # Use Terminal in docker container
 
