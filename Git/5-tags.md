@@ -6,44 +6,54 @@ nav_order: 5
 ---
 
 # Tags
+{: .no_toc }
 
-### Crear tag
+## Table of contents
+{: .no_toc .text-delta }
 
-```
-git tag nombre
-```
+1. TOC
+{:toc}
 
-### ver tags
+--- 
 
-```
-git tag
-```
+* **Crear tag**
 
-### borrar tags
+    ```terminal
+    git tag nombre
+    ```
 
-```
-git tag -d nombreTag
-```
+* **ver tags**
 
-###agregar tag con anotaciones
+    ```terminal
+    git tag
+    ```
 
-```
-git tag -a v1.0.0 -m "Version 1.0.0"
-```
+* **borrar tags**
 
-### agregar tag con anotaciones a otro punto de la rama
+    ```terminal
+    git tag -d nombreTag
+    ```
 
-```
-git tag -a v0.1.0 345d7de -m "Version alfa"
-```
+* **agregar tag con anotaciones**
 
-### para ver lo que contiene cierto tag
+    ```terminal
+    git tag -a v1.0.0 -m "Version 1.0.0"
+    ```
 
-```
-git show v0.1.0
-```
-### subir tags
+* **agregar tag con anotaciones a otro punto de la rama**
 
-```
-git push --tags
-```
+    ```
+    git tag -a v0.1.0 345d7de -m "Version alfa"
+    ```
+
+* **para ver lo que contiene cierto tag**
+
+    ```terminal
+    git show v0.1.0
+    ```
+
+* **subir tags**
+
+    ```terminal
+    git push --tags
+    ```

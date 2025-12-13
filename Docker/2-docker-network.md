@@ -1,11 +1,20 @@
 ---
-title: Network
+title: Networks
 layout: home
 parent: Docker
 nav_order: 2
 ---
 
-## Network
+# Networks
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+--- 
 
 Si dos o más contenedores están en la misma red, podrán hablar entre sí. Si no lo están, no podrán.
 

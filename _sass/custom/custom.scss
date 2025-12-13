@@ -117,12 +117,12 @@ pre:has(> code[class^="language"]) {
 
 // border del codigo
 //.language-plaintext,
-//.language-plaintext .highlight 
+.language-plaintext .highlight, 
 .language-plaintext.highlighter-rouge 
 {
   border-radius: 10px !important;
   background-color: #202020 !important;
-  border: 1px solid #181818 !important; // 181818
+  border: 1px solid #00ff0d !important; // 181818
   color: white !important;
 
 }
