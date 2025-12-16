@@ -6,7 +6,7 @@ description: "Informacion tecnica en varios lenguajes de programacion"
 permalink: /
 ---
 
-# Technical Information
+# Docs by Sergio
 
 Documentacion e informacion que he ido documentando a lo largo de los años.
 {: .fs-6 .fw-300 }
