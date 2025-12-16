@@ -20,7 +20,12 @@ nav_order: 4
     ```
     git branch
     ```
+* **Ver branch remotas**
 
+    ```batch
+    git branch -r
+    ```
+    
 * **Se cambia de rama a la que se esta mencionando**
 
     ```

@@ -20,5 +20,8 @@ nav_order: 9
 
 # Web Page
 
+
+https://docs.github.com/en/pages/quickstart
+
 change the name of repository
 
