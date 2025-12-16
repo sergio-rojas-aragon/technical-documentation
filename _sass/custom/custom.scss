@@ -121,18 +121,19 @@ pre:has(> code[class^="language"]) {
 div.language-plaintext.highlighter-rouge > div.highlight 
 {
   border-radius: 10px !important;
-  background-color: #202020 !important;
-  border: 1px solid #00ff0d !important; // 181818
-  color: white !important;
-
 }
 
+div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
+    background-color: #3cff00 !important; /* Cambia el color aquí */
+    margin: 0 !important;                /* Opcional: elimina márgenes internos */
+    padding: 1em !important;             /* Opcional: ajusta el espacio interno */
+}
 
 .language-plaintext.highlighter-rouge 
 {
   border-radius: 10px !important;
   background-color: #202020 !important;
-  border: 1px solid #ff0000 !important; // 181818
+  border: 1px solid #181818 !important; // 181818
   color: white !important;
 
 }
@@ -145,6 +146,8 @@ code.language-plaintext.highlighter-rouge {
   border: 0px !important;
   //font-weight: bold;
 }
+
+
 
 
 // border del codigo
