@@ -124,9 +124,20 @@ div.language-plaintext.highlighter-rouge > div.highlight
 }
 
 div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
-    background-color: #3cff00 !important; /* Cambia el color aquí */
+    background-color: #202020 !important; /* Cambia el color aquí */
     margin: 0 !important;                /* Opcional: elimina márgenes internos */
     padding: 1em !important;             /* Opcional: ajusta el espacio interno */
+}
+
+div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
+    border-radius: 2px !important;
+    margin: 3px !important;
+    padding: 3px !important;
+    /* Ajustes adicionales para asegurar que se vea bien */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f10000 !important; /* Cambia el color del botón aquí */
 }
 
 .language-plaintext.highlighter-rouge 
