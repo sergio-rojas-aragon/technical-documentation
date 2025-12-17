@@ -120,7 +120,7 @@ div.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
     align-items: center !important;
     justify-content: center !important;
     border: 1px solid #979797 !important;
-    background-color: violet !important; // prueba
+    background-color: #273642 !important; // prueba
 
 }
 
@@ -148,7 +148,7 @@ div.highlight pre {
 {
   border-radius: 5px !important;
   background-color: #202020 !important;
-  border: 1px solid #273642 !important; // 181818
+  //border: 1px solid #273642 !important; // 181818
   color: white !important;
 
 }
@@ -168,17 +168,16 @@ div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
 
 // color del texto inline
 code.language-plaintext.highlighter-rouge {
-  //border-radius: 2px !important;
   background-color: #000407 !important;
-  color:red !important;
   border: 0px !important;
-  //font-weight: bold;
 }
 
 
 
+//=======================================================
+// terminal
+//=======================================================
 
-// border del codigo
 .language-terminal,
 .language-terminal .highlight {
   border-radius: 15px !important;
@@ -187,7 +186,9 @@ code.language-plaintext.highlighter-rouge {
 
 }
 
-// border del codigo YML
+//=======================================================
+// yml
+//=======================================================
 .language-yml,
 .language-yml .highlight {
   border-radius: 15px !important;
@@ -196,21 +197,23 @@ code.language-plaintext.highlighter-rouge {
 
 }
 
-
+//=======================================================
+// csharp
+//=======================================================
 
 .language-csharp,
 .language-csharp .highlight,
 .language-csharp .highlighter-rouge
 {
-  border-radius: 7px !important;
-  background-color: #202020 !important;
-  border: 1px solid #181818 !important;
-
-}
-
-.language-csharp.highlighter-rouge .highlight {
-
   border-radius: 5px !important;
   background-color: #202020 !important;
-  border: 1px solid #181818 !important;
+   border: 1px solid #273642 !important;
+
 }
+
+// .language-csharp.highlighter-rouge .highlight {
+
+//   border-radius: 5px !important;
+//   background-color: #202020 !important;
+//   border: 1px solid #181818 !important;
+// }
