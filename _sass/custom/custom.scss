@@ -107,22 +107,41 @@ table .status-failed {
 pre:has(> code[class^="language"]) {
   background-color: #202020 !important;
   border: 1px solid #f10000 !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
   padding: 5px !important;
 }
 
-
-
-.language-plaintext.highlighter-rouge 
-{
-  border-radius: 10px !important;
-  background-color: #202020 !important;
-  border: 1px solid #181818 !important; // 181818
-  color: white !important;
+// Boton de copiar, esta sin color porque solo cambia el color del icono
+div.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
+    border-radius: 5px !important;
+    margin: 10px !important;
+    padding: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #979797 !important;
+    background-color: violet !important; // prueba
 
 }
 
+// ageegado para ver si funciona
+div.highlighter-rouge {
+  background-color: #018efa !important;
+}
 
+
+//=======================================================
+// plaintext
+//=======================================================
+
+.language-plaintext.highlighter-rouge 
+{
+  border-radius: 5px !important;
+  background-color: #202020 !important;
+  border: 1px solid #273642 !important; // 181818
+  color: white !important;
+
+}
 
 // Borde externo
 div.language-plaintext.highlighter-rouge > div.highlight 
@@ -135,25 +154,6 @@ div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
     background-color: #202020 !important; /* Cambia el color aquí */
     margin: 0 !important;                /* Opcional: elimina márgenes internos */
     //padding: 1em !important;             /* Opcional: ajusta el espacio interno */
-}
-
-// boton copiar codigo
-//div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] 
-div.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
-    border-radius: 5px !important;
-    margin: 10px !important;
-    padding: 10px !important;
-    /* Ajustes adicionales para asegurar que se vea bien */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border: 1px solid #979797 !important;
-
-}
-
-// ageegado para ver si funciona
-.highlighter-rouge {
-  background-color: #018efa !important;
 }
 
 // color del texto inline
