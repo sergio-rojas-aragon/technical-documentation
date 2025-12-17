@@ -104,12 +104,12 @@ table .status-failed {
 // }
 
 
-pre:has(> code[class^="language"]) {
-  background-color: #202020 !important;
-  border: 1px solid #f10000 !important;
-  border-radius: 5px !important;
-  padding: 5px !important;
-}
+// pre:has(> code[class^="language"]) {
+//   background-color: #202020 !important;
+//   border: 1px solid #f10000 !important;
+//   border-radius: 5px !important;
+//   padding: 5px !important;
+// }
 
 // Boton de copiar, esta sin color porque solo cambia el color del icono
 div.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
@@ -124,14 +124,13 @@ div.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
 
 }
 
-// ageegado para ver si funciona
-div.highlighter-rouge {
-  background-color: #018efa !important;
-}
+//=======================================================
+// fondo de color por defecto
+//=======================================================
 
 div.highlight {
   color: #e5e7eb;
-  border: 1px solid #979797 !important;
+  border: 1px solid #273642 !important;
   background-color: #202020 !important;
   border-radius: 5px !important;
 }
