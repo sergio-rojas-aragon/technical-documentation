@@ -138,7 +138,8 @@ div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
 }
 
 // boton copiar codigo
-div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
+//div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] 
+div.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
     border-radius: 5px !important;
     margin: 10px !important;
     padding: 10px !important;
@@ -150,6 +151,10 @@ div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipb
 
 }
 
+// ageegado para ver si funciona
+.highlighter-rouge {
+  background-color: #018efa !important;
+}
 
 // color del texto inline
 code.language-plaintext.highlighter-rouge {
