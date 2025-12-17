@@ -130,8 +130,10 @@ div.highlighter-rouge {
 }
 
 div.highlight {
-  background-color: #ff010d; /* azul oscuro */
   color: #e5e7eb;
+  border: 1px solid #979797 !important;
+  background-color: #202020 !important;
+  border-radius: 5px !important;
 }
 
 div.highlight pre {
