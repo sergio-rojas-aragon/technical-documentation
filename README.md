@@ -67,6 +67,56 @@ yml
 docker container ls -a
 ```
 
+bash
+```bash
+docker container ls -a
+```
+
+curl
+```curl
+docker container ls -a
+```
+
+dockerfile
+```dockerfile
+ARG nodeVersion=16.0.0
+ARG PROD_NODE_MODULES_PATH=/tmp/prod_node_modules
+ARG alpineVersion=3.11
+```
+
+json
+```json
+{
+    "hola": "chao",
+    "chao": "hola"
+}
+
+```
+
+javascript
+```javascript
+function hola(){
+    console.log("chao");
+}
+```
+
+powershell
+```powershell
+git lg
+```
+
+sql
+```sql
+select * from hola where chao = 'hola'
+```
+
+vbnet
+```vbnet
+public function hola() as string
+
+end function
+```
+
 
 
 tablas

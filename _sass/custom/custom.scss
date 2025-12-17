@@ -111,35 +111,7 @@ pre:has(> code[class^="language"]) {
   padding: 5px !important;
 }
 
-// pre {
-//   background-color: darkgrey !important;
-// }
 
-// border del codigo
-//.language-plaintext,
-
-div.language-plaintext.highlighter-rouge > div.highlight 
-{
-  border-radius: 10px !important;
-}
-
-div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
-    background-color: #202020 !important; /* Cambia el color aquí */
-    margin: 0 !important;                /* Opcional: elimina márgenes internos */
-    padding: 1em !important;             /* Opcional: ajusta el espacio interno */
-}
-
-div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
-    border-radius: 5px !important;
-    margin: 10px !important;
-    padding: 10px !important;
-    /* Ajustes adicionales para asegurar que se vea bien */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border: 1px solid red !important;
-
-}
 
 .language-plaintext.highlighter-rouge 
 {
@@ -149,6 +121,35 @@ div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipb
   color: white !important;
 
 }
+
+
+
+// Borde externo
+div.language-plaintext.highlighter-rouge > div.highlight 
+{
+  border-radius: 5px !important;
+   background-color: #202020 !important; 
+}
+
+div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
+    background-color: #202020 !important; /* Cambia el color aquí */
+    margin: 0 !important;                /* Opcional: elimina márgenes internos */
+    //padding: 1em !important;             /* Opcional: ajusta el espacio interno */
+}
+
+// boton copiar codigo
+div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
+    border-radius: 5px !important;
+    margin: 10px !important;
+    padding: 10px !important;
+    /* Ajustes adicionales para asegurar que se vea bien */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #979797 !important;
+
+}
+
 
 // color del texto inline
 code.language-plaintext.highlighter-rouge {
