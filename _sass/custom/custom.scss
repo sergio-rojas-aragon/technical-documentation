@@ -130,14 +130,15 @@ div.language-plaintext.highlighter-rouge > div.highlight > pre.highlight {
 }
 
 div.language-plaintext.highlighter-rouge > button[aria-label="Copy code to clipboard"] {
-    border-radius: 2px !important;
-    margin: 3px !important;
-    padding: 3px !important;
+    border-radius: 5px !important;
+    margin: 10px !important;
+    padding: 10px !important;
     /* Ajustes adicionales para asegurar que se vea bien */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background-color: #f10000 !important; /* Cambia el color del botón aquí */
+    border: 1px solid red !important;
+
 }
 
 .language-plaintext.highlighter-rouge 
