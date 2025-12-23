@@ -1,5 +1,5 @@
 ---
-title: Entity Framework Core
+title: EF NetCore y Linq
 layout: home
 parent: DotNet
 nav_order: 2
@@ -121,7 +121,7 @@ En las relaciones si puede ser plural.
 
 Un rol puede tener muchos usuarios
 
-```
+```csharp
 public class Rol
 {
     [Key]
@@ -136,7 +136,7 @@ public class Rol
 }
 ```
 
-```
+```csharp
 public class Usuario
 {
     public int UsuarioId { get; set; }
@@ -162,75 +162,148 @@ public class Usuario
 
 ### Métodos de Ejecución y Recuperación en EF Core
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`ToList()`/`ToListAsync()`** | `List<T>` | Ejecuta y trae **todos** los resultados como una lista. | `await db.Productos.Where(p => p.Stock > 0).ToListAsync()` |
-| **`FirstOrDefault()`<br>`FirstOrDefaultAsync()`** | `T` o `null` | Retorna el **primer** elemento, o `null` si no encuentra ninguno. | `await db.Pedidos.FirstOrDefaultAsync(p => p.Id == 10)` |
-| **`Single()`/`SingleAsync()`** | `T` | Retorna el **único** elemento; lanza excepción si es cero o más de uno. | `db.Configuracion.Single(c => c.Activa == true)` |
-| **`Find()`/`FindAsync()`** | `T` o `null` | Busca por **clave primaria**, primero en memoria y luego en la DB. | `await db.Clientes.FindAsync(customerId)` |
-| **`ToArray()`/`ToArrayAsync()`** | `T[]` | Ejecuta y trae **todos** los resultados como un array. | `await db.Usuarios.OrderBy(u => u.Nombre).ToArrayAsync()` |
+* **`ToList()` / `ToListAsync()`**
+    * Ejecuta y trae **todos** los resultados como una lista. 
+    * Retorno: `List<T>`
+    * Ejemplo: `await db.Productos.Where(p => p.Stock > 0).ToListAsync()`
+
+* **`FirstOrDefault()` / `FirstOrDefaultAsync()`**
+    * Retorna el **primer** elemento, o `null` si no encuentra ninguno. 
+    * Retorno: `T` o `null` 
+    * Ejemplo: `await db.Pedidos.FirstOrDefaultAsync(p => p.Id == 10)`
+
+* **`Single()`/`SingleAsync()`** 
+    * Retorna el **único** elemento; lanza excepción si es cero o más de uno.
+    * Ejemplo: `db.Configuracion.Single(c => c.Activa == true)` 
+    * Retorno:`T`
+
+* **`Find()` / `FindAsync()`**  
+    * Busca por **clave primaria**, primero en memoria y luego en la DB. 
+    * Ejemplo: `await db.Clientes.FindAsync(customerId)`
+    * Retorno:`T` o `null` 
+
+* **`ToArray()` / `ToArrayAsync()`**
+    * Ejecuta y trae **todos** los resultados como un array.
+    * Ejemplo:  `await db.Usuarios.OrderBy(u => u.Nombre).ToArrayAsync()`
+    * Retorno: `T[]` 
 
 ###  Métodos de Agregación y Conteo en EF Core
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`Count()`/`CountAsync()`** | `int` | Retorna el número **total** de elementos que cumplen la condición. | `await db.Items.CountAsync(i => i.Estado == "Activo")` |
-| **`LongCount()`/`LongCountAsync()`** | `long` | Similar a `Count`, pero para conjuntos de datos **muy grandes**. | `db.Logs.LongCount()` |
-| **`Sum()`/`SumAsync()`** | Tipo numérico | Calcula la **suma** de los valores de una propiedad numérica. | `await db.Ordenes.SumAsync(o => o.Total)` |
-| **`Average()`/`AverageAsync()`** | Tipo numérico | Calcula el **promedio** de los valores de una propiedad numérica. | `db.Notas.Average(n => n.Puntuacion)` |
-| **`Min()`/`MinAsync()`** | Tipo | Determina el valor **mínimo** de una propiedad en la secuencia. | `await db.Productos.MinAsync(p => p.Precio)` |
-| **`Max()`/`MaxAsync()`** | Tipo | Determina el valor **máximo** de una propiedad en la secuencia. | `db.Empleados.Max(e => e.Salario)` |
+
+* **`Count()` / `CountAsync()`**
+    * Retorno: `int`
+    * Retorna el número **total** de elementos que cumplen la condición.
+    * Ejemplo: `await db.Items.CountAsync(i => i.Estado == "Activo")`4
+
+* **`LongCount()`/`LongCountAsync()`**
+    * Retorno:`long`
+    * Similar a `Count`, pero para conjuntos de datos **muy grandes**.
+    * Ejemplo: `db.Logs.LongCount()`
+
+* **`Sum()`/`SumAsync()`**
+    * Retorno:Tipo numérico
+    * Calcula la **suma** de los valores de una propiedad numérica.
+    * Ejemplo: `await db.Ordenes.SumAsync(o => o.Total)`
+
+* **`Average()`/`AverageAsync()`**
+    * Retorno:Tipo numérico
+    * Calcula el **promedio** de los valores de una propiedad numérica.
+    * Ejemplo: `db.Notas.Average(n => n.Puntuacion)`
+
+* **`Min()`/`MinAsync()`**
+    * Retorno: Tipo
+    * Determina el valor **mínimo** de una propiedad en la secuencia.
+    * Ejemplo: `await db.Productos.MinAsync(p => p.Precio)`
+
+* **`Max()`/`MaxAsync()`**
+    * Retorno: Tipo
+    * Determina el valor **máximo** de una propiedad en la secuencia.
+    * Ejemplo: `db.Empleados.Max(e => e.Salario)`
 
 ### Métodos Condicionales en EF Core
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`Any()`/`AnyAsync()`** | `bool` | Determina si **al menos un** elemento satisface la condición. | `await db.Usuarios.AnyAsync(u => u.Rol == "Admin")` |
-| **`All()`/`AllAsync()`** | `bool` | Determina si **todos** los elementos satisfacen la condición. | `db.Tareas.All(t => t.Prioridad > 0)` |
-| **`Contains()`** | `bool` | Determina si una secuencia **contiene** un elemento específico. | `db.Categorias.Contains(miCategoria)` |
+* **Any() / AnyAsync()** - Determina si **al menos un** elemento satisface la condición.
+   * Ejemplo: `await db.Usuarios.AnyAsync(u => u.Rol == "Admin")`
+   * Retorno: `bool`
+
+* **All() / AllAsync()** - Determina si **todos** los elementos satisfacen la condición.
+   * Ejemplo: `db.Tareas.All(t => t.Prioridad > 0)`
+   * Retorno: `bool`
+
+* **Contains()** - Determina si una secuencia **contiene** un elemento específico.
+   * Ejemplo: `db.Categorias.Contains(miCategoria)`
+   * Retorno: `bool`
+
 
 ### Proyection y transformacion
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`Select()`** | `IQueryable<TResult>` | Transforma o proyecta la secuencia en un **nuevo formulario** (columnas/objeto). | `db.Autores.Select(a => a.NombreCompleto)` |
-| **`SelectMany()`** | `IQueryable<TResult>` | Proyecta y **aplana** colecciones anidadas en una sola secuencia. | `db.Blogs.SelectMany(b => b.Posts)` |
+* **Select()** - Transforma o proyecta la secuencia en un **nuevo formulario** (columnas/objeto).
+   * Ejemplo: `db.Autores.Select(a => a.NombreCompleto)`
+   * Retorno: `IQueryable<TResult>`
+
+* **SelectMany()** - Proyecta y **aplana** colecciones anidadas en una sola secuencia.
+   * Ejemplo: `db.Blogs.SelectMany(b => b.Posts)`
+   * Retorno: `IQueryable<TResult>`
+
 
 ### FIltrado
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`Where()`** | `IQueryable<T>` | Filtra la secuencia de valores basada en una **condición** (predicado). | `db.Libros.Where(l => l.Publicado > 2020)` |
-| **`OfType<TResult>()`** | `IQueryable<TResult>` | Filtra elementos basados en un **tipo específico** (útil para herencia). | `db.Entidades.OfType<EntidadHija>()` |
+* **Where()** - Filtra la secuencia de valores basada en una **condición** (predicado).
+   * Ejemplo: `db.Libros.Where(l => l.Publicado > 2020)`
+   * Retorno: `IQueryable<T>`
+
+* **OfType<TResult>()** - Filtra elementos basados en un **tipo específico** (útil para herencia).
+   * Ejemplo: `db.Entidades.OfType<EntidadHija>()`
+   * Retorno: `IQueryable<TResult>`
+
 
 ### Ordenamiento
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`OrderBy()`/`OrderByDescending()`** | `IOrderedQueryable<T>` | Ordena los elementos en orden **ascendente** o **descendente**. | `db.Articulos.OrderBy(a => a.Fecha)` |
-| **`ThenBy()`/`ThenByDescending()`** | `IOrderedQueryable<T>` | Define un **ordenamiento secundario** (debe seguir a `OrderBy`). | `db.Personas.OrderBy(p => p.Apellido).ThenBy(p => p.Nombre)` |
+* **OrderBy() / OrderByDescending()** - Ordena los elementos en orden **ascendente** o **descendente**.
+   * Ejemplo: `db.Articulos.OrderBy(a => a.Fecha)`
+   * Retorno: `IOrderedQueryable<T>`
+
+* **ThenBy() / ThenByDescending()** - Define un **ordenamiento secundario** (debe seguir a `OrderBy`).
+   * Ejemplo: `db.Personas.OrderBy(p => p.Apellido).ThenBy(p => p.Nombre)`
+   * Retorno: `IOrderedQueryable<T>`
+
 
 ### Paginacion
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`Skip()`** | `IQueryable<T>` | **Omite** un número especificado de elementos al inicio. | `db.Comentarios.Skip(20)` |
-| **`Take()`** | `IQueryable<T>` | Devuelve un número **especificado** de elementos al inicio. | `db.Productos.Take(10)` |
+* **Skip()** - **Omite** un número especificado de elementos al inicio.
+   * Ejemplo: `db.Comentarios.Skip(20)`
+   * Retorno: `IQueryable<T>`
+
+* **Take()** - Devuelve un número **especificado** de elementos al inicio.
+   * Ejemplo: `db.Productos.Take(10)`
+   * Retorno: `IQueryable<T>`
+
 
 ### Relaciones (Eager Loading)
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`Include()`** | `IQueryable<T>` | Incluye una **propiedad de navegación** (relación) en la consulta. | `db.Pedidos.Include(p => p.Cliente)` |
-| **`ThenInclude()`** | `IIncludableQueryable<T, TProperty>` | Encadena la inclusión para cargar **relaciones anidadas** (más profundas). | `db.Pedidos.Include(p => p.Cliente).ThenInclude(c => c.Direccion)` |
+* **Include()** - Incluye una **propiedad de navegación** (relación) en la consulta.
+   * Ejemplo: `db.Pedidos.Include(p => p.Cliente)`
+   * Retorno: `IQueryable<T>`
+
+* **ThenInclude()** - Encadena la inclusión para cargar **relaciones anidadas** (más profundas).
+   * Ejemplo: `db.Pedidos.Include(p => p.Cliente).ThenInclude(c => c.Direccion)`
+   * Retorno: `IIncludableQueryable<T, TProperty>`
+
 
 ### Modificadores de Consulta
 
-| Método | Tipo de Retorno | Descripción Muy Corta | Ejemplo Aplicado (C#) |
-| :--- | :--- | :--- | :--- |
-| **`AsNoTracking()`** | `IQueryable<T>` | Indica al contexto **no rastrear** entidades (para consultas de solo lectura). | `db.Reportes.AsNoTracking().ToList()` |
-| **`GroupBy()`** | `IQueryable<IGrouping<TKey, TElement>>` | **Agrupa** los elementos que comparten una clave en común. | `db.Ventas.GroupBy(v => v.Mes)` |
-| **`Distinct()`** | `IQueryable<T>` | Retorna solo los elementos **únicos** o distintos. | `db.Correos.Select(c => c.Dominio).Distinct()` |
+* **AsNoTracking()** - Indica al contexto **no rastrear** entidades (para consultas de solo lectura).
+   * Ejemplo: `db.Reportes.AsNoTracking().ToList()`
+   * Retorno: `IQueryable<T>`
+
+* **GroupBy()** - **Agrupa** los elementos que comparten una clave en común.
+   * Ejemplo: `db.Ventas.GroupBy(v => v.Mes)`
+   * Retorno: `IQueryable<IGrouping<TKey, TElement>>`
+
+* **Distinct()** - Retorna solo los elementos **únicos** o distintos.
+   * Ejemplo: `db.Correos.Select(c => c.Dominio).Distinct()`
+   * Retorno: `IQueryable<T>`
+
 
 
 ### guardar nuevo elemento
@@ -238,26 +311,56 @@ public class Usuario
 
 ## Data Annotations en EF Core
 
-| Atributo | Ejemplo | Descripción |
-|-----------|----------|-------------|
-| `[Key]` | `[Key] public int IdRol { get; set; }` | Indica que la propiedad es la **clave primaria (PK)**. |
-| `[DatabaseGenerated(DatabaseGeneratedOption.Identity)]` | `[DatabaseGenerated(DatabaseGeneratedOption.Identity)]` | Hace que la columna sea **auto incremental**. |
-| `[DatabaseGenerated(DatabaseGeneratedOption.Computed)]` | `[DatabaseGenerated(DatabaseGeneratedOption.Computed)]` | Valor **calculado por la BD** (ej. timestamp, fórmula). |
-| `[Table("NombreTabla")]` | `[Table("Roles")]` | Define el **nombre de la tabla** en la base de datos. |
-| `[Column("NombreColumna")]` | `[Column("DescripcionRol")]` | Define el **nombre de la columna** en la tabla. |
-| `[Column(TypeName = "nvarchar(200)")]` | `[Column(TypeName = "decimal(18,2)")]` | Especifica el **tipo de dato SQL**. |
-| `[Required]` | `[Required] public string Nombre { get; set; }` | Indica que el campo es **obligatorio** (`NOT NULL`). |
-| `[MaxLength(100)]` | `[MaxLength(100)]` | Define el **tamaño máximo** de la cadena. |
-| `[StringLength(100)]` | `[StringLength(100, MinimumLength = 3)]` | Similar a `MaxLength`, pero también puede definir **mínimo**. |
-| `[MinLength(3)]` | `[MinLength(3)]` | Define la **longitud mínima** de la cadena. |
-| `[Precision(10, 2)]` | `[Precision(10, 2)] public decimal Precio { get; set; }` | Define **precisión y escala** para valores numéricos o decimales. |
-| `[ForeignKey("PropiedadNavegacion")]` | `[ForeignKey("Rol")] public int IdRol { get; set; }` | Define la **clave foránea (FK)** hacia otra entidad. |
-| `[InverseProperty("PropiedadRelacionada")]` | `[InverseProperty("Usuarios")]` | Indica la **propiedad inversa** en una relación (útil en relaciones múltiples). |
-| `[NotMapped]` | `[NotMapped] public string NombreCompleto => Nombre + " " + Apellido;` | Excluye la propiedad del mapeo a la base de datos. |
-| `[ConcurrencyCheck]` | `[ConcurrencyCheck] public string Email { get; set; }` | Marca el campo para **control de concurrencia**. |
-| `[Timestamp]` | `[Timestamp] public byte[] RowVersion { get; set; }` | Crea una **columna de versión binaria** para control de concurrencia. |
-| `[Index("NombreIndice", IsUnique = true)]` | `[Index(nameof(Email), IsUnique = true)]` | Crea un **índice** (único o no). |
-| `[Unicode(false)]` | `[Unicode(false)] public string Codigo { get; set; }` | Define si la columna es **Unicode o no** (`nvarchar` o `varchar`). |
-| `[Comment("Texto de comentario")]` | `[Comment("Fecha de creación del registro")]` | Agrega un **comentario** a nivel de columna o tabla en la BD. |
+
+* **[Key]** - Indica que la propiedad es la **clave primaria (PK)**.
+   * Ejemplo: `[Key] public int IdRol { get; set; }`
+
+* **[Table("NombreTabla")]** - Define el **nombre de la tabla** en la base de datos.
+   * Ejemplo: `[Table("Roles")]`
+
+* **[Column("NombreColumna")]** - Define el **nombre de la columna** en la tabla.
+   * Ejemplo: `[Column("DescripcionRol")]`
+
+* **[Column(TypeName = "...")]** - Especifica el **tipo de dato SQL**.
+   * Ejemplo: `[Column(TypeName = "decimal(18,2)")]`
+
+* **[Required]** - Indica que el campo es **obligatorio** (`NOT NULL`).
+   * Ejemplo: `[Required] public string Nombre { get; set; }`
+
+* **[MaxLength(n)]** - Define el **tamaño máximo** de la cadena.
+   * Ejemplo: `[MaxLength(100)]`
+
+* **[StringLength(n)]** - Similar a `MaxLength`, pero también puede definir **mínimo**.
+   * Ejemplo: `[StringLength(100, MinimumLength = 3)]`
+
+* **[MinLength(n)]** - Define la **longitud mínima** de la cadena.
+   * Ejemplo: `[MinLength(3)]`
+
+* **[Precision(p, s)]** - Define **precisión y escala** para valores numéricos o decimales.
+   * Ejemplo: `[Precision(10, 2)] public decimal Precio { get; set; }`
+
+* **[ForeignKey("PropiedadNavegacion")]** - Define la **clave foránea (FK)** hacia otra entidad.
+   * Ejemplo: `[ForeignKey("Rol")] public int IdRol { get; set; }`
+
+* **[InverseProperty("PropiedadRelacionada")]** - Indica la **propiedad inversa** en una relación.
+   * Ejemplo: `[InverseProperty("Usuarios")]`
+
+* **[NotMapped]** - Excluye la propiedad del mapeo a la base de datos.
+   * Ejemplo: `[NotMapped] public string NombreCompleto => Nombre + " " + Apellido;`
+
+* **[ConcurrencyCheck]** - Marca el campo para **control de concurrencia**.
+   * Ejemplo: `[ConcurrencyCheck] public string Email { get; set; }`
+
+* **[Timestamp]** - Crea una **columna de versión binaria** para control de concurrencia.
+   * Ejemplo: `[Timestamp] public byte[] RowVersion { get; set; }`
+
+* **[Index(...)]** - Crea un **índice** (único o no).
+   * Ejemplo: `[Index(nameof(Email), IsUnique = true)]`
+
+* **[Unicode(false)]** - Define si la columna es **Unicode o no** (`nvarchar` o `varchar`).
+   * Ejemplo: `[Unicode(false)] public string Codigo { get; set; }`
+
+* **[Comment("Texto")]** - Agrega un **comentario** a nivel de columna o tabla en la BD.
+   * Ejemplo: `[Comment("Fecha de creación del registro")]`
 
 

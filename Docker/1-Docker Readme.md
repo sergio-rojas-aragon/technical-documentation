@@ -20,7 +20,7 @@ nav_order: 1
 
 * **mostrar todos los contenedores**
 
-    ```yml
+    ```bash
     docker container ls -a
     ```
 * detener y eliminar los contenedores de forma forzada
@@ -28,6 +28,13 @@ nav_order: 1
     ```yml
     docker container rm -f <container-id> o <ID1 ID2...> 
     ```
+* **ver nombre de contenedor**, en `NAMES` aparece el nombre del contenedor (al final)
+
+    ```bash
+    docker ps
+    ```
+
+
 
 ## Volumes
 

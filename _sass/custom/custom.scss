@@ -180,7 +180,7 @@ code.language-plaintext.highlighter-rouge {
 
 .language-terminal,
 .language-terminal .highlight {
-  border-radius: 15px !important;
+  border-radius: 5px !important;
   background-color: #000407 !important;
   color: white !important;
 
@@ -191,29 +191,9 @@ code.language-plaintext.highlighter-rouge {
 //=======================================================
 .language-yml,
 .language-yml .highlight {
-  border-radius: 15px !important;
+  border-radius: 5px !important;
   background-color: #000407 !important;
   color: #ff8b2b !important;
 
 }
 
-//=======================================================
-// csharp
-//=======================================================
-
-// .language-csharp,
-// .language-csharp .highlight,
-// .language-csharp .highlighter-rouge
-// {
-//   border-radius: 5px !important;
-//   background-color: #202020 !important;
-//    border: 1px solid #273642 !important;
-
-// }
-
-// .language-csharp.highlighter-rouge .highlight {
-
-//   border-radius: 5px !important;
-//   background-color: #202020 !important;
-//   border: 1px solid #181818 !important;
-// }

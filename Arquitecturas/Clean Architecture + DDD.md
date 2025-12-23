@@ -365,3 +365,66 @@ Cliente
 
 ### 2. Modelar entidades y relaciones
 
+
+# Mermaid
+
+DomainObjects["- Entities - ValueObjects - Aggregates - DomainServices - Repositories (interfaces)"]
+ApplicationObjects["- UseCases / Handlers- DTOs- Mappers- Validators- (opcional) Repositorios de lectura (interfaces)"]
+  InfrastructureObjects["
+  - EF DbContext
+  - Repositories (implementations)
+  - ExternalServices
+  - DataAccess / Migrations"]
+  APIObjects["UI
+  - Controllers
+  - Endpoints
+  - Middlewares
+  - DI registration"]
+  CrossCutting["Cross-cutting
+  - Logging
+  - Caching
+  - Policies
+  - Exception handling"]
+
+```mermaid
+flowchart LR
+  Domain["DOMAIN"]
+  Application["Application"]
+  Infrastructure["Infrastructure"]
+  API["API"]
+
+  %% Dependencias principales
+  API --> Application
+  Application --> Domain
+  Infrastructure --> Domain
+  Infrastructure --> Application
+
+  %% Nota opcional: alternativa de ubicación de interfaces
+  subgraph Options ["Opciones comunes"]
+    OptA["Interfaces de Repositorio en Domain (recomendado)\n- Domain define contratos\n- Infrastructure implementa"]
+    OptB["Interfaces de Repositorio de lectura en Application (opcional)\n- Application define DTO-contracts\n- Infrastructure implementa proyecciones"]
+  end
+  OptA --- Domain
+  OptB --- Application
+```
+
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+
+```

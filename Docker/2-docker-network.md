@@ -38,8 +38,8 @@ https://docs.docker.com/engine/network/tutorials/standalone/
     docker network connect nombre-red nombre-contenedor
     ```
 
-* inspect. Show list of containers in the selected network.
-    ```powershell
+* inspect. Show list of containers in the selected network. In Json name `Containers`
+    ```bash
     docker network inspect <NAME o ID>
     ```
 
