@@ -72,6 +72,18 @@ Como todas las pruebas de desarrollo se basan en pruebas de logica con caractere
   Console.WriteLine(r); // h0la mund0
   ```
 
+# Funciones segun aplicacion
+
+* **Buscar elemento dentro de una lista**
+
+```csharp
+List<int> numeros = new List<int> { 10, 20, 30, 40, 50 };
+int numeroABuscar = 30;
+
+// true or false
+numeros.Contains(numeroABuscar)
+```
+
 # Funciones Regex
 
 * **Regex.IsMatch()** Verifica si una cadena cumple o contiene un patrón.
